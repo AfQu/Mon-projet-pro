@@ -1026,11 +1026,13 @@ body.cine-done .hero-mono-img{
   .pq-pin-glow{opacity:0.85;transform:translate(-50%,-50%)!important}
 }
 </style>
-<!-- TODO avant mise en ligne : remplacer data-sitekey (ci-dessous, sur les deux formulaires)
-     par la vraie clé de site Cloudflare Turnstile, obtenue en enregistrant affairesquebec.ca
-     sur https://dash.cloudflare.com/?to=/:account/turnstile. La clé de test utilisée ici
-     (1x00000000000000000000AA) affiche toujours le widget comme réussi, quel que soit le
-     visiteur : elle ne protège de rien tant qu'elle n'est pas remplacée. -->
+<!-- TODO avant mise en ligne : remplacer VOTRE_CLE_DE_SITE_TURNSTILE (data-sitekey, sur les
+     deux formulaires) par la vraie clé de SITE Cloudflare Turnstile — la clé SECRÈTE va dans
+     le nœud « Vérifier Turnstile » de n8n, jamais ici. Les deux se créent en enregistrant
+     affairesquebec.ca sur https://dash.cloudflare.com/?to=/:account/turnstile. Tant que le
+     placeholder n'est pas remplacé, le widget ne peut pas s'afficher (clé invalide) ; le site
+     reste utilisable grâce au filet de sécurité JS (onTurnstileError / le délai de 4s), mais
+     rien n'est encore protégé contre les robots. -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body class="cine-on">
@@ -1369,11 +1371,11 @@ body.cine-done .hero-mono-img{
         <p>La carte réelle de l'écosystème, ce qu'un prêteur lit dans votre dossier, l'argent qui n'est pas à la banque et les codes non écrits d'une rencontre d'affaires au Québec. Écrit pour celles et ceux qui commencent ici.</p>
       </div>
       <div class="guide-right">
-        <form class="guide-form" id="guideForm" action="https://n8n.srv1057446.hstgr.cloud/webhook/affairesquebec-lead" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — demande" data-fallback-to="renald.rabathaly@affairesquebec.ca" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
+        <form class="guide-form" id="guideForm" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — demande" data-fallback-to="renald.rabathaly@affairesquebec.ca" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
           <input type="hidden" name="form" value="guide">
           <input type="email" name="email" placeholder="Votre courriel" required>
           <button type="submit" disabled>Recevoir le guide</button>
-          <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired"></div>
+          <div class="cf-turnstile" data-sitekey="VOTRE_CLE_DE_SITE_TURNSTILE" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired" data-error-callback="onTurnstileError"></div>
         </form>
         <p class="form-status" id="guideFormStatus" role="status" aria-live="polite"></p>
         <p class="form-note">Votre courriel sert uniquement à vous tenir informé·e des prochaines éditions. Il n'est jamais revendu.<br>
@@ -1628,7 +1630,7 @@ body.cine-done .hero-mono-img{
       </div>
     </div>
     <div class="reveal">
-      <form id="contactForm" action="https://n8n.srv1057446.hstgr.cloud/webhook/affairesquebec-lead" method="POST" data-fallback-subject="Demande de diagnostic — site web" data-fallback-to="renald.rabathaly@affairesquebec.ca">
+      <form id="contactForm" method="POST" data-fallback-subject="Demande de diagnostic — site web" data-fallback-to="renald.rabathaly@affairesquebec.ca">
         <input type="hidden" name="form" value="contact">
         <div class="row">
           <div><label for="cf-nom">Votre nom *</label><input id="cf-nom" type="text" name="nom" required></div>
@@ -1640,7 +1642,7 @@ body.cine-done .hero-mono-img{
         </div>
         <div><label for="cf-sujet">Sujet *</label><input id="cf-sujet" type="text" name="sujet" required></div>
         <div><label for="cf-message">Votre message *</label><textarea id="cf-message" name="message" required></textarea></div>
-        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" data-callback="onTurnstileContact" data-expired-callback="onTurnstileContactExpired"></div>
+        <div class="cf-turnstile" data-sitekey="VOTRE_CLE_DE_SITE_TURNSTILE" data-theme="light" data-callback="onTurnstileContact" data-expired-callback="onTurnstileContactExpired" data-error-callback="onTurnstileError"></div>
         <button type="submit" disabled>Demander mon diagnostic</button>
       </form>
       <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
@@ -2047,6 +2049,14 @@ const counterIO=new IntersectionObserver((entries)=>{
   })
 },{threshold:0.5});
 document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
+// ---------- FORMULAIRES DU SITE ----------
+// Point de collecte unique pour les deux formulaires (guide + contact) : le workflow n8n
+// qui écrit dans Notion et envoie les courriels de confirmation. Voir README.md / le
+// workflow n8n fourni pour ce que fait l'autre bout. Un seul endroit à changer si l'URL
+// du webhook change un jour.
+const AQ_ENDPOINT='https://n8n.srv1057446.hstgr.cloud/webhook/affairesquebec-lead';
+document.querySelectorAll('#guideForm,#contactForm').forEach(f=>f.action=AQ_ENDPOINT);
+
 // Cloudflare Turnstile: the submit buttons start disabled (see the "disabled"
 // attribute in the HTML) and only unlock once the widget confirms a human.
 // Named globally because the Turnstile script calls these by name (data-callback).
@@ -2066,17 +2076,24 @@ function onTurnstileContactExpired(){
   const b=document.querySelector('#contactForm button[type="submit"]');
   if(b)b.disabled=true;
 }
-// If Turnstile's script never loads (blocked by an ad/privacy blocker, offline),
-// don't trap a genuine visitor behind a button that can never unlock.
+// If the widget can't render at all (invalid/placeholder site key, misconfiguration),
+// Turnstile calls this instead of onTurnstileGuide/onTurnstileContact — which would
+// otherwise never fire, trapping visitors behind a button that can never unlock.
+function onTurnstileError(){
+  document.querySelectorAll('#guideForm button[type="submit"],#contactForm button[type="submit"]')
+    .forEach(b=>b.disabled=false);
+}
+// Same idea, one layer further out: if Turnstile's script never loads at all
+// (ad/privacy blocker, offline), no callback of any kind fires.
 setTimeout(()=>{
   if(typeof turnstile==='undefined'){
     document.querySelectorAll('#guideForm button[type="submit"],#contactForm button[type="submit"]')
       .forEach(b=>b.disabled=false);
   }
 },4000);
-// form submission: POST via fetch (Formspree-compatible); if the endpoint is still
-// the unconfigured placeholder, or the request fails outright (offline, blocked,
-// wrong ID), fall back to a prefilled mailto: so no lead is ever silently lost.
+// Form submission: POST via fetch to AQ_ENDPOINT; if the request fails outright
+// (offline, blocked, n8n down), fall back to a prefilled mailto: so no lead is
+// ever silently lost.
 (function(){
   function wireForm(form){
     if(!form)return;
@@ -2085,20 +2102,17 @@ setTimeout(()=>{
     form.addEventListener('submit',async(e)=>{
       e.preventDefault();
       const data=new FormData(form);
-      const isPlaceholder=(form.getAttribute('action')||'').includes('votre-id');
       const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
       submitBtn&&(submitBtn.disabled=true);
-      if(!isPlaceholder){
-        try{
-          const res=await fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}});
-          if(res.ok){
-            setStatus('Merci, votre message a bien été envoyé.','ok');
-            form.reset();
-            submitBtn&&(submitBtn.disabled=false);
-            return;
-          }
-        }catch(err){/* network error: fall through to mailto */}
-      }
+      try{
+        const res=await fetch(AQ_ENDPOINT,{method:'POST',body:data,headers:{Accept:'application/json'}});
+        if(res.ok){
+          setStatus('Merci, votre message a bien été envoyé.','ok');
+          form.reset();
+          submitBtn&&(submitBtn.disabled=false);
+          return;
+        }
+      }catch(err){/* network error: fall through to mailto */}
       // Fallback: open the visitor's email client with the message prefilled.
       const to=form.dataset.fallbackTo||'renald.rabathaly@affairesquebec.ca';
       const subject=form.dataset.fallbackSubject||'Message depuis le site';
@@ -2110,10 +2124,9 @@ setTimeout(()=>{
       submitBtn&&(submitBtn.disabled=false);
     });
   }
-  // Guide form: capture the email in the background (fire-and-forget — the
-  // download never waits on it and never depends on it succeeding), then start
-  // the PDF download immediately. No "check your inbox" step, no dead end if
-  // Formspree is down or not yet configured.
+  // Guide form: capture the email via AQ_ENDPOINT in the background (fire-and-forget —
+  // the download never waits on it and never depends on it succeeding), then start the
+  // PDF download immediately. No "check your inbox" step, no dead end if n8n is down.
   function wireGuideForm(form){
     if(!form)return;
     const statusEl=document.getElementById(form.id+'Status');
@@ -2123,10 +2136,7 @@ setTimeout(()=>{
       e.preventDefault();
       const data=new FormData(form);
       const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
-      const action=form.getAttribute('action')||'';
-      if(!action.includes('votre-id')){
-        fetch(action,{method:'POST',body:data,headers:{Accept:'application/json'}}).catch(()=>{});
-      }
+      fetch(AQ_ENDPOINT,{method:'POST',body:data,headers:{Accept:'application/json'}}).catch(()=>{});
       if(pdfPath){
         const a=document.createElement('a');
         a.href=pdfPath;

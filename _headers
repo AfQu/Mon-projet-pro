@@ -1,0 +1,10 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/*
+  Cache-Control: public, max-age=604800, immutable
+
+/assets/guide-entrepreneur-immigrant.pdf
+  Content-Disposition: attachment; filename="guide-entrepreneur-immigrant.pdf"
+  Cache-Control: public, max-age=3600
