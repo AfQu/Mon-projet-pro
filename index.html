@@ -1370,6 +1370,7 @@ body.cine-done .hero-mono-img{
       </div>
       <div class="guide-right">
         <form class="guide-form" id="guideForm" action="https://formspree.io/f/votre-id" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — demande" data-fallback-to="renald.rabathaly@affairesquebec.ca" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
+          <input type="hidden" name="form" value="guide">
           <input type="email" name="email" placeholder="Votre courriel" required>
           <button type="submit" disabled>Recevoir le guide</button>
           <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired"></div>
@@ -1628,6 +1629,7 @@ body.cine-done .hero-mono-img{
     </div>
     <div class="reveal">
       <form id="contactForm" action="https://formspree.io/f/votre-id" method="POST" data-fallback-subject="Demande de diagnostic — site web" data-fallback-to="renald.rabathaly@affairesquebec.ca">
+        <input type="hidden" name="form" value="contact">
         <div class="row">
           <div><label for="cf-nom">Votre nom *</label><input id="cf-nom" type="text" name="nom" required></div>
           <div><label for="cf-tel">Téléphone</label><input id="cf-tel" type="tel" name="telephone"></div>
