@@ -431,7 +431,8 @@ section{position:relative}
 .guide-left .eyebrow{color:var(--gold)}
 .guide-left h3{font-size:clamp(22px,2.6vw,30px);margin:12px 0 10px;color:var(--paper)}
 .guide-left p{color:var(--ink-muted);font-size:15px;max-width:480px}
-.guide-form{display:flex;gap:10px;position:relative;z-index:2}
+.guide-form{display:flex;flex-wrap:wrap;gap:10px;position:relative;z-index:2}
+.guide-form .cf-turnstile{flex:1 1 100%}
 .guide-form input{
   flex:1;min-width:0;padding:13px 16px;border-radius:8px;border:1px solid var(--line-dark);
   background:rgba(247,245,240,0.06);color:var(--paper);font-family:'Inter',sans-serif;font-size:14px;
@@ -1025,6 +1026,12 @@ body.cine-done .hero-mono-img{
   .pq-pin-glow{opacity:0.85;transform:translate(-50%,-50%)!important}
 }
 </style>
+<!-- TODO avant mise en ligne : remplacer data-sitekey (ci-dessous, sur les deux formulaires)
+     par la vraie clé de site Cloudflare Turnstile, obtenue en enregistrant affairesquebec.ca
+     sur https://dash.cloudflare.com/?to=/:account/turnstile. La clé de test utilisée ici
+     (1x00000000000000000000AA) affiche toujours le widget comme réussi, quel que soit le
+     visiteur : elle ne protège de rien tant qu'elle n'est pas remplacée. -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body class="cine-on">
 <script>
@@ -1364,7 +1371,8 @@ body.cine-done .hero-mono-img{
       <div class="guide-right">
         <form class="guide-form" id="guideForm" action="https://formspree.io/f/votre-id" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — demande" data-fallback-to="renald.rabathaly@affairesquebec.ca" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
           <input type="email" name="email" placeholder="Votre courriel" required>
-          <button type="submit">Recevoir le guide</button>
+          <button type="submit" disabled>Recevoir le guide</button>
+          <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired"></div>
         </form>
         <p class="form-status" id="guideFormStatus" role="status" aria-live="polite"></p>
         <p class="form-note">Votre courriel sert uniquement à vous tenir informé·e des prochaines éditions. Il n'est jamais revendu.<br>
@@ -1630,7 +1638,8 @@ body.cine-done .hero-mono-img{
         </div>
         <div><label for="cf-sujet">Sujet *</label><input id="cf-sujet" type="text" name="sujet" required></div>
         <div><label for="cf-message">Votre message *</label><textarea id="cf-message" name="message" required></textarea></div>
-        <button type="submit">Demander mon diagnostic</button>
+        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" data-callback="onTurnstileContact" data-expired-callback="onTurnstileContactExpired"></div>
+        <button type="submit" disabled>Demander mon diagnostic</button>
       </form>
       <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
       <p class="form-note">Vos données servent uniquement à traiter votre demande. Elles ne sont jamais revendues ni partagées avec des tiers.</p>
@@ -2036,6 +2045,33 @@ const counterIO=new IntersectionObserver((entries)=>{
   })
 },{threshold:0.5});
 document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
+// Cloudflare Turnstile: the submit buttons start disabled (see the "disabled"
+// attribute in the HTML) and only unlock once the widget confirms a human.
+// Named globally because the Turnstile script calls these by name (data-callback).
+function onTurnstileGuide(){
+  const b=document.querySelector('#guideForm button[type="submit"]');
+  if(b)b.disabled=false;
+}
+function onTurnstileGuideExpired(){
+  const b=document.querySelector('#guideForm button[type="submit"]');
+  if(b)b.disabled=true;
+}
+function onTurnstileContact(){
+  const b=document.querySelector('#contactForm button[type="submit"]');
+  if(b)b.disabled=false;
+}
+function onTurnstileContactExpired(){
+  const b=document.querySelector('#contactForm button[type="submit"]');
+  if(b)b.disabled=true;
+}
+// If Turnstile's script never loads (blocked by an ad/privacy blocker, offline),
+// don't trap a genuine visitor behind a button that can never unlock.
+setTimeout(()=>{
+  if(typeof turnstile==='undefined'){
+    document.querySelectorAll('#guideForm button[type="submit"],#contactForm button[type="submit"]')
+      .forEach(b=>b.disabled=false);
+  }
+},4000);
 // form submission: POST via fetch (Formspree-compatible); if the endpoint is still
 // the unconfigured placeholder, or the request fails outright (offline, blocked,
 // wrong ID), fall back to a prefilled mailto: so no lead is ever silently lost.
