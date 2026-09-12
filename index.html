@@ -10,20 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23231F20'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='24' font-weight='600' fill='%23E6AD19' text-anchor='middle'%3EAQ%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#231F20">
-<!-- TODO avant mise en ligne : remplacer l'URL ci-dessous par le domaine réel une fois le site hébergé. -->
-<link rel="canonical" href="https://www.affairesquebec.ca/">
+<link rel="canonical" href="https://affairesquebec.ca/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Affaires Québec">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="Affaires Québec — Le pont entre votre vision et la réalité locale">
 <meta property="og:description" content="Cabinet-conseil spécialisé en accompagnement des entrepreneurs immigrants, repreneuriat, montage de financement et évaluation d'impact. Afrique, Europe, Caraïbes, Québec.">
-<meta property="og:url" content="https://www.affairesquebec.ca/">
-<!-- TODO avant mise en ligne : ajouter une image de partage (1200×630) hébergée en ligne ; les plateformes sociales ignorent les images en data URI. -->
-<meta property="og:image" content="https://www.affairesquebec.ca/og-image.jpg">
+<meta property="og:url" content="https://affairesquebec.ca/">
+<meta property="og:image" content="https://affairesquebec.ca/assets/og-affaires-quebec.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Affaires Québec — Le pont entre votre vision et la réalité locale">
 <meta name="twitter:description" content="Cabinet-conseil spécialisé en accompagnement des entrepreneurs immigrants, repreneuriat, montage de financement et évaluation d'impact.">
-<meta name="twitter:image" content="https://www.affairesquebec.ca/og-image.jpg">
+<meta name="twitter:image" content="https://affairesquebec.ca/assets/og-affaires-quebec.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -748,6 +748,8 @@ form button:disabled{opacity:0.6;cursor:not-allowed;transform:none}
 .form-status.ok{color:var(--gold)}
 .form-status.err{color:#E8A24A}
 .form-note{margin-top:10px;font-size:12.5px;color:var(--ink-muted-dark)}
+.guide-direct-link{color:var(--ink-muted);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:color .2s}
+.guide-direct-link:hover{color:var(--gold)}
 .guide-form ~ .form-status,.guide-form ~ .form-note{max-width:480px}
 
 /* ---------- FOOTER ---------- */
@@ -1346,16 +1348,19 @@ body.cine-done .hero-mono-img{
   <div class="wrap">
     <div class="guide-card reveal">
       <div class="guide-left">
-        <span class="eyebrow mono">Ressource gratuite · en préparation</span>
+        <span class="eyebrow mono">Ressource gratuite</span>
         <h3>Le guide de l'entrepreneur immigrant au Canada</h3>
         <p>La carte réelle de l'écosystème, ce qu'un prêteur lit dans votre dossier, l'argent qui n'est pas à la banque et les codes non écrits d'une rencontre d'affaires au Québec. Écrit pour celles et ceux qui commencent ici.</p>
       </div>
-      <form class="guide-form" id="guideForm" action="https://formspree.io/f/votre-id" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — être averti·e" data-fallback-to="renald.rabathaly@affairesquebec.ca">
-        <input type="email" name="email" placeholder="Votre courriel" required>
-        <button type="submit">Être averti·e</button>
-      </form>
-      <p class="form-status" id="guideFormStatus" role="status" aria-live="polite"></p>
-      <p class="form-note">Votre courriel sert uniquement à vous prévenir de la sortie du guide. Il n'est jamais revendu.</p>
+      <div class="guide-right">
+        <form class="guide-form" id="guideForm" action="https://formspree.io/f/votre-id" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — demande" data-fallback-to="renald.rabathaly@affairesquebec.ca" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
+          <input type="email" name="email" placeholder="Votre courriel" required>
+          <button type="submit">Recevoir le guide</button>
+        </form>
+        <p class="form-status" id="guideFormStatus" role="status" aria-live="polite"></p>
+        <p class="form-note">Votre courriel sert uniquement à vous tenir informé·e des prochaines éditions. Il n'est jamais revendu.<br>
+          <a href="assets/guide-entrepreneur-immigrant.pdf" download target="_blank" rel="noopener" class="guide-direct-link">ou téléchargez-le directement</a>, sans formulaire.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -2058,7 +2063,39 @@ document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
       submitBtn&&(submitBtn.disabled=false);
     });
   }
-  wireForm(document.getElementById('guideForm'));
+  // Guide form: capture the email in the background (fire-and-forget — the
+  // download never waits on it and never depends on it succeeding), then start
+  // the PDF download immediately. No "check your inbox" step, no dead end if
+  // Formspree is down or not yet configured.
+  function wireGuideForm(form){
+    if(!form)return;
+    const statusEl=document.getElementById(form.id+'Status');
+    const submitBtn=form.querySelector('button[type="submit"]');
+    const pdfPath=form.dataset.pdf;
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const data=new FormData(form);
+      const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
+      const action=form.getAttribute('action')||'';
+      if(!action.includes('votre-id')){
+        fetch(action,{method:'POST',body:data,headers:{Accept:'application/json'}}).catch(()=>{});
+      }
+      if(pdfPath){
+        const a=document.createElement('a');
+        a.href=pdfPath;
+        a.download='';
+        a.target='_blank';
+        a.rel='noopener';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
+      setStatus('Merci ! Le téléchargement démarre. Vous recevrez aussi les prochaines éditions par courriel.','ok');
+      submitBtn&&(submitBtn.disabled=true,setTimeout(()=>{submitBtn.disabled=false},1500));
+      form.reset();
+    });
+  }
+  wireGuideForm(document.getElementById('guideForm'));
   wireForm(document.getElementById('contactForm'));
 })();
 
