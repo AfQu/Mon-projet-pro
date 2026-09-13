@@ -1026,13 +1026,12 @@ body.cine-done .hero-mono-img{
   .pq-pin-glow{opacity:0.85;transform:translate(-50%,-50%)!important}
 }
 </style>
-<!-- TODO avant mise en ligne : remplacer VOTRE_CLE_DE_SITE_TURNSTILE (data-sitekey, sur les
-     deux formulaires) par la vraie clé de SITE Cloudflare Turnstile — la clé SECRÈTE va dans
-     le nœud « Vérifier Turnstile » de n8n, jamais ici. Les deux se créent en enregistrant
-     affairesquebec.ca sur https://dash.cloudflare.com/?to=/:account/turnstile. Tant que le
-     placeholder n'est pas remplacé, le widget ne peut pas s'afficher (clé invalide) ; le site
-     reste utilisable grâce au filet de sécurité JS (onTurnstileError / le délai de 4s), mais
-     rien n'est encore protégé contre les robots. -->
+<!-- Clé de SITE Cloudflare Turnstile (publique, sans danger à exposer ici) : 0x4AAAAAAEx-yTN2Vj4r2-dn.
+     TODO restant : la clé SECRÈTE correspondante va dans le nœud « Vérifier Turnstile » du
+     workflow n8n, jamais dans ce fichier. Tant qu'elle n'y est pas (ou n'y est pas la bonne),
+     Cloudflare renvoie un échec pour tout le monde, y compris de vrais visiteurs : chaque
+     soumission retombe alors sur le repli du site (mailto pour le contact, téléchargement
+     quand même pour le guide) sans jamais atteindre Notion. -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body class="cine-on">
@@ -1375,7 +1374,7 @@ body.cine-done .hero-mono-img{
           <input type="hidden" name="form" value="guide">
           <input type="email" name="email" placeholder="Votre courriel" required>
           <button type="submit" disabled>Recevoir le guide</button>
-          <div class="cf-turnstile" data-sitekey="VOTRE_CLE_DE_SITE_TURNSTILE" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired" data-error-callback="onTurnstileError"></div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAEx-yTN2Vj4r2-dn" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired" data-error-callback="onTurnstileError"></div>
         </form>
         <p class="form-status" id="guideFormStatus" role="status" aria-live="polite"></p>
         <p class="form-note">Votre courriel sert uniquement à vous tenir informé·e des prochaines éditions. Il n'est jamais revendu.<br>
@@ -1642,7 +1641,7 @@ body.cine-done .hero-mono-img{
         </div>
         <div><label for="cf-sujet">Sujet *</label><input id="cf-sujet" type="text" name="sujet" required></div>
         <div><label for="cf-message">Votre message *</label><textarea id="cf-message" name="message" required></textarea></div>
-        <div class="cf-turnstile" data-sitekey="VOTRE_CLE_DE_SITE_TURNSTILE" data-theme="light" data-callback="onTurnstileContact" data-expired-callback="onTurnstileContactExpired" data-error-callback="onTurnstileError"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEx-yTN2Vj4r2-dn" data-theme="light" data-callback="onTurnstileContact" data-expired-callback="onTurnstileContactExpired" data-error-callback="onTurnstileError"></div>
         <button type="submit" disabled>Demander mon diagnostic</button>
       </form>
       <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
