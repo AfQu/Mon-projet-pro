@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://affairesquebec.ca/sitemap.xml
