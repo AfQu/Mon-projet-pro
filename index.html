@@ -2147,6 +2147,15 @@ setTimeout(()=>{
 // (offline, blocked, n8n down), fall back to a prefilled mailto: so no lead is
 // ever silently lost.
 (function(){
+  // Meta Pixel "Lead" event: only fires if the visitor accepted cookies (see
+  // bandeau de consentement) and the pixel actually loaded — never tracks silently.
+  function aqTrackLead(){
+    try{
+      if(localStorage.getItem('aq_cookie_consent')==='accepted'&&typeof window.fbq==='function'){
+        window.fbq('track','Lead');
+      }
+    }catch(e){}
+  }
   function wireForm(form){
     if(!form)return;
     const statusEl=document.getElementById(form.id+'Status');
@@ -2160,6 +2169,7 @@ setTimeout(()=>{
         const res=await fetch(AQ_ENDPOINT,{method:'POST',body:data,headers:{Accept:'application/json'}});
         if(res.ok){
           setStatus('Merci, votre message a bien été envoyé.','ok');
+          aqTrackLead();
           form.reset();
           submitBtn&&(submitBtn.disabled=false);
           return;
@@ -2189,6 +2199,7 @@ setTimeout(()=>{
       const data=new FormData(form);
       const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
       fetch(AQ_ENDPOINT,{method:'POST',body:data,headers:{Accept:'application/json'}}).catch(()=>{});
+      aqTrackLead();
       if(pdfPath){
         const a=document.createElement('a');
         a.href=pdfPath;
