@@ -785,6 +785,31 @@ footer{background:var(--charcoal);border-top:1px solid var(--line-dark);padding:
 .foot-soc-btn:hover{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}
 .foot-bottom{border-top:1px solid var(--line-dark);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .foot-bottom p{font-size:13px;color:var(--ink-muted-dark)}
+
+/* ---------- BANDEAU CONSENTEMENT COOKIES ---------- */
+.cookie-consent{
+  position:fixed;left:0;right:0;bottom:0;z-index:500;
+  background:var(--charcoal);border-top:1px solid var(--line-dark);
+  padding:20px 24px;
+}
+.cc-inner{
+  max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+  gap:24px;flex-wrap:wrap;
+}
+.cc-inner p{font-size:13.5px;line-height:1.55;color:var(--ink-muted-dark);max-width:640px;margin:0}
+.cc-inner p a{color:var(--gold);text-decoration:underline}
+.cc-actions{display:flex;gap:10px;flex-shrink:0}
+.cc-btn{padding:10px 20px;border-radius:2px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap}
+.cc-btn-gold{background:var(--gold);color:var(--charcoal);border:1px solid var(--gold)}
+.cc-btn-gold:hover{background:var(--gold-deep)}
+.cc-btn-ghost{background:transparent;color:var(--ink-on-dark);border:1px solid var(--line-dark)}
+.cc-btn-ghost:hover{border-color:var(--gold);background:rgba(223,175,69,0.06)}
+@media (max-width:640px){
+  .cookie-consent{padding:16px}
+  .cc-inner{gap:14px}
+  .cc-actions{width:100%}
+  .cc-btn{flex:1}
+}
 .terr{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-muted-dark);letter-spacing:0.08em}
 .terr b{color:var(--gold)}
 
@@ -1047,22 +1072,23 @@ body.cine-done .hero-mono-img{
      soumission retombe alors sur le repli du site (mailto pour le contact, téléchargement
      quand même pour le guide) sans jamais atteindre Notion. -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code — chargé uniquement après consentement (voir bandeau cookies en bas de page) -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '969053682231950');
-fbq('track', 'PageView');
+function loadMetaPixel(){
+  if(window._aqPixelLoaded)return;
+  window._aqPixelLoaded=true;
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '969053682231950');
+  fbq('track', 'PageView');
+}
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=969053682231950&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
 </head>
 <body class="cine-on">
@@ -1705,7 +1731,7 @@ src="https://www.facebook.com/tr?id=969053682231950&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="foot-bottom">
-      <p>© 2026 Affaires Québec. Tous droits réservés.</p>
+      <p>© 2026 Affaires Québec. Tous droits réservés. · <a href="#" id="manageCookies" style="color:inherit;text-decoration:underline">Gérer les cookies</a></p>
       <p class="terr">AFRIQUE <b>·</b> EUROPE <b>·</b> CARAÏBES <b>·</b> QUÉBEC</p>
     </div>
   </div>
@@ -2212,6 +2238,42 @@ setTimeout(()=>{
   slider.addEventListener('mouseenter',stop);
   slider.addEventListener('mouseleave',start);
   start();
+})();
+</script>
+
+<!-- Bandeau de consentement cookies (Loi 25) — contrôle le chargement du Meta Pixel -->
+<div id="cookieConsent" class="cookie-consent" hidden>
+  <div class="cc-inner">
+    <p>Nous aimerions utiliser un cookie de mesure (Meta Pixel) pour comprendre d'où viennent nos visiteurs et améliorer nos publicités Facebook/Instagram. Rien d'obligatoire : le site fonctionne pareil si vous refusez. <a href="mailto:renald.rabathaly@affairesquebec.ca">Nous écrire</a> pour toute question.</p>
+    <div class="cc-actions">
+      <button type="button" id="cookieRefuse" class="cc-btn cc-btn-ghost">Refuser</button>
+      <button type="button" id="cookieAccept" class="cc-btn cc-btn-gold">Accepter</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='aq_cookie_consent';
+  var banner=document.getElementById('cookieConsent');
+  function applyChoice(choice){
+    if(choice==='accepted')loadMetaPixel();
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(saved){
+    applyChoice(saved);
+  }else{
+    banner.hidden=false;
+  }
+  function choose(choice){
+    try{localStorage.setItem(KEY,choice)}catch(e){}
+    applyChoice(choice);
+    banner.hidden=true;
+  }
+  document.getElementById('cookieAccept').addEventListener('click',function(){choose('accepted')});
+  document.getElementById('cookieRefuse').addEventListener('click',function(){choose('refused')});
+  var manage=document.getElementById('manageCookies');
+  if(manage)manage.addEventListener('click',function(ev){ev.preventDefault();banner.hidden=false});
 })();
 </script>
 </body>
