@@ -21,6 +21,28 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
 - Respecter les piliers (30/30/20/20) et le plafond financement (25 %) sur le cumul du trimestre.
 - Chaque contenu apporte une valeur concrète et vérifiable (organismes, outils, programmes, étapes nommés).
 
+## 3 bis. Vidéos face caméra (Rouba, Rénald)
+- Au plus **1 vidéo face caméra par semaine**, en alternant Rouba et Rénald (pilier « Visages »).
+- **Date de publication : au plus tôt le dimanche**, soit 3 jours après la livraison du jeudi, pour laisser le temps d'enregistrer. Jamais le vendredi ni le samedi qui suivent la livraison.
+- Livrer pour chaque vidéo un fichier `script-<AAAA-MM-JJ>-<prénom>.md` dans le dossier du lot, avec :
+  1. l'objectif et le message clé, en une phrase ;
+  2. la durée cible (30 à 60 s) ;
+  3. l'**accroche des 3 premières secondes**, à dire face caméra ;
+  4. le texte complet, en phrases courtes, lisible au prompteur (environ 130 mots par minute) ;
+  5. les consignes de tournage : vertical 9:16, face à une fenêtre, fond neutre (sans bleu), téléphone à hauteur des yeux, regarder l'objectif, 2 prises ;
+  6. la date limite d'envoi de la vidéo (la veille de la publication) ;
+  7. la légende Instagram/Facebook (et LinkedIn si pertinent).
+- Fournir aussi la **couverture du Reel** (texte seul si aucune photo n'est disponible).
+- Dans `programme.md` et dans le message final, mettre en tête : « Vidéo à tourner : <sujet>, par <prénom>, à envoyer avant le <date> ».
+- Quand la vidéo arrive : intro et outro animées (`reel.py`), couverture. Les sous-titres se font avec l'outil automatique d'Instagram ou de CapCut (pas de transcription automatique ici).
+
+## 3 ter. Varier les Reels en motion design
+- Moteur : `visuels/outils/reel.py`. Formes disponibles : `titre`, `pile`, `compteur` (chiffre qui défile), `liste` (cases cochées dans une seule scène), `machine` (question tapée puis réponse), `mythe` (idée reçue barrée puis la réalité), `logo`. Transitions : `volet`, `fondu`, `glisse`, `cercle`, `coupe`. Exemple complet : `visuels/outils/exemples/reel-formes.json`.
+- Chaque Reel dure de 12 à 20 s, mélange **au moins 3 formes différentes** et **au moins 2 types de transitions**, sans enchaîner plus de 2 scènes de la même forme.
+- **Changer de forme d'ouverture à chaque Reel** (ex. : idée reçue, puis chiffre clé, puis question tapée, puis checklist). Le format « titre puis titre puis titre » ne doit pas revenir deux fois de suite.
+- Consigner chaque Reel dans `visuels/reels-journal.md` (date, sujet, forme d'ouverture, formes et transitions utilisées) et le lire avant d'en concevoir un nouveau.
+- Alterner les semaines : Reel en motion design ou vidéo face caméra en vedette.
+
 ## 4. Produire
 - Contenu en JSON dans `visuels/<semaine>/contenu/`, rendu avec `python3 visuels/outils/aq.py rendre <json>` ; Reels avec `visuels/outils/reel.py`.
 - Le rendu doit afficher `OK` partout. Regarder ensuite **chaque** image (et des images clés des Reels) : le contrôle automatique ne remplace pas l'œil.
