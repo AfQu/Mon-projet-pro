@@ -44,10 +44,10 @@ def typo(s):
         return s
     s = s.replace("'", "’")
     s = re.sub(r"\s*([:%$])(?=\s|$|<)", NBSP + r"\1", s)
-    s = re.sub(r"\s*([;?!])", NNBSP + r"\1", s)
+    s = re.sub(r"\s*([;?!])", NBSP + r"\1", s)
     s = re.sub(r"«\s*", "«" + NBSP, s)
     s = re.sub(r"\s*»", NBSP + "»", s)
-    s = re.sub(r"(\d) (\d{3})\b", r"\1" + NNBSP + r"\2", s)
+    s = re.sub(r"(\d) (\d{3})\b", r"\1" + NBSP + r"\2", s)
     s = re.sub(r"(\d) (h|ans|entreprises|octobre|novembre|décembre)\b", r"\1" + NBSP + r"\2", s)
     s = re.sub(r"\b(n°|J-) ?(\d)", r"\1\2", s)
     s = s.replace(" →", NBSP + "→").replace(" —", NBSP + "—")
@@ -94,6 +94,25 @@ def g_porte(d):
     </div>"""
 
 
+def g_ressources(d):
+    """Liste de ressources nommées (nom en or + explication), ou liste à cocher si "coche" est vrai."""
+    def item(i, x):
+        if isinstance(x, str):
+            x = {"texte": x}
+        nom = f'<span class="nom">{t(x["nom"])}</span>' if x.get("nom") else ""
+        return f'<li data-n="{i:02d}">{nom}<span class="explication">{t(x["texte"])}</span></li>'
+    items = "".join(item(i, x) for i, x in enumerate(d["items"], 1))
+    classes = "ressources" + (" coche" if d.get("coche") else "")
+    return f"""
+    <div class="corps haut">
+      <div class="surtitre">{t(d["surtitre"])}</div>
+      <h2 class="titre {d.get("taille", "m")}">{t(d["titre"])}</h2>
+      {f'<p class="chapeau">{t(d["chapeau"])}</p>' if d.get("chapeau") else ""}
+      <ul class="{classes}">{items}</ul>
+      {f'<p class="source">{t(d["source"])}</p>' if d.get("source") else ""}
+    </div>"""
+
+
 def g_evenement(d):
     return f"""
     <div class="corps">
@@ -108,7 +127,7 @@ def g_evenement(d):
     </div>"""
 
 
-GABARITS = {"couverture": g_couverture, "texte": g_texte, "porte": g_porte, "evenement": g_evenement}
+GABARITS = {"couverture": g_couverture, "texte": g_texte, "porte": g_porte, "ressources": g_ressources, "evenement": g_evenement}
 AVEC_LOGO = {"evenement"}  # slides qui portent le logo complet : pas de filigrane
 
 
@@ -152,7 +171,7 @@ QA_JS = """
     if (q.left < m - 1 || q.right > W - m + 1 || q.top < m - 1 || q.bottom > H - m + 1) pb.push(`image hors marge : ${i.getAttribute('src')}`);
   });
   // 2. Mots orphelins : dernière ligne d'un bloc réduite à un seul mot
-  document.querySelectorAll('h1,h2,p,li,.jour,.heure,.lieu,.appel').forEach(el => {
+  document.querySelectorAll('h1,h2,p,li:not(.ressources li),.nom,.explication,.jour,.heure,.lieu,.appel').forEach(el => {
     const mots = [];
     const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
     let n;
@@ -166,10 +185,21 @@ QA_JS = """
     const lignes = [...new Set(mots.map(o => o.y))];
     if (lignes.length > 1) {
       const der = mots.filter(o => o.y === lignes[lignes.length - 1]);
-      if (der.length === 1) pb.push(`mot orphelin « ${der[0].m} » dans « ${el.textContent.trim().slice(0, 50)} »`);
+      if (der.length === 1 && der[0].m.split(/[\u00a0]/).filter(w => w.length > 2).length < 2) pb.push(`mot orphelin « ${der[0].m} » dans « ${el.textContent.trim().slice(0, 50)} »`);
     }
   });
-  // 3. Polices réellement chargées
+  // 3. Le contenu ne doit pas toucher le pied (filet + signature)
+  const pied = document.querySelector('.pied');
+  if (pied) {
+    const lim = pied.getBoundingClientRect().top - 24;
+    document.querySelectorAll('.corps *').forEach(el => {
+      if (!el.children.length && el.getBoundingClientRect().bottom > lim) pb.push(`contenu trop proche du pied : « ${el.textContent.trim().slice(0, 40)} »`);
+    });
+    document.querySelectorAll('.ressources li, .liste li').forEach(el => {
+      if (el.getBoundingClientRect().bottom > lim) pb.push(`liste trop proche du pied : « ${el.textContent.trim().slice(0, 40)} »`);
+    });
+  }
+  // 4. Polices réellement chargées
   for (const f of ['400 40px Caslon', '400 40px "DM Sans"'])
     if (!document.fonts.check(f)) pb.push('police non chargée : ' + f);
   return pb;

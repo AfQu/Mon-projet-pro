@@ -3,27 +3,25 @@
 Lien d'inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
 
 ## 1. Carrousel « Les 3 portes à ouvrir avant de chercher du financement »
-Fichiers : `s41-01-trois-portes-01.png` à `-07.png` (Instagram) ; remplacer la slide 7 par `-07-fb.png` sur Facebook.
+Fichiers : `s41-01-trois-portes-01.png` à `-09.png` (Instagram) ; sur Facebook, remplacer la slide 9 par `-09-fb.png`.
 
 ### Instagram
-Avant de chercher du financement, ouvre trois portes.
+Avant de chercher du financement, ouvre trois portes. Voici qui appeler, quoi vérifier et quoi préparer. 📌 Sauvegarde ce carrousel.
 
-Un bailleur de fonds ne regarde pas seulement ton plan. Il se demande qui te connaît ici, qui va t'acheter et si ton dossier tient la route.
+1. Le réseau : le Réseau accès PME de ta MRC, PME MTL à Montréal, ta SADC ou ton CAE en région, et Entreprendre ici si tu es issu de l'immigration.
+2. Le marché : le Profil du recensement de Statistique Canada et les données sur la performance financière d'ISDE, toutes deux gratuites. Ensuite, des preuves écrites que des clients d'ici veulent acheter.
+3. Le dossier : ton dossier de crédit (gratuit chez Equifax et TransUnion), les conditions des programmes, et les pièces que le prêteur va lire.
 
-1. Le réseau : rencontre l'organisme de développement économique de ta ville ou de ta MRC.
-2. Le marché : montre qu'un client, ici, est prêt à payer.
-3. Le dossier : écris-le pour celui qui va le lire.
-
-On en parle en détail au webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », le vendredi 23 octobre à 19 h (heure de Montréal).
+On va plus loin au webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », le vendredi 23 octobre à 19 h (heure de Montréal).
 
 Inscription : lien en bio.
 
-#EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #Financement #PlanDAffaires #DéveloppementÉconomique #Québec #Montréal #TroisRivières #NouveauxArrivants
+#EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #Financement #PlanDAffaires #DéveloppementÉconomique #NouveauxArrivants #Québec #Montréal #TroisRivières #Futurpreneur
 
 ### Facebook
 Avant de chercher du financement, ouvre trois portes : le réseau, le marché et le dossier.
 
-Un bailleur de fonds se pose trois questions : qui te connaît ici ? Qui va t'acheter ? Ton dossier tient-il la route ? Le carrousel te donne trois gestes concrets pour chacune.
+Dans ce carrousel : les organismes à appeler en premier (Réseau accès PME, PME MTL, SADC et CAE, Entreprendre ici), les données gratuites pour chiffrer ton marché, comment obtenir ton dossier de crédit gratuitement et les conditions de Futurpreneur pour les nouveaux arrivants.
 
 On approfondit le sujet au webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », le vendredi 23 octobre 2026 à 19 h (heure de Montréal).
 

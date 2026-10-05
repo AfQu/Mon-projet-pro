@@ -1,64 +1,93 @@
 {
   "id": "s41-01-trois-portes",
   "format": "post",
-  "pilier": "Guides pratiques (réseau, marché) — tutoiement",
+  "pilier": "Guides pratiques (réseau, marché, dossier) — tutoiement",
   "slides": [
     {
       "gabarit": "couverture",
       "centre": true,
-      "surtitre": "Guide pratique",
+      "surtitre": "Guide pratique · à sauvegarder",
       "titre": "Les 3 portes à ouvrir avant de chercher du financement",
-      "sous_titre": "Réseau, marché, dossier. Dans cet ordre."
+      "sous_titre": "Qui appeler, quoi vérifier, quoi préparer. Avec les noms des organismes et des outils."
     },
     {
-      "gabarit": "texte",
-      "centre": true,
-      "titre": "Le financement arrive rarement en premier.",
-      "paragraphes": [
-        "Avant de te prêter, un bailleur de fonds se pose trois questions : qui te connaît ici ? Qui va t'acheter ? Ton dossier tient-il la route ?",
-        "Chaque question est une porte. <strong>Ouvre-les avant de déposer ta demande.</strong>"
-      ]
-    },
-    {
-      "gabarit": "porte",
-      "surtitre": "Porte 1",
-      "titre": "Le réseau",
-      "chapeau": "Un projet que l'écosystème connaît déjà inspire confiance.",
+      "gabarit": "ressources",
+      "surtitre": "Porte 1 · Le réseau",
+      "titre": "Qui appeler en premier",
       "items": [
-        "Repère l'organisme de développement économique de ta ville ou de ta MRC.",
-        "Présente ton projet à des gens de ton secteur, pas seulement à ton entourage.",
-        "Demande d'abord un rendez-vous, pas un prêt."
-      ]
+        { "nom": "Le Réseau accès PME de ta MRC", "texte": "Plus de 450 conseillers dans les MRC. Ils t'orientent vers les programmes et les fonds locaux d'investissement." },
+        { "nom": "À Montréal : PME MTL", "texte": "6 pôles de services selon ton secteur de l'île : accompagnement, financement, formation." },
+        { "nom": "En région : ta SADC ou ton CAE", "texte": "57 SADC et 10 CAE accompagnent et financent les petites entreprises hors des grands centres." },
+        { "nom": "Entreprendre ici", "texte": "Oriente les entrepreneurs issus de l'immigration vers les bons organismes de l'écosystème." }
+      ],
+      "source": "Sources : Gouvernement du Québec, PME MTL, Réseau des SADC et CAE, Entreprendre ici."
     },
     {
-      "gabarit": "porte",
-      "surtitre": "Porte 2",
-      "titre": "Le marché",
-      "chapeau": "Montre que quelqu'un, ici, est prêt à payer.",
+      "gabarit": "ressources",
+      "surtitre": "Porte 1 · Le réseau",
+      "titre": "Prépare ton premier\u00a0rendez-vous",
+      "coche": true,
       "items": [
-        "Parle à de vrais clients potentiels au Québec avant d'écrire tes prévisions.",
-        "Vise une première vente, une précommande ou une lettre d'intention.",
-        "Fixe tes prix d'après le marché local, pas d'après celui de ton pays d'origine."
+        { "nom": "Apporte une page, pas un plan", "texte": "Quoi, pour qui, où, avec quel budget. Le conseiller doit comprendre ton projet en deux minutes." },
+        { "nom": "Pose une question précise", "texte": "« Quels programmes et quels fonds s'appliquent à mon projet, à mon stade ? »" },
+        { "nom": "Annonce ton statut", "texte": "Citoyen, résident permanent ou permis de travail : certains programmes en dépendent." },
+        { "nom": "Repars avec un nom", "texte": "« À qui d'autre devrais-je parler ? » C'est comme ça que le réseau s'agrandit." }
       ]
     },
     {
-      "gabarit": "porte",
-      "surtitre": "Porte 3",
-      "titre": "Le dossier",
-      "chapeau": "Écris-le pour celui qui va le lire : le bailleur de fonds.",
+      "gabarit": "ressources",
+      "surtitre": "Porte 2 · Le marché",
+      "titre": "Chiffre ton marché avec des données gratuites",
       "items": [
-        "Forme juridique choisie et entreprise immatriculée au Registraire des entreprises.",
-        "Mise de fonds claire et prévisions réalistes, appuyées sur ton étude de marché.",
-        "Ton parcours mis en valeur : expérience, diplômes, premiers clients."
+        { "nom": "Statistique Canada · Profil du recensement", "texte": "Population, âge, revenus et langues de ta ville ou de ton quartier." },
+        { "nom": "ISDE · Données sur la performance financière", "texte": "Revenus, dépenses et marges moyennes de plus de 1 000 industries : compare tes prévisions à la réalité." },
+        { "nom": "Registraire des entreprises du Québec", "texte": "La recherche est publique : repère les concurrents déjà enregistrés dans ton secteur." }
+      ],
+      "source": "Sources : Statistique Canada ; Innovation, Sciences et Développement économique Canada ; Registraire des entreprises."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Porte 2 · Le marché",
+      "titre": "Prouve la demande avant de demander le prêt",
+      "coche": true,
+      "items": [
+        { "nom": "Parle à une dizaine de clients potentiels", "texte": "Ici, au Québec. Note leurs mots, le prix qu'ils paient aujourd'hui et leurs objections." },
+        { "nom": "Obtiens une preuve écrite", "texte": "Une précommande, une lettre d'intention ou un devis accepté vaut plus qu'un sondage." },
+        { "nom": "Compare ton prix", "texte": "Relève les prix de trois concurrents locaux et explique ton écart dans le dossier." }
       ]
     },
     {
-      "gabarit": "texte",
-      "centre": true,
-      "titre": "Réseau. Marché. Dossier.",
-      "sous_titre": "Ensuite, le financement.",
-      "paragraphes": [
-        "Ta demande arrive alors chez des gens qui te connaissent, avec la preuve qu'on t'achète et un dossier prêt à être lu."
+      "gabarit": "ressources",
+      "surtitre": "Porte 3 · Le dossier",
+      "titre": "Vérifie ton crédit et ton admissibilité",
+      "items": [
+        { "nom": "Ton dossier de crédit, gratuit", "texte": "Commande-le chez Equifax et TransUnion. Ta cote est gratuite en ligne chez Equifax, et chez TransUnion au Québec." },
+        { "nom": "Peu ou pas d'historique ici ?", "texte": "Futurpreneur a un volet nouveaux arrivants : moins de 60 mois au Canada, historique de crédit limité." },
+        { "nom": "Vérifie les conditions avant de monter le dossier", "texte": "Futurpreneur : 18 à 39 ans, citoyenneté ou résidence permanente, prêt jusqu'à 75 000 $ avec mentorat." }
+      ],
+      "source": "Sources : Agence de la consommation en matière financière du Canada ; Futurpreneur (critères consultés en octobre 2026)."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Porte 3 · Le dossier",
+      "titre": "Les pièces à réunir",
+      "coche": true,
+      "items": [
+        { "nom": "Le plan d'affaires", "texte": "Écrit pour le prêteur : marché local chiffré, preuves de demande, concurrents." },
+        { "nom": "Les prévisions financières", "texte": "Un budget de caisse mois par mois, appuyé sur les moyennes de ton industrie." },
+        { "nom": "Ta mise de fonds et ton bilan personnel", "texte": "Ce que tu apportes, d'où ça vient, ce que tu possèdes et ce que tu dois." },
+        { "nom": "Ton parcours", "texte": "CV, diplômes, expérience dans le secteur : même acquise à l'étranger, elle compte." }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Cette semaine",
+      "titre": "Trois gestes, moins d'une heure",
+      "coche": true,
+      "items": [
+        { "nom": "Trouve ton conseiller", "texte": "Réseau accès PME, PME MTL ou SADC selon l'endroit où tu t'installes." },
+        { "nom": "Commande ton dossier de crédit", "texte": "Equifax et TransUnion, gratuitement." },
+        { "nom": "Ouvre les données de ton industrie", "texte": "Sur le site d'ISDE, cherche ton secteur et note les marges moyennes." }
       ]
     },
     {

@@ -62,3 +62,15 @@ body { font-family: "DM Sans", sans-serif; color: var(--texte); -webkit-font-smo
 .evenement .heure { font-size: 34px; font-weight: 500; color: var(--or-titre); margin-top: 12px; }
 .evenement .lieu { font-size: 28px; font-weight: 400; color: var(--texte); opacity: .8; margin-top: 12px; }
 .appel { display: inline-block; margin-top: 56px; padding: 26px 48px; background: var(--or-titre); color: var(--noir); font-size: 32px; font-weight: 700; letter-spacing: .01em; }
+
+/* Ressources nommées (slides « porte » détaillées) */
+.ed .corps.haut { justify-content: flex-start; padding-top: 40px; }
+.ressources { list-style: none; margin-top: 44px; }
+.ressources li { padding: 24px 0 24px 56px; border-top: 1.5px solid var(--filet); position: relative; }
+.ressources li:last-child { border-bottom: 1.5px solid var(--filet); }
+.ressources li::before { content: attr(data-n); position: absolute; left: 0; top: 31px; font-size: 22px; font-weight: 700; letter-spacing: .08em; color: var(--or-titre); }
+.ressources.coche li::before { content: ""; top: 30px; width: 24px; height: 24px; border: 2px solid var(--or-titre); }
+.ressources .nom { display: block; font-size: 33px; font-weight: 700; line-height: 1.25; color: var(--or-titre); margin-bottom: 6px; text-wrap: pretty; }
+.ressources .explication { display: block; font-size: 30px; line-height: 1.38; color: var(--texte); text-wrap: pretty; }
+.source { margin-top: 22px; font-size: 19px; line-height: 1.4; color: var(--texte); opacity: .62; text-wrap: pretty; }
+.ed .corps.haut .titre { max-width: 640px; font-size: 74px; }
