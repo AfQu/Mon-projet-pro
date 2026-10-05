@@ -259,6 +259,38 @@ def rendre(chemin_json):
     return ok
 
 
+def legendes(semaine, titre):
+    """Légendes Instagram et Facebook d'un visuel, lues dans <semaine>/legendes.md."""
+    md = (semaine / "legendes.md").read_text(encoding="utf-8")
+    bloc = md.split(f"« {titre} »", 1)[1].split("\n## ", 1)[0]
+    out = {}
+    for plateforme in ("Instagram", "Facebook", "LinkedIn"):
+        m = re.search(rf"### {plateforme}\n(.*?)(?=\n### |\Z)", bloc, re.S)
+        if m:
+            out[plateforme.lower()] = m.group(1).strip() + "\n"
+    return out
+
+
+def publier(chemin_json):
+    """Dossiers prêts à téléverser : publication/<id>/instagram et facebook (images numérotées + légende)."""
+    import shutil
+    src = Path(chemin_json).resolve()
+    spec = json.loads(src.read_text(encoding="utf-8"))
+    semaine = src.parent.parent
+    textes = legendes(semaine, spec["titre"])
+    variante = {"instagram": "", "facebook": "-fb"}
+    for plateforme, suffixe in variante.items():
+        d = semaine / "publication" / spec["id"] / plateforme
+        shutil.rmtree(d, ignore_errors=True)
+        d.mkdir(parents=True)
+        for n in range(1, len(spec["slides"]) + 1):
+            base = semaine / f"{spec['id']}-{n:02d}.png"
+            choix = semaine / f"{spec['id']}-{n:02d}{suffixe}.png"
+            shutil.copy(choix if suffixe and choix.exists() else base, d / f"{n:02d}.png")
+        (d / "legende.txt").write_text(textes[plateforme], encoding="utf-8")
+        print(f"{d} : {len(spec['slides'])} images + legende.txt")
+
+
 def apercu(dossier):
     """Planche contact de tous les PNG d'une semaine, regroupés par visuel."""
     d = Path(dossier)
@@ -297,6 +329,9 @@ if __name__ == "__main__":
     cmd, *args = sys.argv[1:]
     if cmd == "rendre":
         sys.exit(0 if all([rendre(a) for a in args]) else 1)
+    elif cmd == "publier":
+        for a in args:
+            publier(a)
     elif cmd == "apercu":
         for a in args:
             apercu(a)

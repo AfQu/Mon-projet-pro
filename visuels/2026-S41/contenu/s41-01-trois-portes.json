@@ -1,6 +1,7 @@
 {
   "id": "s41-01-trois-portes",
   "format": "post",
+  "titre": "Les 3 portes à ouvrir avant de chercher du financement",
   "pilier": "Guides pratiques (réseau, marché, dossier) — tutoiement",
   "slides": [
     {
@@ -63,7 +64,7 @@
       "items": [
         { "nom": "Ton dossier de crédit, gratuit", "texte": "Commande-le chez Equifax et TransUnion. Ta cote est gratuite en ligne chez Equifax, et chez TransUnion au Québec." },
         { "nom": "Peu ou pas d'historique ici ?", "texte": "Futurpreneur a un volet nouveaux arrivants : moins de 60 mois au Canada, historique de crédit limité." },
-        { "nom": "Vérifie les conditions avant de monter le dossier", "texte": "Futurpreneur : 18 à 39 ans, citoyenneté ou résidence permanente, prêt jusqu'à 75 000 $ avec mentorat." }
+        { "nom": "Les conditions de Futurpreneur", "texte": "18 à 39 ans, citoyenneté ou résidence permanente. Prêt jusqu'à 75 000 $, avec du mentorat." }
       ],
       "source": "Sources : Agence de la consommation en matière financière du Canada ; Futurpreneur (critères consultés en octobre 2026)."
     },
@@ -85,7 +86,7 @@
       "titre": "Trois gestes, moins d'une heure",
       "coche": true,
       "items": [
-        { "nom": "Trouve ton conseiller", "texte": "Réseau accès PME, PME MTL ou SADC selon l'endroit où tu t'installes." },
+        { "nom": "Trouve ton conseiller", "texte": "Réseau accès PME, PME MTL, SADC ou CAE, selon l'endroit où tu t'installes." },
         { "nom": "Commande ton dossier de crédit", "texte": "Equifax et TransUnion, gratuitement." },
         { "nom": "Ouvre les données de ton industrie", "texte": "Sur le site d'ISDE, cherche ton secteur et note les marges moyennes." }
       ]
