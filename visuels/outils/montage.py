@@ -3,13 +3,13 @@
 
 Usage :
     python3 visuels/outils/montage.py brute.mp4 sortie.mp4 --nom "Rouba Hamadi" \
-        --fonction "Co-fondatrice et présidente" [--mots mots.json] [--sans-coupe] [--outro outro.json]
+        --fonction "Co-fondatrice et présidente" [--script script.md] [--modele medium] [--mots mots.json] [--sans-coupe]
 
 Étapes :
   1. recadrage 1080 × 1920, 30 i/s ;
   2. transcription mot à mot en français (faster-whisper, modèle « small », exécuté ici :
      la vidéo ne quitte pas l'environnement). Avec --mots, on fournit les mots déjà minutés ;
-  3. suppression des silences de plus de 0,6 s (sauf --sans-coupe) ;
+  3. suppression des silences de plus de 0,6 s, détectés dans le son (sauf --sans-coupe) ;
   4. sous-titres incrustés : 3 ou 4 mots à la fois, DM Sans, mot prononcé en or,
      placés au-dessus des 250 px du bas (zone des boutons Instagram) ;
   5. bandeau « L'ÉQUIPE » + nom + fonction (style équipe de la charte) de 0,8 s à 4,5 s ;
@@ -39,36 +39,64 @@ def duree(fichier):
     return float(out.strip())
 
 
-def transcrire(fichier):
+LEXIQUE = ("Affaires Québec, Rouba Hamadi, Rénald Rabathaly, Réseau accès PME, PME MTL, SADC, CAE, MRC, "
+           "Entreprendre ici, Futurpreneur, Equifax, TransUnion, ISDE, Statistique Canada, Registraire des entreprises, "
+           "MEIE, MIFI, IDÉ Trois-Rivières, Mauricie, bailleur de fonds, mise de fonds, plan d'affaires.")
+
+
+def transcrire(fichier, script=None, modele="small"):
+    """Transcription locale ; le lexique et le script lu orientent la reconnaissance des noms propres."""
     from faster_whisper import WhisperModel
-    modele = WhisperModel("small", device="cpu", compute_type="int8")
-    segments, _ = modele.transcribe(fichier, language="fr", word_timestamps=True, vad_filter=True)
-    return [{"mot": w.word.strip(), "debut": round(w.start, 3), "fin": round(w.end, 3)}
-            for s in segments for w in s.words if w.word.strip()]
+    invite = LEXIQUE + (" " + " ".join(script.split())[-600:] if script else "")
+    m = WhisperModel(modele, device="cpu", compute_type="int8")
+    segments, _ = m.transcribe(fichier, language="fr", word_timestamps=True, vad_filter=True, initial_prompt=invite)
+    mots = []
+    for s in segments:
+        for w in s.words:
+            txt = w.word.strip()
+            if not txt:
+                continue
+            if mots and txt in "?!:;":
+                mots[-1]["mot"] += "\u00a0" + txt; continue
+            # « s' » + « y » ou « 'y » : on recolle au mot précédent, sans espace
+            if mots and (txt.startswith("'") or txt.startswith("’") or mots[-1]["mot"].endswith(("'", "’"))) or (mots and not w.word.startswith(" ")):
+                mots[-1]["mot"] += txt.replace("'", "’"); mots[-1]["fin"] = round(w.end, 3)
+            else:
+                mots.append({"mot": txt.replace("'", "’"), "debut": round(w.start, 3), "fin": round(w.end, 3)})
+    return mots
 
 
-def intervalles_parole(mots, total):
-    """Plages à garder : la parole, en fusionnant les pauses courtes."""
-    if not mots:
-        return [(0.0, total)]
-    plages = []
-    d, f = mots[0]["debut"], mots[0]["fin"]
-    for m in mots[1:]:
-        if m["debut"] - f > SILENCE_MAX:
-            plages.append((d, f)); d = m["debut"]
-        f = m["fin"]
-    plages.append((d, f))
-    return [(max(0.0, a - MARGE_COUPE), min(total, b + MARGE_COUPE)) for a, b in plages]
+def plages_son(fichier, total):
+    """Plages à garder : tout sauf les silences de plus de SILENCE_MAX (détectés dans le son par ffmpeg)."""
+    err = subprocess.run(["ffmpeg", "-v", "info", "-i", fichier, "-af", f"silencedetect=noise=-35dB:d={SILENCE_MAX}",
+                          "-f", "null", "-"], capture_output=True, text=True).stderr
+    debuts = [float(x.split("silence_start: ")[1].split()[0]) for x in err.splitlines() if "silence_start: " in x]
+    fins = [float(x.split("silence_end: ")[1].split()[0]) for x in err.splitlines() if "silence_end: " in x]
+    fins += [total] * (len(debuts) - len(fins))
+    plages, t = [], 0.0
+    for d, f in zip(debuts, fins):
+        a, b = d + MARGE_COUPE, f - MARGE_COUPE
+        if b - a > 0.05:
+            if a > t: plages.append((t, a))
+            t = b
+    if total > t: plages.append((t, total))
+    return plages or [(0.0, total)]
 
 
 def recaler(mots, plages):
-    """Temps des mots après suppression des silences."""
-    out, decalage, fin_prec = [], 0.0, 0.0
-    for a, b in plages:
-        decalage += a - fin_prec; fin_prec = b
-        for m in mots:
-            if a <= m["debut"] < b:
-                out.append({**m, "debut": round(m["debut"] - decalage, 3), "fin": round(min(m["fin"], b) - decalage, 3)})
+    """Temps des mots après suppression des silences (un temps tombé dans un silence est ramené à sa bordure)."""
+    def nouveau(t):
+        acc = 0.0
+        for a, b in plages:
+            if t < a: return acc
+            if t <= b: return acc + (t - a)
+            acc += b - a
+        return acc
+    out = []
+    for m in mots:
+        d, f = nouveau(m["debut"]), nouveau(m["fin"])
+        if f - d > 0.01:
+            out.append({**m, "debut": round(d, 3), "fin": round(f, 3)})
     return out
 
 
@@ -147,6 +175,8 @@ def main():
     ap.add_argument("--nom", required=True); ap.add_argument("--fonction", required=True)
     ap.add_argument("--mots", help="JSON de mots minutés (sinon transcription automatique)")
     ap.add_argument("--sans-coupe", action="store_true")
+    ap.add_argument("--script", help="script lu (Markdown ou texte) pour guider la transcription")
+    ap.add_argument("--modele", default="small", help="small (rapide) ou medium (plus précis, plus lent)")
     ap.add_argument("--outro", default=os.path.join(HERE, "exemples", "outro-video.json"))
     a = ap.parse_args()
     tmp = tempfile.mkdtemp()
@@ -158,11 +188,12 @@ def main():
        "-c:v", "libx264", "-crf", "18", "-c:a", "aac", "-ar", "48000", "-ac", "2", norm)
 
     # 2. mots
-    mots = json.load(open(a.mots, encoding="utf-8")) if a.mots else transcrire(norm)
+    script = open(a.script, encoding="utf-8").read() if a.script else None
+    mots = json.load(open(a.mots, encoding="utf-8")) if a.mots else transcrire(norm, script, a.modele)
     total = duree(norm)
 
     # 3. coupe des silences
-    plages = [(0.0, total)] if a.sans_coupe else intervalles_parole(mots, total)
+    plages = [(0.0, total)] if a.sans_coupe else plages_son(norm, total)
     mots = recaler(mots, plages)
     coupe = os.path.join(tmp, "coupe.mp4")
     sel = "+".join(f"between(t,{x:.3f},{y:.3f})" for x, y in plages)
