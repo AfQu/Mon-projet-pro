@@ -19,3 +19,6 @@ Les pages officielles ont été vérifiées le 5 octobre 2026 par recherche (le 
 | Webinaire gratuit, vendredi 23 octobre 2026, 19 h (heure de Montréal) | Bandeau du site affairesquebec.ca ; page Eventbrite |
 
 Conseils non chiffrés (premier rendez-vous, entretiens clients, preuve écrite, pièces du dossier) : pratiques d'accompagnement d'AQ, sans statistique.
+
+## Reel « 3 portes » (s41-reel-trois-portes.mp4)
+Mêmes sources que le carrousel : Réseau accès PME (plus de 450 conseillers, Gouvernement du Québec) ; dossier de crédit gratuit chez Equifax et TransUnion (Agence de la consommation en matière financière du Canada) ; webinaire du 23 octobre 2026. Musique : synthétisée par `visuels/outils/musique.py`, libre de droits.

@@ -1,0 +1,7 @@
+[
+  {"type": "titre", "duree": 3.6, "lignes": ["3 portes", "à ouvrir"], "sous": ["avant de chercher", "du financement"], "filet": true},
+  {"type": "pile", "duree": 3.6, "mots": ["Le réseau.", "Le marché.", "Le dossier."], "pied": "Dans cet ordre."},
+  {"type": "titre", "duree": 3.8, "lignes": ["Plus de 450", "conseillers"], "sous": ["dans les MRC du Québec\u00a0:", "le Réseau accès PME"], "filet": true},
+  {"type": "titre", "duree": 3.8, "lignes": ["Ton dossier", "de crédit\u00a0?"], "sous": ["Gratuit chez Equifax", "et TransUnion."], "filet": true},
+  {"type": "logo", "duree": 4.6, "accroche": "WEBINAIRE GRATUIT", "petit": "VENDREDI", "grand": "23.10.26", "note": "19 h · heure de Montréal · en ligne"}
+]

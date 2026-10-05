@@ -30,3 +30,20 @@ Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-
 Laquelle de ces trois portes est la plus difficile à ouvrir pour toi ?
 
 #EntrepreneuriatImmigrant #AffairesQuébec
+
+## 2. Reel « 3 portes à ouvrir avant de chercher du financement »
+Fichier : `s41-reel-trois-portes.mp4` (1080 × 1920, 19 s, son inclus). Même légende sur Instagram et Facebook, sauf le lien.
+
+### Instagram
+Avant de chercher du financement, ouvre trois portes : le réseau, le marché, le dossier. Le détail (organismes, outils gratuits, pièces à préparer) est dans notre carrousel.
+
+Webinaire gratuit le vendredi 23 octobre à 19 h (heure de Montréal). Inscription : lien en bio.
+
+#EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #Financement #NouveauxArrivants #Québec #Montréal
+
+### Facebook
+Avant de chercher du financement, ouvre trois portes : le réseau, le marché, le dossier.
+
+Webinaire gratuit le vendredi 23 octobre 2026 à 19 h (heure de Montréal) : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
+
+#EntrepreneuriatImmigrant #AffairesQuébec
