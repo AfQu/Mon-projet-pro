@@ -23,7 +23,7 @@ OUTILS = Path(__file__).resolve().parent
 ASSETS = OUTILS.parent / "assets"
 CHROMIUM = "/opt/pw-browsers/chromium"
 MARGE = 88
-ZONE_SURE_V = {"story": 250}  # stories et Reels : rien d'important dans les 250 px du haut et du bas
+ZONE_SURE_V = {"story": 250, "banniere-linkedin": 40, "couverture-linkedin": 24}  # stories et Reels : rien d'important dans les 250 px du haut et du bas
 
 FORMATS = {
     "post": (1080, 1350),
@@ -131,7 +131,16 @@ def g_evenement(d):
     </div>"""
 
 
-GABARITS = {"couverture": g_couverture, "texte": g_texte, "porte": g_porte, "ressources": g_ressources, "evenement": g_evenement}
+def g_banniere(d):
+    """Bannière ou couverture LinkedIn : texte calé à droite (la photo de profil masque la gauche)."""
+    return f"""
+    <div class="corps banniere">
+      <p class="b-titre">{t(d["titre"])}</p>
+      {f'<p class="b-sous">{t(d["sous_titre"])}</p>' if d.get("sous_titre") else ""}
+    </div>"""
+
+
+GABARITS = {"banniere": g_banniere, "couverture": g_couverture, "texte": g_texte, "porte": g_porte, "ressources": g_ressources, "evenement": g_evenement}
 AVEC_LOGO = {"evenement"}  # slides qui portent le logo complet : pas de filigrane
 
 
@@ -141,11 +150,14 @@ def page_html(slide, n, total, fmt):
     logo = gabarit in AVEC_LOGO
     filigrane = "" if logo else f'<img class="filigrane" src="../assets/symbole-or.png" alt="" style="--echelle:{w / 1080}">'
     pagination = f"{n}/{total}" + ("" if n == total else NBSP + "→")
-    if logo:
+    if gabarit == "banniere":
+        pied = ""
+    elif logo:
         pied = '<div class="pied avec-logo"><img class="logo" src="../assets/logo-3-2-fond-sombre.png" alt="Affaires Québec">'
     else:
         pied = '<div class="pied"><span class="signature">Affaires Québec</span>'
-    pied += f'<span class="pagination">{pagination}</span></div>' if total > 1 else "</div>"
+    if pied:
+        pied += f'<span class="pagination">{pagination}</span></div>' if total > 1 else "</div>"
     classes = f"slide ed fmt-{fmt}" + (" centre" if slide.get("centre") else "")
     return f"""<!doctype html><html lang="fr-CA"><head><meta charset="utf-8">
 <link rel="stylesheet" href="aq.css"><style>.slide{{width:{w}px;height:{h}px}}</style></head>

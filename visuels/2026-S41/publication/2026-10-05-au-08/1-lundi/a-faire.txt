@@ -1,0 +1,3 @@
+Pas de légende. Page AQ : Modifier la page → En-tête → Image de couverture. Profils : crayon sur la bannière → Modifier l'image de fond. Vérifier sur mobile que la photo de profil ne masque pas le texte (le texte est calé à droite pour cette raison).
+
+Pas de légende. Ajouter le sticker « Lien » dans l'espace vide au-dessus de « Inscription : touche le lien ci-dessus », vers https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379 (texte du sticker : « S'inscrire »). L'ajouter ensuite à la bulle « À la une » Événements.

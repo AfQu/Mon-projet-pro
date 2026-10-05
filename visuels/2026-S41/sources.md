@@ -22,3 +22,8 @@ Conseils non chiffrés (premier rendez-vous, entretiens clients, preuve écrite,
 
 ## Reel « 3 portes » (s41-reel-trois-portes.mp4)
 Mêmes sources que le carrousel : Réseau accès PME (plus de 450 conseillers, Gouvernement du Québec) ; dossier de crédit gratuit chez Equifax et TransUnion (Agence de la consommation en matière financière du Canada) ; webinaire du 23 octobre 2026. Musique : synthétisée par `visuels/outils/musique.py`, libre de droits.
+
+## Contenus du 5 au 8 octobre (bannières, Reel « idée reçue », vidéo « Rouba répond »)
+- 450 conseillers, fonds locaux d'investissement, PME MTL, SADC, dossier de crédit gratuit : mêmes sources que le carrousel (ci-dessus).
+- Rouba Hamadi, ancienne conseillère puis directrice générale d'Entreprendre ici : fait validé dans le skill (`references/legendes.md`, « Faits utilisables sur l'équipe »). Aucun nombre d'années cité (à harmoniser, voir `PLAN.md`).
+- Phrase d'expérience personnelle de Rouba dans le script : à adapter par Rouba, ce n'est pas une statistique.

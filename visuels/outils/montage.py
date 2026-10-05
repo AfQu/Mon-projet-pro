@@ -3,7 +3,7 @@
 
 Usage :
     python3 visuels/outils/montage.py brute.mp4 sortie.mp4 --nom "Rouba Hamadi" \
-        --fonction "Co-fondatrice et présidente" [--script script.md] [--modele medium] [--mots mots.json] [--sans-coupe]
+        --fonction "Cofondatrice et présidente" [--script script.md] [--modele medium] [--mots mots.json] [--sans-coupe]
 
 Étapes :
   1. recadrage 1080 × 1920, 30 i/s ;

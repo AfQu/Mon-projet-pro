@@ -92,3 +92,15 @@ body { font-family: "DM Sans", sans-serif; color: var(--texte); -webkit-font-smo
 .fmt-linkedin .evenement { margin-top: 40px; padding: 30px 0; }
 .fmt-linkedin .appel { margin-top: 40px; }
 .fmt-linkedin .pour { margin-top: 24px; }
+
+/* Bannières LinkedIn : texte à droite, arche à gauche (zone masquée par la photo de profil) */
+.fmt-banniere-linkedin.ed, .fmt-couverture-linkedin.ed { padding: 0 var(--marge); }
+.corps.banniere { align-items: flex-end; text-align: right; justify-content: center; }
+.fmt-banniere-linkedin .filigrane, .fmt-couverture-linkedin .filigrane { right: auto; left: 40px; top: -30px; width: 360px; opacity: .22; }
+.fmt-couverture-linkedin .filigrane { width: 200px; top: -14px; }
+.b-titre { font-family: "Caslon", serif; color: var(--or-titre); line-height: 1.08; text-wrap: balance; }
+.b-sous { font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--texte); margin-top: 18px; }
+.fmt-banniere-linkedin .b-titre { font-size: 64px; max-width: 980px; }
+.fmt-banniere-linkedin .b-sous { font-size: 22px; }
+.fmt-couverture-linkedin .b-titre { font-size: 40px; max-width: 760px; }
+.fmt-couverture-linkedin .b-sous { font-size: 14px; margin-top: 10px; }

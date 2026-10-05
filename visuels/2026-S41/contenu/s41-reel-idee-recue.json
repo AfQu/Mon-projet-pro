@@ -1,0 +1,6 @@
+[
+  {"type": "mythe", "duree": 5.0, "mythe": "Il faut d'abord trouver le financement.", "realite": "Le financement arrive après le réseau, le marché et le dossier."},
+  {"type": "compteur", "duree": 4.0, "transition": "glisse", "prefixe": "Plus de", "valeur": 450, "label": ["conseillers", "dans les MRC du Québec"], "source": "Source : Gouvernement du Québec, Réseau accès PME"},
+  {"type": "machine", "duree": 4.6, "transition": "coupe", "surtitre": "QUESTION", "texte": "Ton dossier de crédit est-il prêt ?", "reponse": "Commande-le gratuitement chez Equifax et TransUnion avant ton premier rendez-vous."},
+  {"type": "logo", "duree": 4.4, "transition": "cercle", "accroche": "WEBINAIRE GRATUIT", "petit": "VENDREDI", "grand": "23.10.26", "note": "19 h · heure de Montréal · en ligne"}
+]

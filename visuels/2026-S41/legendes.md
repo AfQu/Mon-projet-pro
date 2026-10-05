@@ -76,3 +76,82 @@ Pas de légende pour une story. À ajouter dans l'application :
 
 ### Facebook
 Mêmes images en story Facebook (le sondage n'existe pas partout sur Facebook : à défaut, publier la story 1 seulement).
+
+## 5. Bannières « Couverture de la page LinkedIn AQ », « Bannière LinkedIn de Rouba », « Bannière LinkedIn de Rénald »
+Fichiers : `s41-05-linkedin-couverture-page.png` (1128 × 191), `s41-06-linkedin-banniere-rouba.png` et `s41-07-linkedin-banniere-renald.png` (1584 × 396). À installer lundi 5 octobre, avant le post LinkedIn de mardi.
+
+### LinkedIn
+Pas de légende. Page AQ : Modifier la page → En-tête → Image de couverture. Profils : crayon sur la bannière → Modifier l'image de fond. Vérifier sur mobile que la photo de profil ne masque pas le texte (le texte est calé à droite pour cette raison).
+
+## 6. Story « Story : lien d'inscription au webinaire »
+Fichier : `s41-08-story-webinaire-lien.png`. Lundi 5 octobre, Instagram et Facebook.
+
+### Instagram
+Pas de légende. Ajouter le sticker « Lien » dans l'espace vide au-dessus de « Inscription : touche le lien ci-dessus », vers https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379 (texte du sticker : « S'inscrire »). L'ajouter ensuite à la bulle « À la une » Événements.
+
+## 7. Reel « Reel idée reçue »
+Fichiers : `s41-reel-idee-recue.mp4` (1080 × 1920, 18 s, son inclus) et sa couverture `s41-09-couverture-reel-idee-recue.png`. Mercredi 7 octobre.
+
+### Instagram
+« Il faut d'abord trouver le financement. » C'est l'idée reçue qu'on entend le plus souvent chez les personnes qui démarrent au Québec.
+
+En réalité, le financement arrive après trois portes : le réseau, le marché et le dossier.
+
+Deux gestes à faire cette semaine :
+• Trouve le conseiller du Réseau accès PME de ta MRC (plus de 450 au Québec), PME MTL à Montréal, ou ta SADC en région.
+• Commande ton dossier de crédit, gratuit chez Equifax et TransUnion.
+
+On détaille tout au webinaire gratuit du vendredi 23 octobre à 19 h (heure de Montréal). Inscription : lien en bio.
+
+#EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #Financement #NouveauxArrivants #DéveloppementÉconomique #Québec #Montréal #Sherbrooke #Gatineau
+
+### Facebook
+« Il faut d'abord trouver le financement. » En réalité, le financement arrive après le réseau, le marché et le dossier.
+
+Deux gestes concrets : trouver le conseiller du Réseau accès PME de ta MRC (PME MTL à Montréal, SADC en région) et commander ton dossier de crédit, gratuit chez Equifax et TransUnion.
+
+Webinaire gratuit le vendredi 23 octobre 2026 à 19 h (heure de Montréal) : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
+
+Tu avais entendu cette idée reçue, toi aussi ?
+
+#EntrepreneuriatImmigrant #AffairesQuébec
+
+## 8. Story « Story : pose ta question à Rouba »
+Fichier : `s41-10-story-question-rouba.png`. Mercredi 7 octobre, Instagram.
+
+### Instagram
+Pas de légende. Ajouter le sticker « Questions » dans l'espace vide (texte : « Ta question pour Rouba »). Les questions reçues alimentent les prochaines vidéos « Rouba répond » : les transmettre dans la session.
+
+## 9. Vidéo « Vidéo Rouba répond »
+Fichiers : vidéo montée (après réception de la vidéo brute, voir `script-2026-10-08-rouba.md`) et couverture `s41-11-couverture-rouba-repond.png`. Jeudi 8 octobre.
+
+### Instagram
+Tu arrives au Québec avec un projet d'entreprise ? Ne commence pas par la banque.
+
+Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, t'explique par quelle porte entrer :
+• le conseiller du Réseau accès PME de ta MRC (PME MTL à Montréal, SADC en région) ;
+• une seule page de projet : quoi, pour qui, avec quel budget ;
+• une question précise : quels programmes s'appliquent à mon projet ?
+
+Webinaire gratuit le vendredi 23 octobre à 19 h (heure de Montréal). Inscription : lien en bio.
+
+#RoubaRépond #EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #NouveauxArrivants #Québec #Montréal #TroisRivières
+
+### Facebook
+J'arrive au Québec avec un projet d'entreprise : par où je commence ? Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, répond en moins d'une minute.
+
+Webinaire gratuit le vendredi 23 octobre 2026 à 19 h (heure de Montréal) : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
+
+Et vous, quelle est la première porte que vous avez ouverte ?
+
+#EntrepreneuriatImmigrant #AffairesQuébec
+
+### LinkedIn
+Une personne qui arrive au Québec avec un projet d'entreprise pense souvent d'abord au financement. Pourtant, la première porte à ouvrir est celle du réseau.
+
+Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, ancienne conseillère puis directrice générale d'Entreprendre ici, explique par où commencer : le conseiller du Réseau accès PME de sa MRC, une page de projet claire et une question précise sur les programmes.
+
+Le vendredi 23 octobre 2026 à 19 h (heure de Montréal), nous animons un webinaire gratuit : « De l'idée au financement : démarrer son entreprise au Québec ».
+Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
+
+#EntrepreneuriatImmigrant #DéveloppementÉconomique #Québec
