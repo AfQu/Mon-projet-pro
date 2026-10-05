@@ -4,7 +4,7 @@ Exécutée automatiquement chaque jeudi vers 17 h 45 (heure de Montréal). Elle 
 
 ## 1. Préparer l'environnement
 ```
-pip install -q pillow playwright numpy
+pip install -q pillow playwright numpy faster-whisper
 apt-get install -y -q hunspell hunspell-fr   # correcteur fr_CA
 git fetch origin claude/wonderful-bell-06kyk8 && git checkout claude/wonderful-bell-06kyk8 && git pull
 ```
@@ -34,7 +34,9 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
   7. la légende Instagram/Facebook (et LinkedIn si pertinent).
 - Fournir aussi la **couverture du Reel** (texte seul si aucune photo n'est disponible).
 - Dans `programme.md` et dans le message final, mettre en tête : « Vidéo à tourner : <sujet>, par <prénom>, à envoyer avant le <date> ».
-- Quand la vidéo arrive : intro et outro animées (`reel.py`), couverture. Les sous-titres se font avec l'outil automatique d'Instagram ou de CapCut (pas de transcription automatique ici).
+- Quand la vidéo brute arrive (déposée dans la session) : `python3 visuels/outils/montage.py brute.mp4 finale.mp4 --nom "Rouba Hamadi" --fonction "Co-fondatrice et présidente"`. Le script recadre en 1080 × 1920, transcrit en français sur place (faster-whisper ; la vidéo ne sort pas de l'environnement), coupe les silences de plus de 0,6 s, incruste les sous-titres (mot prononcé en or, au-dessus des 250 px du bas), ajoute le bandeau « L'ÉQUIPE » et le carton de fin.
+- **Relire `finale.srt`** : la transcription se trompe surtout sur les noms propres (organismes, programmes, sigles). Corriger les mots dans `finale-mots.json`, puis relancer avec `--mots finale-mots.json`.
+- Regarder des images clés (début avec bandeau, milieu, carton de fin) avant de livrer, et fournir la couverture.
 
 ## 3 ter. Varier les Reels en motion design
 - Moteur : `visuels/outils/reel.py`. Formes disponibles : `titre`, `pile`, `compteur` (chiffre qui défile), `liste` (cases cochées dans une seule scène), `machine` (question tapée puis réponse), `mythe` (idée reçue barrée puis la réalité), `logo`. Transitions : `volet`, `fondu`, `glisse`, `cercle`, `coupe`. Exemple complet : `visuels/outils/exemples/reel-formes.json`.
