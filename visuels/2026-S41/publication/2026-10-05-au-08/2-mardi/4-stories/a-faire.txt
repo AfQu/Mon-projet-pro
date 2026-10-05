@@ -1,3 +1,0 @@
-Pas de légende pour une story. À ajouter dans l'application :
-- Story 1 : sticker « Lien » vers la publication du carrousel, ou repartager directement le carrousel (avion en papier → « Ajouter à votre story ») juste après.
-- Story 2 : sticker « Sondage » dans l'espace vide au centre, question déjà sur le visuel. Réponses : « Le réseau », « Le marché », « Le dossier ».

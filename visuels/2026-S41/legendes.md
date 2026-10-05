@@ -90,7 +90,7 @@ Fichier : `s41-08-story-webinaire-lien.png`. Lundi 5 octobre, Instagram et Faceb
 Pas de légende. Ajouter le sticker « Lien » dans l'espace vide au-dessus de « Inscription : touche le lien ci-dessus », vers https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379 (texte du sticker : « S'inscrire »). L'ajouter ensuite à la bulle « À la une » Événements.
 
 ## 7. Reel « Reel idée reçue »
-Fichiers : `s41-reel-idee-recue.mp4` (1080 × 1920, 18 s, son inclus) et sa couverture `s41-09-couverture-reel-idee-recue.png`. Mercredi 7 octobre.
+Fichiers : `s41-reel-idee-recue.mp4` (1080 × 1920, 18 s, son inclus) et sa couverture `s41-09-couverture-reel-idee-recue.png`. Mardi 6 octobre (déplacé : le carrousel a été publié le 4 au soir).
 
 ### Instagram
 « Il faut d'abord trouver le financement. » C'est l'idée reçue qu'on entend le plus souvent chez les personnes qui démarrent au Québec.

@@ -29,7 +29,7 @@ Après le 23 octobre : plus aucune mention d'inscription ; post « Merci + repla
 ## Visuels prévus par le brief
 | Semaine | Visuel | État |
 | --- | --- | --- |
-| S41 | 1. Carrousel « Les 3 portes » | ✅ fait (publié le 6 oct.) |
+| S41 | 1. Carrousel « Les 3 portes » | ✅ publié le 4 oct. au soir |
 | S41 | 2. Couverture Reel « Rouba répond » (modèle avec la question en titre) | ⏳ attend une photo de Rouba |
 | S41 | 3. Post LinkedIn annonce webinaire | ✅ fait |
 | S41 | 4. Couverture page LinkedIn AQ + bannières Rouba et Rénald | à faire (bannières : photos optionnelles) |

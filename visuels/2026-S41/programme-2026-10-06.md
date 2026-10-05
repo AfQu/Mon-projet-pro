@@ -1,5 +1,7 @@
 # Programme de publication — mardi 6 octobre 2026
 
+> **Remplacé** : le carrousel a été publié le 4 octobre au soir. Programme à jour : `programme-2026-10-05-au-08.md` (lot `publication/2026-10-05-au-08`).
+
 Heures de Montréal (identiques à la Martinique jusqu'au 1er novembre). Créneaux proposés à ajuster avec les statistiques de la page.
 
 | Heure | Plateforme | Quoi | Fichiers | Légende |

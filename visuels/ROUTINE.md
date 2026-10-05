@@ -13,7 +13,8 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
 ## 2. Lire avant de produire
 1. `visuels/PLAN.md` (charte, ligne éditoriale, visuels prévus, accords).
 2. Le skill `.claude/skills/aq-creation-contenu/` (SKILL.md et `references/`).
-3. Les semaines déjà produites (`visuels/2026-S*/legendes.md`) pour ne pas se répéter et respecter les proportions des piliers.
+3. `visuels/publie.md` : ce qui est déjà publié (ne jamais le reproposer ; tenir compte des écarts avec les programmes).
+4. Les semaines déjà produites (`visuels/2026-S*/legendes.md`) pour ne pas se répéter et respecter les proportions des piliers.
 
 ## 3. Choisir le contenu de la période
 - D'abord les visuels du `PLAN.md` dont la date tombe dans la période et qui ne sont pas bloqués (⛔).
