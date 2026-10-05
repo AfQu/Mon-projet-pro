@@ -1,0 +1,78 @@
+{
+  "id": "s41-01-trois-portes",
+  "format": "post",
+  "pilier": "Guides pratiques (réseau, marché) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Guide pratique",
+      "titre": "Les 3 portes à ouvrir avant de chercher du financement",
+      "sous_titre": "Réseau, marché, dossier. Dans cet ordre."
+    },
+    {
+      "gabarit": "texte",
+      "centre": true,
+      "titre": "Le financement arrive rarement en premier.",
+      "paragraphes": [
+        "Avant de te prêter, un bailleur de fonds se pose trois questions : qui te connaît ici ? Qui va t'acheter ? Ton dossier tient-il la route ?",
+        "Chaque question est une porte. <strong>Ouvre-les avant de déposer ta demande.</strong>"
+      ]
+    },
+    {
+      "gabarit": "porte",
+      "surtitre": "Porte 1",
+      "titre": "Le réseau",
+      "chapeau": "Un projet que l'écosystème connaît déjà inspire confiance.",
+      "items": [
+        "Repère l'organisme de développement économique de ta ville ou de ta MRC.",
+        "Présente ton projet à des gens de ton secteur, pas seulement à ton entourage.",
+        "Demande d'abord un rendez-vous, pas un prêt."
+      ]
+    },
+    {
+      "gabarit": "porte",
+      "surtitre": "Porte 2",
+      "titre": "Le marché",
+      "chapeau": "Montre que quelqu'un, ici, est prêt à payer.",
+      "items": [
+        "Parle à de vrais clients potentiels au Québec avant d'écrire tes prévisions.",
+        "Vise une première vente, une précommande ou une lettre d'intention.",
+        "Fixe tes prix d'après le marché local, pas d'après celui de ton pays d'origine."
+      ]
+    },
+    {
+      "gabarit": "porte",
+      "surtitre": "Porte 3",
+      "titre": "Le dossier",
+      "chapeau": "Écris-le pour celui qui va le lire : le bailleur de fonds.",
+      "items": [
+        "Forme juridique choisie et entreprise immatriculée au Registraire des entreprises.",
+        "Mise de fonds claire et prévisions réalistes, appuyées sur ton étude de marché.",
+        "Ton parcours mis en valeur : expérience, diplômes, premiers clients."
+      ]
+    },
+    {
+      "gabarit": "texte",
+      "centre": true,
+      "titre": "Réseau. Marché. Dossier.",
+      "sous_titre": "Ensuite, le financement.",
+      "paragraphes": [
+        "Ta demande arrive alors chez des gens qui te connaissent, avec la preuve qu'on t'achète et un dossier prêt à être lu."
+      ]
+    },
+    {
+      "gabarit": "evenement",
+      "centre": true,
+      "surtitre": "Webinaire gratuit",
+      "titre": "De l'idée au financement : démarrer son entreprise au Québec",
+      "jour": "Vendredi 23 octobre 2026",
+      "heure": "19 h, heure de Montréal",
+      "lieu": "En ligne",
+      "appel": "Inscription : lien en bio",
+      "variantes": {
+        "fb": { "appel": "Inscription : lien dans la publication" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+/* Charte AQ — gabarits de visuels réseaux sociaux.
+   Les chemins url(...) sont relatifs à visuels/outils/ (le HTML est rendu avec ce dossier pour base). */
+
+@font-face { font-family: "Caslon"; src: url("../assets/fonts/LibreCaslonDisplay-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: "DM Sans"; src: url("../assets/fonts/DMSans[opsz,wght].ttf"); font-weight: 100 1000; font-style: normal; }
+@font-face { font-family: "DM Sans"; src: url("../assets/fonts/DMSans-Italic[opsz,wght].ttf"); font-weight: 100 1000; font-style: italic; }
+@font-face { font-family: "Figtree"; src: url("../assets/fonts/Figtree[wght].ttf"); font-weight: 300 900; }
+
+:root {
+  --noir: #231F20;
+  --or-titre: #E3A73C;
+  --or-logo: #E8A900;
+  --texte: #E8E4DC;
+  --filet: #96783C;
+  --marge: 88px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--noir); }
+body { font-family: "DM Sans", sans-serif; color: var(--texte); -webkit-font-smoothing: antialiased; }
+
+.slide { position: relative; overflow: hidden; background: var(--noir); }
+
+/* Filigrane : arche or à 18 %, 420 px de large sur 1080, en haut à droite */
+.filigrane { position: absolute; top: -36px; right: -52px; width: calc(420px * var(--echelle, 1)); opacity: .18; pointer-events: none; }
+
+/* ---------- Style éditorial ---------- */
+.ed { display: flex; flex-direction: column; padding: var(--marge); padding-bottom: 210px; }
+.ed .corps { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.ed.centre .corps { align-items: center; text-align: center; padding-top: 160px; }
+
+.surtitre { font-weight: 600; font-size: 26px; letter-spacing: .22em; text-transform: uppercase; color: var(--or-titre); margin-bottom: 36px; }
+.titre { font-family: "Caslon", serif; font-weight: 400; color: var(--or-titre); line-height: 1.04; letter-spacing: -.005em; text-wrap: balance; }
+.titre.xl { font-size: 112px; }
+.titre.l  { font-size: 96px; }
+.titre.m  { font-size: 80px; }
+.sous-titre { font-size: 40px; line-height: 1.3; font-weight: 500; color: var(--texte); margin-top: 44px; text-wrap: pretty; }
+.sous-titre.or { color: var(--or-titre); }
+.texte { font-size: 38px; line-height: 1.42; font-weight: 400; color: var(--texte); text-wrap: pretty; }
+.texte + .texte { margin-top: 30px; }
+.texte strong { font-weight: 600; color: var(--or-titre); }
+.court { width: 100%; height: 0; margin: 56px 0 52px; }
+.court::after { content: ""; display: block; width: 96px; height: 2px; background: var(--or-titre); }
+.ed.centre .court::after { margin: 0 auto; }
+
+.chapeau { font-size: 42px; line-height: 1.34; font-weight: 500; color: var(--texte); margin-top: 32px; text-wrap: pretty; }
+.liste { list-style: none; margin-top: 72px; }
+.liste li { font-size: 37px; line-height: 1.38; color: var(--texte); padding: 34px 0 34px 60px; border-top: 1.5px solid var(--filet); position: relative; text-wrap: pretty; }
+.liste li:last-child { border-bottom: 1.5px solid var(--filet); }
+.liste li::before { content: attr(data-n); position: absolute; left: 0; top: 41px; font-size: 22px; font-weight: 700; letter-spacing: .08em; color: var(--or-titre); }
+
+/* Pied éditorial : filet or fin, signature espacée, numérotation */
+.pied { position: absolute; left: var(--marge); right: var(--marge); bottom: calc(var(--marge) + 6px); height: 58px; border-top: 1.5px solid var(--filet); display: flex; align-items: flex-end; justify-content: center; }
+.signature { font-size: 20px; font-weight: 500; line-height: 1; text-transform: uppercase; letter-spacing: .5em; word-spacing: .6em; margin-right: -.5em; color: var(--or-titre); white-space: nowrap; }
+.pied .logo { height: 76px; }
+.pied.avec-logo { height: 118px; }
+.pagination { position: absolute; right: 0; bottom: 0; font-size: 20px; font-weight: 500; letter-spacing: .06em; color: var(--texte); opacity: .72; white-space: nowrap; line-height: 1; }
+
+/* Bloc événement (dernière slide) */
+.evenement { margin-top: 56px; padding: 40px 0; border-top: 1.5px solid var(--filet); border-bottom: 1.5px solid var(--filet); width: 100%; }
+.evenement .jour { font-size: 44px; font-weight: 600; color: var(--texte); }
+.evenement .heure { font-size: 34px; font-weight: 500; color: var(--or-titre); margin-top: 12px; }
+.evenement .lieu { font-size: 28px; font-weight: 400; color: var(--texte); opacity: .8; margin-top: 12px; }
+.appel { display: inline-block; margin-top: 56px; padding: 26px 48px; background: var(--or-titre); color: var(--noir); font-size: 32px; font-weight: 700; letter-spacing: .01em; }
