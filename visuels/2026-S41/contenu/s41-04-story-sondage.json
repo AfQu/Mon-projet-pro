@@ -1,0 +1,16 @@
+{
+  "id": "s41-04-story-sondage",
+  "titre": "Story : sondage sur les 3 portes",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton avis",
+      "titre": "Quelle porte est la plus difficile à ouvrir pour toi ?",
+      "taille": "l",
+      "espace": 330,
+      "note": "Ta réponse nourrit nos prochains contenus."
+    }
+  ]
+}

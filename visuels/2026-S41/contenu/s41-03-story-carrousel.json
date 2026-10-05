@@ -1,0 +1,15 @@
+{
+  "id": "s41-03-story-carrousel",
+  "titre": "Story : relais du carrousel",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Nouveau carrousel",
+      "titre": "Les 3 portes à ouvrir avant de chercher du financement",
+      "sous_titre": "Qui appeler, quoi vérifier, quoi préparer.",
+      "note": "À lire et à sauvegarder sur notre profil."
+    }
+  ]
+}

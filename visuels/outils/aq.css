@@ -74,3 +74,21 @@ body { font-family: "DM Sans", sans-serif; color: var(--texte); -webkit-font-smo
 .ressources .explication { display: block; font-size: 30px; line-height: 1.38; color: var(--texte); text-wrap: pretty; }
 .source { margin-top: 22px; font-size: 19px; line-height: 1.4; color: var(--texte); opacity: .62; text-wrap: pretty; }
 .ed .corps.haut .titre { max-width: 640px; font-size: 74px; }
+
+/* Ligne « pour qui » sous le titre d'un événement */
+.pour { font-size: 32px; line-height: 1.35; font-weight: 500; color: var(--texte); margin-top: 32px; text-wrap: balance; }
+.note { font-size: 30px; line-height: 1.4; color: var(--texte); opacity: .8; margin-top: 28px; text-wrap: balance; }
+
+/* Stories 1080 × 1920 : texte hors des 250 px du haut et du bas */
+.fmt-story.ed { padding-top: 290px; padding-bottom: 400px; }
+.fmt-story .pied { bottom: 290px; }
+.fmt-story .titre.xl { font-size: 120px; }
+.fmt-story .sous-titre { font-size: 44px; }
+
+/* Post LinkedIn carré 1200 × 1200 */
+.fmt-linkedin.ed { padding-bottom: 230px; }
+.fmt-linkedin.ed { padding-bottom: 250px; }
+.fmt-linkedin.centre .corps { padding-top: 0; }
+.fmt-linkedin .evenement { margin-top: 40px; padding: 30px 0; }
+.fmt-linkedin .appel { margin-top: 40px; }
+.fmt-linkedin .pour { margin-top: 24px; }

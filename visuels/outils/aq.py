@@ -23,6 +23,7 @@ OUTILS = Path(__file__).resolve().parent
 ASSETS = OUTILS.parent / "assets"
 CHROMIUM = "/opt/pw-browsers/chromium"
 MARGE = 88
+ZONE_SURE_V = {"story": 250}  # stories et Reels : rien d'important dans les 250 px du haut et du bas
 
 FORMATS = {
     "post": (1080, 1350),
@@ -68,6 +69,8 @@ def g_couverture(d):
       {f'<div class="surtitre">{t(d["surtitre"])}</div>' if d.get("surtitre") else ""}
       <h1 class="titre {d.get("taille", "xl")}">{t(d["titre"])}</h1>
       {f'<p class="sous-titre">{t(d["sous_titre"])}</p>' if d.get("sous_titre") else ""}
+      {f'<div class="espace" style="height:{d["espace"]}px"></div>' if d.get("espace") else ""}
+      {f'<p class="note">{t(d["note"])}</p>' if d.get("note") else ""}
     </div>"""
 
 
@@ -118,6 +121,7 @@ def g_evenement(d):
     <div class="corps">
       <div class="surtitre">{t(d["surtitre"])}</div>
       <h2 class="titre {d.get("taille", "m")}">{t(d["titre"])}</h2>
+      {f'<p class="pour">{t(d["pour"])}</p>' if d.get("pour") else ""}
       <div class="evenement">
         <div class="jour">{t(d["jour"])}</div>
         <div class="heure">{t(d["heure"])}</div>
@@ -142,7 +146,7 @@ def page_html(slide, n, total, fmt):
     else:
         pied = '<div class="pied"><span class="signature">Affaires Québec</span>'
     pied += f'<span class="pagination">{pagination}</span></div>' if total > 1 else "</div>"
-    classes = "slide ed" + (" centre" if slide.get("centre") else "")
+    classes = f"slide ed fmt-{fmt}" + (" centre" if slide.get("centre") else "")
     return f"""<!doctype html><html lang="fr-CA"><head><meta charset="utf-8">
 <link rel="stylesheet" href="aq.css"><style>.slide{{width:{w}px;height:{h}px}}</style></head>
 <body><div class="{classes}">{filigrane}{GABARITS[gabarit](slide)}{pied}</div></body></html>"""
@@ -151,7 +155,7 @@ def page_html(slide, n, total, fmt):
 # ---------- Contrôle qualité dans la page ----------
 
 QA_JS = """
-(m) => {
+({ m, mv }) => {
   const W = innerWidth, H = innerHeight, pb = [];
   const ignore = el => el.closest('.filigrane');
   // 1. Texte et images dans la zone sûre (marge m)
@@ -161,14 +165,14 @@ QA_JS = """
     if (!node.textContent.trim()) continue;
     const r = document.createRange(); r.selectNodeContents(node);
     for (const q of r.getClientRects()) {
-      if (q.left < m - 1 || q.right > W - m + 1 || q.top < m - 1 || q.bottom > H - m + 1)
+      if (q.left < m - 1 || q.right > W - m + 1 || q.top < mv - 1 || q.bottom > H - mv + 1)
         pb.push(`texte hors marge (${Math.round(q.left)},${Math.round(q.top)},${Math.round(q.right)},${Math.round(q.bottom)}) : « ${node.textContent.trim().slice(0, 40)} »`);
     }
   }
   document.querySelectorAll('img').forEach(i => {
     if (ignore(i)) return;
     const q = i.getBoundingClientRect();
-    if (q.left < m - 1 || q.right > W - m + 1 || q.top < m - 1 || q.bottom > H - m + 1) pb.push(`image hors marge : ${i.getAttribute('src')}`);
+    if (q.left < m - 1 || q.right > W - m + 1 || q.top < mv - 1 || q.bottom > H - mv + 1) pb.push(`image hors marge : ${i.getAttribute('src')}`);
   });
   // 2. Mots orphelins : dernière ligne d'un bloc réduite à un seul mot
   document.querySelectorAll('h1,h2,p,li:not(.ressources li),.nom,.explication,.jour,.heure,.lieu,.appel').forEach(el => {
@@ -242,7 +246,7 @@ def rendre(chemin_json):
                 tmp.write_text(page_html(s, n, len(slides), fmt), encoding="utf-8")
                 page.goto(tmp.as_uri())
                 page.evaluate("document.fonts.ready")
-                pb = page.evaluate(QA_JS, MARGE) + controle_source(s)
+                pb = page.evaluate(QA_JS, {"m": MARGE, "mv": ZONE_SURE_V.get(fmt, MARGE)}) + controle_source(s)
                 page.screenshot(path=str(sortie / nom), clip={"x": 0, "y": 0, "width": w, "height": h})
                 with Image.open(sortie / nom) as im:
                     if im.size != (w, h):

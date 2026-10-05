@@ -1,0 +1,19 @@
+{
+  "id": "s41-02-linkedin-webinaire",
+  "titre": "Post LinkedIn : annonce du webinaire",
+  "format": "linkedin",
+  "pilier": "Contexte et opportunités — institutionnel, vouvoiement",
+  "slides": [
+    {
+      "gabarit": "evenement",
+      "centre": true,
+      "surtitre": "Webinaire gratuit",
+      "titre": "De l'idée au financement : démarrer son entreprise au Québec",
+      "pour": "Pour les entrepreneurs issus de l'immigration et les organismes qui les accompagnent",
+      "jour": "Vendredi 23 octobre 2026",
+      "heure": "19 h, heure de Montréal",
+      "lieu": "En ligne",
+      "appel": "Inscription : lien dans la publication"
+    }
+  ]
+}
