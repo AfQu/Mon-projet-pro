@@ -128,17 +128,17 @@ Fichiers : vidéo montée (après réception de la vidéo brute, voir `script-20
 ### Instagram
 Tu arrives au Québec avec un projet d'entreprise ? Ne commence pas par la banque.
 
-Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, t'explique par quelle porte entrer :
+Ton premier capital, c'est ton réseau d'affaires. Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, t'explique par quelle porte entrer :
 • le conseiller du Réseau accès PME de ta MRC (PME MTL à Montréal, SADC en région) ;
 • une seule page de projet : quoi, pour qui, avec quel budget ;
 • une question précise : quels programmes s'appliquent à mon projet ?
 
 Webinaire gratuit le vendredi 23 octobre à 19 h (heure de Montréal). Inscription : lien en bio.
 
-#RoubaRépond #EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #NouveauxArrivants #Québec #Montréal #TroisRivières
+#RoubaRépond #EntrepreneuriatImmigrant #RéseauDAffaires #AffairesQuébec #Entrepreneuriat #NouveauxArrivants #Québec #Montréal #TroisRivières
 
 ### Facebook
-J'arrive au Québec avec un projet d'entreprise : par où je commence ? Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, répond en moins d'une minute.
+J'arrive au Québec avec un projet d'entreprise : par où je commence ? Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, répond en moins d'une minute : d'abord le réseau d'affaires, ensuite le financement.
 
 Webinaire gratuit le vendredi 23 octobre 2026 à 19 h (heure de Montréal) : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
 
@@ -147,7 +147,7 @@ Et vous, quelle est la première porte que vous avez ouverte ?
 #EntrepreneuriatImmigrant #AffairesQuébec
 
 ### LinkedIn
-Une personne qui arrive au Québec avec un projet d'entreprise pense souvent d'abord au financement. Pourtant, la première porte à ouvrir est celle du réseau.
+Une personne qui arrive au Québec avec un projet d'entreprise pense souvent d'abord au financement. Pourtant, la première porte à ouvrir est celle du réseau d'affaires : c'est le premier frein que nous observons chez les entrepreneurs issus de l'immigration.
 
 Rouba Hamadi, cofondatrice et présidente d'Affaires Québec, ancienne conseillère puis directrice générale d'Entreprendre ici, explique par où commencer : le conseiller du Réseau accès PME de sa MRC, une page de projet claire et une question précise sur les programmes.
 

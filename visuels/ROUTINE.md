@@ -19,7 +19,10 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
 ## 3. Choisir le contenu de la période
 - D'abord les visuels du `PLAN.md` dont la date tombe dans la période et qui ne sont pas bloqués (⛔).
 - Compléter selon la trame du skill : au plus **1 publication de fil par jour et par plateforme**, 3 à 5 stories, 1 à 2 posts LinkedIn (vouvoiement).
-- Respecter les piliers (30/30/20/20) et le plafond financement (25 %) sur le cumul du trimestre.
+- Respecter les piliers (30/30/20/20) et la **rotation des 6 sujets** de `PLAN.md` : réseautage et accès au marché en priorité, puis repreneuriat, régions et secteurs, ressources institutionnelles, démarrage. **Financement et crédit : au plus 1 contenu de fil par semaine.**
+- Avant de choisir, compter les sujets des 4 dernières semaines (`publie.md`, `legendes.md`) et rattraper les sujets en retard.
+- Placer les mots-clés de `PLAN.md` (« reprendre une entreprise Québec », « réseau d'affaires immigrant », « s'installer en région Québec ») dans les accroches et les légendes quand le sujet s'y prête.
+- Dans `programme.md`, indiquer pour chaque contenu son sujet (1 à 6), et le décompte de la semaine.
 - Chaque contenu apporte une valeur concrète et vérifiable (organismes, outils, programmes, étapes nommés).
 
 ## 3 bis. Vidéos face caméra (Rouba, Rénald)
