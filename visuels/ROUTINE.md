@@ -44,6 +44,7 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
 
 ## 3 ter. Varier les Reels en motion design
 - Moteur : `visuels/outils/reel.py`. Formes disponibles : `titre`, `pile`, `compteur` (chiffre qui défile), `liste` (cases cochées dans une seule scène), `machine` (question tapée puis réponse), `mythe` (idée reçue barrée puis la réalité), `logo`. Transitions : `volet`, `fondu`, `glisse`, `cercle`, `coupe`. Exemple complet : `visuels/outils/exemples/reel-formes.json`.
+- **Reel vidéo** (vrais plans) : `visuels/outils/reel_video.py scenario.json sortie.mp4`. Plans libres de droits (Mixkit, Pexels) ou tournés par l'équipe, dans `visuels/<semaine>/clips/`, étalonnage chaud, lent zoom, textes animés, transitions xfade variées, carton de fin AQ. Exemple : `2026-S42/contenu/s42-reel-repreneuriat.json`. Jamais de visuel « lifestyle » ni de gros plan de visage d'inconnu ; noter la source de chaque plan dans `sources.md`. Alterner Reel vidéo et Reel en motion design.
 - Chaque Reel dure de 12 à 20 s, mélange **au moins 3 formes différentes** et **au moins 2 types de transitions**, sans enchaîner plus de 2 scènes de la même forme.
 - **Changer de forme d'ouverture à chaque Reel** (ex. : idée reçue, puis chiffre clé, puis question tapée, puis checklist). Le format « titre puis titre puis titre » ne doit pas revenir deux fois de suite.
 - Consigner chaque Reel dans `visuels/reels-journal.md` (date, sujet, forme d'ouverture, formes et transitions utilisées) et le lire avant d'en concevoir un nouveau.

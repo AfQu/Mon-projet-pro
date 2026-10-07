@@ -1,0 +1,28 @@
+# Légendes — semaine 42 (12-18 octobre 2026)
+
+## 1. Carrousel « Reprendre une entreprise au Québec »
+Fichiers : `s42-01-repreneuriat-01.png` à `-08.png`. Sujet 2 (repreneuriat). Mot-clé : « reprendre une entreprise Québec ».
+
+### Instagram
+Reprendre une entreprise au Québec, c'est entreprendre avec des clients, une équipe et un réseau déjà en place.
+
+Près de 16 000 dirigeants d'entreprise québécois disent vouloir vendre ou transférer leur entreprise. Pour une personne issue de l'immigration, c'est souvent une porte d'entrée plus rapide vers le marché qu'un démarrage de zéro.
+
+Dans ce carrousel : les 4 étapes avant toute offre, qui peut t'accompagner (Repreneuriat Québec, Réseau accès PME, EEB, EntreChefs PME), le volet « Reprise d'entreprise » du Programme des entrepreneurs et 3 pièges à éviter.
+
+📌 Sauvegarde-le pour le jour où tu passes à l'action.
+
+Premier appel de cadrage sans frais : lien en bio.
+
+#Repreneuriat #RepriseDEntreprise #EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #ReleveDEntreprise #Québec #Montréal #TroisRivières #Sherbrooke #RéseauDAffaires
+
+### Facebook
+Reprendre une entreprise au Québec : des clients, une équipe et un réseau déjà là.
+
+Près de 16 000 dirigeants d'entreprise disent vouloir vendre ou transférer leur entreprise (Gouvernement du Québec, juin 2026). Voici par où commencer, qui peut vous accompagner et les pièges à éviter.
+
+Premier appel de cadrage sans frais : https://affairesquebec.ca
+
+Reprendre plutôt que créer : est-ce que vous y aviez déjà pensé ?
+
+#Repreneuriat #EntrepreneuriatImmigrant

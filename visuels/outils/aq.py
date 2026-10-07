@@ -116,6 +116,19 @@ def g_ressources(d):
     </div>"""
 
 
+def g_chiffre(d):
+    """Un chiffre clé en très grand, son explication et sa source."""
+    return f"""
+    <div class="corps">
+      {f'<div class="surtitre">{t(d["surtitre"])}</div>' if d.get("surtitre") else ""}
+      {f'<p class="chiffre-pre">{t(d["avant"])}</p>' if d.get("avant") else ""}
+      <p class="chiffre">{t(d["chiffre"])}</p>
+      <p class="chiffre-txt">{t(d["texte"])}</p>
+      {f'<p class="chapeau">{t(d["suite"])}</p>' if d.get("suite") else ""}
+      {f'<p class="source">{t(d["source"])}</p>' if d.get("source") else ""}
+    </div>"""
+
+
 def g_evenement(d):
     return f"""
     <div class="corps">
@@ -140,7 +153,7 @@ def g_banniere(d):
     </div>"""
 
 
-GABARITS = {"banniere": g_banniere, "couverture": g_couverture, "texte": g_texte, "porte": g_porte, "ressources": g_ressources, "evenement": g_evenement}
+GABARITS = {"chiffre": g_chiffre, "banniere": g_banniere, "couverture": g_couverture, "texte": g_texte, "porte": g_porte, "ressources": g_ressources, "evenement": g_evenement}
 AVEC_LOGO = {"evenement"}  # slides qui portent le logo complet : pas de filigrane
 
 
@@ -187,7 +200,7 @@ QA_JS = """
     if (q.left < m - 1 || q.right > W - m + 1 || q.top < mv - 1 || q.bottom > H - mv + 1) pb.push(`image hors marge : ${i.getAttribute('src')}`);
   });
   // 2. Mots orphelins : dernière ligne d'un bloc réduite à un seul mot
-  document.querySelectorAll('h1,h2,p,li:not(.ressources li),.nom,.explication,.jour,.heure,.lieu,.appel').forEach(el => {
+  document.querySelectorAll('h1,h2,p:not(.chiffre),li:not(.ressources li),.nom,.explication,.jour,.heure,.lieu,.appel').forEach(el => {
     const mots = [];
     const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
     let n;

@@ -1,0 +1,141 @@
+{
+  "id": "s42-01-repreneuriat",
+  "titre": "Reprendre une entreprise au Québec",
+  "format": "post",
+  "pilier": "Contexte et opportunités · sujet 2 (repreneuriat) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Repreneuriat · à sauvegarder",
+      "titre": "Reprendre une entreprise au Québec",
+      "sous_titre": "Des clients, une équipe et un réseau déjà là. Voici par où commencer."
+    },
+    {
+      "gabarit": "chiffre",
+      "centre": true,
+      "surtitre": "Le contexte",
+      "avant": "Près de",
+      "chiffre": "16 000",
+      "texte": "dirigeants d'entreprise au Québec disent vouloir vendre ou transférer leur entreprise.",
+      "suite": "Beaucoup n'ont pas de relève. C'est une porte d'entrée réelle pour qui veut entreprendre ici.",
+      "source": "Sources : Gouvernement du Québec (juin 2026) ; Repreneuriat Québec, rapport annuel 2026."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Pourquoi reprendre",
+      "titre": "Tu ne pars pas de zéro",
+      "items": [
+        {
+          "nom": "Des clients",
+          "texte": "L'accès au marché, le premier frein des nouveaux arrivants, existe déjà."
+        },
+        {
+          "nom": "Un réseau local",
+          "texte": "Fournisseurs, partenaires, voisins d'affaires : le cédant peut t'y introduire."
+        },
+        {
+          "nom": "Une équipe et des façons de faire",
+          "texte": "Des personnes formées et des processus qui fonctionnent."
+        },
+        {
+          "nom": "Un historique",
+          "texte": "Des états financiers réels : un dossier plus lisible qu'une simple projection."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Par où commencer",
+      "titre": "Quatre étapes avant toute offre",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Précise ce que tu cherches",
+          "texte": "Secteur, région, taille, budget, et ton rôle au quotidien."
+        },
+        {
+          "nom": "Inscris-toi à Repreneuriat Québec",
+          "texte": "Accompagnement et mise en relation entre repreneurs et cédants."
+        },
+        {
+          "nom": "Parle au Réseau accès PME de la région visée",
+          "texte": "La MRC est la porte d'entrée pour la relève et le transfert d'entreprise."
+        },
+        {
+          "nom": "Entoure-toi avant de signer",
+          "texte": "Comptable et avocat pour évaluer l'entreprise et sécuriser la transaction."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les ressources",
+      "titre": "Qui peut t'accompagner",
+      "items": [
+        {
+          "nom": "Repreneuriat Québec (ex-CTEQ)",
+          "texte": "Plus de 42 000 entrepreneurs accompagnés et plus de 3 600 transferts amorcés."
+        },
+        {
+          "nom": "École d'entrepreneurship de Beauce",
+          "texte": "Programme EntReprendre pour les repreneurs, sur 12 à 18 mois."
+        },
+        {
+          "nom": "EntreChefs PME",
+          "texte": "Des clubs réservés aux repreneurs, avec accès à des experts."
+        }
+      ],
+      "source": "Sources : Gouvernement du Québec, « Accompagnement pour acheter ou vendre une entreprise » ; Repreneuriat Québec, rapport annuel 2026."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Immigration d'affaires",
+      "titre": "Le volet « Reprise d'entreprise »",
+      "items": [
+        {
+          "nom": "Un volet dédié",
+          "texte": "Le Programme des entrepreneurs du Québec a un volet consacré à la reprise d'une entreprise existante."
+        },
+        {
+          "nom": "Un accompagnement exigé",
+          "texte": "Il demande d'être suivi par un organisme spécialisé en repreneuriat, avec une offre de service."
+        },
+        {
+          "nom": "Valide selon ta situation",
+          "texte": "Les conditions évoluent : vérifie-les sur Québec.ca et avec un conseiller avant de te lancer."
+        }
+      ],
+      "source": "Source : Québec.ca, Programme des entrepreneurs, volet 3 — Reprise d'entreprise."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "À vérifier",
+      "titre": "Trois pièges à éviter",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Des clients liés au propriétaire",
+          "texte": "Prévois une période de transition où le cédant te présente et t'accompagne."
+        },
+        {
+          "nom": "Une offre sans vérification",
+          "texte": "Examine les états financiers, les contrats et les dettes avant de t'engager."
+        },
+        {
+          "nom": "Des baux et des permis non transférables",
+          "texte": "Vérifie que le local, les licences et les contrats suivent l'entreprise."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton projet de reprise",
+      "titre": "Reprendre une entreprise au Québec ? Parlons-en.",
+      "taille": "l",
+      "sous_titre": "Premier appel de cadrage sans frais sur affairesquebec.ca",
+      "note": "Nous t'aidons à structurer le projet et à ouvrir les bonnes portes."
+    }
+  ]
+}

@@ -104,3 +104,9 @@ body { font-family: "DM Sans", sans-serif; color: var(--texte); -webkit-font-smo
 .fmt-banniere-linkedin .b-sous { font-size: 22px; }
 .fmt-couverture-linkedin .b-titre { font-size: 40px; max-width: 760px; }
 .fmt-couverture-linkedin .b-sous { font-size: 14px; margin-top: 10px; }
+
+/* Chiffre clé */
+.chiffre-pre { font-size: 40px; font-weight: 500; color: var(--texte); }
+.chiffre { font-family: "Caslon", serif; font-size: 260px; line-height: .95; color: var(--or-titre); margin: 6px 0 18px; }
+.chiffre-txt { font-size: 44px; line-height: 1.3; font-weight: 500; color: var(--texte); text-wrap: balance; }
+.ed.centre .chiffre-txt, .ed.centre .chapeau { max-width: 880px; }
