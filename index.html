@@ -1106,11 +1106,9 @@ body.cine-done .hero-mono-img{
 }
 </style>
 <!-- Clé de SITE Cloudflare Turnstile (publique, sans danger à exposer ici) : 0x4AAAAAAEx-yTN2Vj4r2-dn.
-     TODO restant : la clé SECRÈTE correspondante va dans le nœud « Vérifier Turnstile » du
-     workflow n8n, jamais dans ce fichier. Tant qu'elle n'y est pas (ou n'y est pas la bonne),
-     Cloudflare renvoie un échec pour tout le monde, y compris de vrais visiteurs : chaque
-     soumission retombe alors sur le repli du site (mailto pour le contact, téléchargement
-     quand même pour le guide) sans jamais atteindre Notion. -->
+     Les formulaires envoient uniquement vers Brevo : Turnstile ne sert plus qu'à freiner les robots
+     côté navigateur (le bouton d'envoi reste grisé tant que le widget n'a pas validé). Aucune clé
+     secrète n'est vérifiée côté serveur ; Brevo a son propre champ piège (email_address_check). -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <!-- Meta Pixel Code — chargé uniquement après consentement (voir bandeau cookies en bas de page) -->
 <script>
@@ -1727,9 +1725,9 @@ function loadMetaPixel(){
       </div>
     </div>
     <div class="reveal">
-      <!-- Formulaire Brevo (liste des demandes de diagnostic) + workflow n8n (Notion) en parallèle.
+      <!-- Formulaire Brevo (liste des demandes de diagnostic) : les demandes vont uniquement dans Brevo.
            Téléphone et organisation sont obligatoires parce qu'ils le sont dans le formulaire Brevo. -->
-      <form id="contactForm" method="POST" action="https://c08289b3.sibforms.com/serve/MUIFAMiXP6qMkRapKIaKp4Uqy-F97iMKKuqgCWZdGya_ExqCHu9RUFV6YUSxXVMNgnKfQPJWzNV92coMGn3qwb25Ce4iU8TkaD_IRdo4M1qfS3LPXw84zn8BWrOAs6STZoO_Zse266VWfXCwj4QN9jHvBrKNwkSYaAO6hG5rPVnSX1wpRDq0fejhsgl9eGWUZWkD_3Ps9NmGs0AIVQ==" data-fallback-subject="Demande de diagnostic — site web" data-fallback-to="renald.rabathaly@affairesquebec.ca">
+      <form id="contactForm" method="POST" action="https://c08289b3.sibforms.com/serve/MUIFAMiXP6qMkRapKIaKp4Uqy-F97iMKKuqgCWZdGya_ExqCHu9RUFV6YUSxXVMNgnKfQPJWzNV92coMGn3qwb25Ce4iU8TkaD_IRdo4M1qfS3LPXw84zn8BWrOAs6STZoO_Zse266VWfXCwj4QN9jHvBrKNwkSYaAO6hG5rPVnSX1wpRDq0fejhsgl9eGWUZWkD_3Ps9NmGs0AIVQ==">
         <input type="hidden" name="form" value="contact">
         <div class="row">
           <div><label for="cf-nom">Votre nom *</label><input id="cf-nom" type="text" name="nom" maxlength="200" autocomplete="name" required></div>
@@ -2194,11 +2192,8 @@ const counterIO=new IntersectionObserver((entries)=>{
 },{threshold:0.5});
 document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
 // ---------- FORMULAIRES DU SITE ----------
-// Point de collecte unique pour les deux formulaires (guide + contact) : le workflow n8n
-// qui écrit dans Notion et envoie les courriels de confirmation. Voir README.md / le
-// workflow n8n fourni pour ce que fait l'autre bout. Un seul endroit à changer si l'URL
-// du webhook change un jour.
-const AQ_ENDPOINT='https://n8n.srv1057446.hstgr.cloud/webhook/affairesquebec-lead';
+// Les deux formulaires (guide + contact) envoient uniquement vers Brevo : l'adresse
+// d'envoi est l'attribut action de chaque formulaire (fourni par Brevo).
 
 // Cloudflare Turnstile: the submit buttons start disabled (see the "disabled"
 // attribute in the HTML) and only unlock once the widget confirms a human.
@@ -2234,9 +2229,7 @@ setTimeout(()=>{
       .forEach(b=>b.disabled=false);
   }
 },4000);
-// Form submission: POST via fetch to AQ_ENDPOINT; if the request fails outright
-// (offline, blocked, n8n down), fall back to a prefilled mailto: so no lead is
-// ever silently lost.
+// Form submission: both forms post to Brevo only (see aqSendToBrevo below).
 (function(){
   // Meta Pixel "Lead" event: only fires if the visitor accepted cookies (see
   // bandeau de consentement) and the pixel actually loaded — never tracks silently.
@@ -2294,7 +2287,6 @@ setTimeout(()=>{
     const submitBtn=form.querySelector('button[type="submit"]');
     form.addEventListener('submit',async(e)=>{
       e.preventDefault();
-      const data=new FormData(form);
       const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
       const phone=aqSplitPhone(form.telephone.value);
       if(!phone){
@@ -2320,31 +2312,14 @@ setTimeout(()=>{
         submitBtn&&(submitBtn.disabled=false);
         return;
       }
-      // 2. n8n (Notion + courriel de confirmation), comme avant.
-      data.delete('email_address_check');
-      try{
-        const res=await fetch(AQ_ENDPOINT,{method:'POST',body:data,headers:{Accept:'application/json'}});
-        if(res.ok){
-          setStatus('Merci, votre message a bien été envoyé.','ok');
-          aqTrackLead();
-          form.reset();
-          submitBtn&&(submitBtn.disabled=false);
-          return;
-        }
-      }catch(err){/* network error: fall through to mailto */}
-      // Fallback: open the visitor's email client with the message prefilled.
-      const to=form.dataset.fallbackTo||'renald.rabathaly@affairesquebec.ca';
-      const subject=form.dataset.fallbackSubject||'Message depuis le site';
-      const lines=[];
-      for(const [key,val] of data.entries()){if(val)lines.push(key+': '+val)}
-      const bodyText=lines.join('\n');
-      location.href='mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyText);
-      setStatus('Votre messagerie va s\'ouvrir avec les informations pré-remplies : envoyez le courriel pour finaliser votre demande.','err');
+      // Brevo uniquement : pas de n8n, pas de courriel prérempli.
+      setStatus('Merci, votre demande a bien été envoyée. Notre équipe vous contacte sous 48 h.','ok');
+      aqTrackLead();
+      form.reset();
       submitBtn&&(submitBtn.disabled=false);
     });
   }
-  // Guide form: the email is required. It is sent to Brevo (contact list) and, in
-  // parallel, to the n8n workflow (Notion) as before. The PDF download starts only
+  // Guide form: the email is required and is sent to Brevo only. The PDF download starts only
   // after the email has been submitted; there is no direct download link anymore.
   function wireGuideForm(form){
     if(!form)return;
@@ -2377,11 +2352,6 @@ setTimeout(()=>{
         submitBtn&&(submitBtn.disabled=false);
         return;
       }
-      // Notion (n8n), comme avant : en arrière-plan, sans bloquer le téléchargement.
-      const n8n=new FormData(form);
-      n8n.delete('EMAIL');n8n.delete('OPT_IN');n8n.delete('email_address_check');n8n.delete('locale');
-      n8n.append('form','guide');n8n.append('email',email);n8n.append('opt_in',optIn?'oui':'non');
-      fetch(AQ_ENDPOINT,{method:'POST',body:n8n,headers:{Accept:'application/json'}}).catch(()=>{});
       aqTrackLead();
       startDownload();
       setStatus(optIn?'Merci ! Le téléchargement démarre. Vous recevrez aussi les prochaines éditions par courriel.':'Merci ! Le téléchargement démarre.','ok');
