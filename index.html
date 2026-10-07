@@ -485,6 +485,9 @@ section{position:relative}
   font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;transition:background .25s;
 }
 .guide-form button:hover{background:var(--gold-deep)}
+.guide-form .guide-optin{flex:1 1 100%;display:flex;gap:10px;align-items:flex-start;margin:4px 0 0;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:400;line-height:1.45;letter-spacing:normal;text-transform:none;color:var(--ink-muted);cursor:pointer}
+.guide-form .guide-optin input{flex:0 0 auto;width:16px;height:16px;min-width:0;margin:2px 0 0;padding:0;accent-color:var(--gold);cursor:pointer}
+.guide-form .guide-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
 @media(max-width:900px){
   .guide-card{grid-template-columns:1fr;padding:36px 28px}
   .guide-cover{display:flex;justify-content:center;margin-bottom:8px}
@@ -1477,15 +1480,18 @@ function loadMetaPixel(){
         <p>La carte réelle de l'écosystème, ce qu'un prêteur lit dans votre dossier, l'argent qui n'est pas à la banque et les codes non écrits d'une rencontre d'affaires au Québec. Écrit pour celles et ceux qui commencent ici.</p>
       </div>
       <div class="guide-right">
-        <form class="guide-form" id="guideForm" method="POST" data-fallback-subject="Guide de l'entrepreneur immigrant — demande" data-fallback-to="renald.rabathaly@affairesquebec.ca" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
-          <input type="hidden" name="form" value="guide">
-          <input type="email" name="email" placeholder="Votre courriel" required>
+        <!-- Formulaire Brevo (liste des contacts qui téléchargent le guide). Le PDF n'est proposé
+             qu'après l'envoi du courriel : il n'y a plus de lien de téléchargement direct sur la page. -->
+        <form class="guide-form" id="guideForm" method="POST" action="https://c08289b3.sibforms.com/serve/MUIFAG0w3MU792-ENDMFrI9cZae_u0Cs3U6Cs-svUsnpFVShU1sLfEzAvlC-5Ot0dc2Ibfn3t72sFd8AHOMz-CiEXzNC0Sw1nCNEar64NYs3r_mEuhisaPkTDPXKRRMxi8sqQfhErflw0zv9YN1w4LRHv318hhnAaBrLPSnmH2I9HkJB2-2bGaxw0TamYq5LPrY8hBkQJD76KVyuRQ==" data-pdf="assets/guide-entrepreneur-immigrant.pdf">
+          <input type="email" name="EMAIL" id="guideEmail" placeholder="Votre courriel" autocomplete="email" required aria-label="Votre courriel">
           <button type="submit" disabled>Recevoir le guide</button>
+          <label class="guide-optin"><input type="checkbox" name="OPT_IN" value="1"><span>J'accepte de recevoir les courriels d'Affaires Québec (prochaines éditions du guide, événements). Désinscription en un clic.</span></label>
+          <input type="text" name="email_address_check" value="" class="guide-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="locale" value="fr">
           <div class="cf-turnstile" data-sitekey="0x4AAAAAAEx-yTN2Vj4r2-dn" data-theme="dark" data-callback="onTurnstileGuide" data-expired-callback="onTurnstileGuideExpired" data-error-callback="onTurnstileError"></div>
         </form>
         <p class="form-status" id="guideFormStatus" role="status" aria-live="polite"></p>
-        <p class="form-note">Votre courriel sert uniquement à vous tenir informé·e des prochaines éditions. Il n'est jamais revendu.<br>
-          <a href="assets/guide-entrepreneur-immigrant.pdf" download target="_blank" rel="noopener" class="guide-direct-link">ou téléchargez-le directement</a>, sans formulaire.</p>
+        <p class="form-note">Votre courriel est transmis à Brevo, notre plateforme d'envoi, et traité selon <a href="https://www.brevo.com/fr/legal/privacypolicy/" target="_blank" rel="nofollow noopener" class="guide-direct-link">sa politique de confidentialité</a>. Il n'est jamais revendu.</p>
       </div>
     </div>
   </div>
@@ -2190,7 +2196,7 @@ document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
 // workflow n8n fourni pour ce que fait l'autre bout. Un seul endroit à changer si l'URL
 // du webhook change un jour.
 const AQ_ENDPOINT='https://n8n.srv1057446.hstgr.cloud/webhook/affairesquebec-lead';
-document.querySelectorAll('#guideForm,#contactForm').forEach(f=>f.action=AQ_ENDPOINT);
+document.querySelectorAll('#contactForm').forEach(f=>f.action=AQ_ENDPOINT);
 
 // Cloudflare Turnstile: the submit buttons start disabled (see the "disabled"
 // attribute in the HTML) and only unlock once the widget confirms a human.
@@ -2269,33 +2275,72 @@ setTimeout(()=>{
       submitBtn&&(submitBtn.disabled=false);
     });
   }
-  // Guide form: capture the email via AQ_ENDPOINT in the background (fire-and-forget —
-  // the download never waits on it and never depends on it succeeding), then start the
-  // PDF download immediately. No "check your inbox" step, no dead end if n8n is down.
+  // Guide form: the email is required. It is sent to Brevo (contact list) and, in
+  // parallel, to the n8n workflow (Notion) as before. The PDF download starts only
+  // after the email has been submitted; there is no direct download link anymore.
+  // Brevo answers JSON on "?isAjax=1" (the same call its own embed script makes).
+  // If that call can't even be made (network / blocked), the form is posted the classic
+  // way into a hidden iframe so the contact still reaches Brevo.
   function wireGuideForm(form){
     if(!form)return;
     const statusEl=document.getElementById(form.id+'Status');
     const submitBtn=form.querySelector('button[type="submit"]');
     const pdfPath=form.dataset.pdf;
-    form.addEventListener('submit',(e)=>{
+    const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
+    function postViaIframe(fd){
+      const name='aqBrevoFrame';
+      let frame=document.getElementById(name);
+      if(!frame){frame=document.createElement('iframe');frame.id=frame.name=name;frame.hidden=true;document.body.appendChild(frame);}
+      const f=document.createElement('form');
+      f.method='POST';f.action=form.action;f.target=name;f.hidden=true;
+      for(const [k,v] of fd.entries()){const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;f.appendChild(i);}
+      document.body.appendChild(f);f.submit();f.remove();
+    }
+    function startDownload(){
+      if(!pdfPath)return;
+      const a=document.createElement('a');
+      a.href=pdfPath;a.download='';a.target='_blank';a.rel='noopener';
+      document.body.appendChild(a);a.click();a.remove();
+    }
+    form.addEventListener('submit',async(e)=>{
       e.preventDefault();
-      const data=new FormData(form);
-      const setStatus=(msg,cls)=>{if(statusEl){statusEl.textContent=msg;statusEl.className='form-status'+(cls?' '+cls:'')}};
-      fetch(AQ_ENDPOINT,{method:'POST',body:data,headers:{Accept:'application/json'}}).catch(()=>{});
-      aqTrackLead();
-      if(pdfPath){
-        const a=document.createElement('a');
-        a.href=pdfPath;
-        a.download='';
-        a.target='_blank';
-        a.rel='noopener';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+      if(!form.reportValidity())return;
+      const email=form.EMAIL.value.trim();
+      const optIn=form.OPT_IN.checked;
+      // Brevo : uniquement ses champs (pas le jeton Turnstile).
+      const brevo=new FormData();
+      brevo.append('EMAIL',email);
+      if(optIn)brevo.append('OPT_IN','1');
+      brevo.append('email_address_check',form.email_address_check.value);
+      brevo.append('locale','fr');
+      submitBtn&&(submitBtn.disabled=true);
+      setStatus('Envoi en cours…','');
+      let refused=false;
+      try{
+        const ctrl=new AbortController();
+        const timer=setTimeout(()=>ctrl.abort(),8000);
+        const res=await fetch(form.action+'?isAjax=1',{method:'POST',body:brevo,signal:ctrl.signal});
+        clearTimeout(timer);
+        const json=await res.json().catch(()=>null);
+        if(json&&json.success===false)refused=true;
+      }catch(err){
+        postViaIframe(brevo);
       }
-      setStatus('Merci ! Le téléchargement démarre. Vous recevrez aussi les prochaines éditions par courriel.','ok');
-      submitBtn&&(submitBtn.disabled=true,setTimeout(()=>{submitBtn.disabled=false},1500));
+      if(refused){
+        setStatus("Cette adresse n'a pas été acceptée. Vérifiez-la et réessayez.",'err');
+        submitBtn&&(submitBtn.disabled=false);
+        return;
+      }
+      // Notion (n8n), comme avant : en arrière-plan, sans bloquer le téléchargement.
+      const n8n=new FormData(form);
+      n8n.delete('EMAIL');n8n.delete('OPT_IN');n8n.delete('email_address_check');n8n.delete('locale');
+      n8n.append('form','guide');n8n.append('email',email);n8n.append('opt_in',optIn?'oui':'non');
+      fetch(AQ_ENDPOINT,{method:'POST',body:n8n,headers:{Accept:'application/json'}}).catch(()=>{});
+      aqTrackLead();
+      startDownload();
+      setStatus(optIn?'Merci ! Le téléchargement démarre. Vous recevrez aussi les prochaines éditions par courriel.':'Merci ! Le téléchargement démarre.','ok');
       form.reset();
+      setTimeout(()=>{submitBtn&&(submitBtn.disabled=false)},1500);
     });
   }
   wireGuideForm(document.getElementById('guideForm'));
