@@ -18,7 +18,8 @@ scenario.json :
   "outro": "visuels/outils/exemples/outro-video.json"
 }
 - style : « accroche » (Caslon, grand, centré haut) ou « soustitre » (DM Sans gras, bas, bandeau).
-- *mot* : mot affiché en or.
+- *mot* : mot affiché en or. « \n » force un retour à la ligne.
+- voile : assombrissement du haut pour l'accroche (1 par défaut ; jusqu'à 2,2 sur une image claire).
 - x : position du recadrage vertical dans l'image (0 = gauche, 0,5 = centre, 1 = droite).
 - Les bleus et cyans sont désaturés automatiquement (charte : jamais de bleu).
 - transition : type xfade de ffmpeg vers ce plan (fade, slideleft, slideup, circleopen, wipeleft, smoothleft…).
@@ -56,6 +57,15 @@ def segments(txt):
 
 
 def lignes(txt, f, maxw):
+    """Découpe en lignes ; « \\n » force un retour à la ligne (l'or peut s'étendre sur la coupure)."""
+    res, dore = [], False
+    for para in txt.split("\n"):
+        res += _lignes(("*" if dore else "") + para, f, maxw)
+        dore = (dore + para.count("*")) % 2 == 1
+    return res
+
+
+def _lignes(txt, f, maxw):
     d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
     mots = [(m, gold) for seg, gold in segments(txt) for m in seg.split(" ") if m]
     res, cur = [], []
@@ -69,13 +79,13 @@ def lignes(txt, f, maxw):
     return res
 
 
-def calque_texte(texte, style, chemin):
+def calque_texte(texte, style, chemin, voile=1.0):
     """PNG transparent 1080 × 1920 : dégradé de lisibilité + texte."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     grad = Image.new("L", (1, H))
     for y in range(H):
         if style == "accroche":
-            a = max(0, 1 - y / 1100) * 170 + max(0, (y - 1300) / 620) * 120
+            a = max(0, 1 - y / 1100) * 170 * voile + max(0, (y - 1300) / 620) * 120
         else:
             a = max(0, (y - 900) / 1020) * 210
         grad.putpixel((0, y), int(min(255, a)))
@@ -104,7 +114,7 @@ def calque_texte(texte, style, chemin):
 def plan(p, i, tmp):
     """Un plan : recadrage vertical, étalonnage, lent zoom, texte en fondu."""
     dur = float(p["duree"]); out = os.path.join(tmp, f"plan{i:02d}.mp4")
-    png = os.path.join(tmp, f"texte{i:02d}.png"); calque_texte(p.get("texte", ""), p.get("style", "soustitre"), png)
+    png = os.path.join(tmp, f"texte{i:02d}.png"); calque_texte(p.get("texte", ""), p.get("style", "soustitre"), png, p.get("voile", 1.0))
     z = 0.06 / max(dur, 0.1)  # zoom progressif de 6 % sur la durée du plan
     vf = (f"[0:v]trim=start={p.get('debut', 0)}:duration={dur},setpts=PTS-STARTPTS,fps={FPS},"
           f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}:(iw-{W})*{p.get('x', 0.5)}:(ih-{H})/2,"

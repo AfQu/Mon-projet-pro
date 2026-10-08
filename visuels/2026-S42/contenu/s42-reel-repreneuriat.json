@@ -3,6 +3,15 @@
  "note": "Plans vidéo libres de droits à télécharger (voir « recherche ») dans visuels/2026-S42/clips/. Aucun visage reconnaissable en gros plan, rien de « lifestyle ».",
  "plans": [
   {
+   "clip": "visuels/2026-S42/clips/00-intro.mp4",
+   "source": "Mixkit 772 « Wood lathe in action »",
+   "debut": 1.0,
+   "duree": 3.4,
+   "x": 0.5,
+   "style": "accroche",
+   "texte": "Tu veux démarrer une entreprise au Québec ?\n*As-tu pensé au repreneuriat ?*"
+  },
+  {
    "clip": "visuels/2026-S42/clips/01-commerce.mp4",
    "recherche": "small shop storefront open sign, local business interior",
    "debut": 0.3,
@@ -10,7 +19,8 @@
    "style": "accroche",
    "texte": "Près de *16 000* dirigeants veulent vendre leur entreprise au Québec.",
    "x": 0.45,
-   "source": "Mixkit 4653 « Tomatoes and broccoli in a greengrocer »"
+   "source": "Mixkit 4653 « Tomatoes and broccoli in a greengrocer »",
+   "transition": "fade"
   },
   {
    "clip": "visuels/2026-S42/clips/02-atelier.mp4",
@@ -55,6 +65,17 @@
    "transition": "fade",
    "x": 0.5,
    "source": "Mixkit 3323 « Snowing on the streets of Canada »"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/06-accompagner.mp4",
+   "source": "Mixkit 4809 « Business people at work meeting »",
+   "debut": 4.0,
+   "duree": 3.6,
+   "x": 0.5,
+   "style": "accroche",
+   "transition": "slideup",
+   "texte": "Tu ne sais pas par où commencer ?\n*On est là pour t’accompagner.*",
+   "voile": 2.2
   }
  ],
  "outro": "visuels/outils/exemples/outro-video.json"

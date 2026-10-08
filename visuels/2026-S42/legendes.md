@@ -28,7 +28,7 @@ Reprendre plutôt que créer : est-ce que vous y aviez déjà pensé ?
 #Repreneuriat #EntrepreneuriatImmigrant
 
 ## 2. Reel vidéo « Reprendre une entreprise au Québec »
-Fichier : `s42-reel-repreneuriat.mp4` (17,7 s, 1080 × 1920, musique incluse). Sujet 2 (repreneuriat). Mot-clé : « reprendre une entreprise Québec ». Couverture conseillée : image de la 1re seconde (accroche « Près de 16 000 dirigeants… »). À publier quelques jours après le carrousel s42-01, qui sert de suite (« tout le détail dans le carrousel »).
+Fichier : `s42-reel-repreneuriat.mp4` (23,7 s, 1080 × 1920, musique incluse). Sujet 2 (repreneuriat). Mot-clé : « reprendre une entreprise Québec ». Couverture conseillée : image de la 1re seconde (accroche « Tu veux démarrer une entreprise au Québec ? As-tu pensé au repreneuriat ? »). Fin : « Tu ne sais pas par où commencer ? On est là pour t’accompagner. » À publier quelques jours après le carrousel s42-01, qui sert de suite (« tout le détail dans le carrousel »).
 
 ### Instagram
 Près de 16 000 dirigeants veulent vendre leur entreprise au Québec.
