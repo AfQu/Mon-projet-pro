@@ -26,3 +26,26 @@ Premier appel de cadrage sans frais : https://affairesquebec.ca
 Reprendre plutôt que créer : est-ce que vous y aviez déjà pensé ?
 
 #Repreneuriat #EntrepreneuriatImmigrant
+
+## 2. Reel vidéo « Reprendre une entreprise au Québec »
+Fichier : `s42-reel-repreneuriat.mp4` (17,7 s, 1080 × 1920, musique incluse). Sujet 2 (repreneuriat). Mot-clé : « reprendre une entreprise Québec ». Couverture conseillée : image de la 1re seconde (accroche « Près de 16 000 dirigeants… »). À publier quelques jours après le carrousel s42-01, qui sert de suite (« tout le détail dans le carrousel »).
+
+### Instagram
+Près de 16 000 dirigeants veulent vendre leur entreprise au Québec.
+
+Des clients, une équipe, un réseau : déjà là. Reprendre, c'est l'autre façon d'entreprendre, à Montréal comme en région.
+
+Par où commencer : Repreneuriat Québec et le Réseau accès PME de ta MRC. Les 4 étapes et les pièges à éviter sont dans notre carrousel sur le repreneuriat.
+
+Premier appel de cadrage sans frais : lien en bio.
+
+#Repreneuriat #RepriseDEntreprise #ReleveDEntreprise #EntrepreneuriatImmigrant #AffairesQuébec #Québec #Région
+
+### Facebook
+Près de 16 000 dirigeants d'entreprise veulent vendre ou transférer leur entreprise au Québec (Gouvernement du Québec, juin 2026).
+
+Pour une personne issue de l'immigration, reprendre une entreprise existante, c'est arriver avec des clients, une équipe et un réseau déjà en place. Premières portes : Repreneuriat Québec et le Réseau accès PME de votre MRC.
+
+Premier appel de cadrage sans frais : https://affairesquebec.ca
+
+#Repreneuriat #EntrepreneuriatImmigrant

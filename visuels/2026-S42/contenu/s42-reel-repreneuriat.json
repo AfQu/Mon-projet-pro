@@ -1,12 +1,61 @@
 {
-  "titre": "Reel vidéo « Reprendre une entreprise au Québec »",
-  "note": "Plans vidéo libres de droits à télécharger (voir « recherche ») dans visuels/2026-S42/clips/. Aucun visage reconnaissable en gros plan, rien de « lifestyle ».",
-  "plans": [
-    {"clip": "visuels/2026-S42/clips/01-commerce.mp4", "recherche": "small shop storefront open sign, local business interior", "debut": 0.5, "duree": 3.2, "style": "accroche", "texte": "Près de *16\u00a0000* dirigeants veulent vendre leur entreprise au Québec."},
-    {"clip": "visuels/2026-S42/clips/02-atelier.mp4", "recherche": "hands working in workshop, craftsman, bakery production", "debut": 0.5, "duree": 3.0, "style": "soustitre", "texte": "Des clients. Une équipe. Un réseau. *Déjà là.*", "transition": "slideleft"},
-    {"clip": "visuels/2026-S42/clips/03-poignee.mp4", "recherche": "business handshake close up, keys handover", "debut": 0.5, "duree": 3.0, "style": "soustitre", "texte": "Reprendre une entreprise au Québec : *l'autre façon d'entreprendre.*", "transition": "circleopen"},
-    {"clip": "visuels/2026-S42/clips/04-documents.mp4", "recherche": "reviewing documents on desk, signing contract close up", "debut": 0.5, "duree": 3.4, "style": "soustitre", "texte": "Commence par *Repreneuriat Québec* et le *Réseau accès PME* de ta MRC.", "transition": "wipeleft"},
-    {"clip": "visuels/2026-S42/clips/05-region.mp4", "recherche": "Quebec small town main street, rural road autumn", "debut": 0.5, "duree": 3.2, "style": "soustitre", "texte": "En région aussi, des entreprises cherchent *une relève.*", "transition": "fade"}
-  ],
-  "outro": "visuels/outils/exemples/outro-video.json"
+ "titre": "Reel vidéo « Reprendre une entreprise au Québec »",
+ "note": "Plans vidéo libres de droits à télécharger (voir « recherche ») dans visuels/2026-S42/clips/. Aucun visage reconnaissable en gros plan, rien de « lifestyle ».",
+ "plans": [
+  {
+   "clip": "visuels/2026-S42/clips/01-commerce.mp4",
+   "recherche": "small shop storefront open sign, local business interior",
+   "debut": 0.3,
+   "duree": 3.2,
+   "style": "accroche",
+   "texte": "Près de *16 000* dirigeants veulent vendre leur entreprise au Québec.",
+   "x": 0.45,
+   "source": "Mixkit 4653 « Tomatoes and broccoli in a greengrocer »"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/02-atelier.mp4",
+   "recherche": "hands working in workshop, craftsman, bakery production",
+   "debut": 12.0,
+   "duree": 3.0,
+   "style": "soustitre",
+   "texte": "Des clients. Une équipe. Un réseau. *Déjà là.*",
+   "transition": "slideleft",
+   "x": 0.68,
+   "source": "Mixkit 771 « A carpenter working at his workshop »"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/03-poignee.mp4",
+   "recherche": "business handshake close up, keys handover",
+   "debut": 1.6,
+   "duree": 3.0,
+   "style": "soustitre",
+   "texte": "Reprendre une entreprise au Québec : *l’autre façon d’entreprendre.*",
+   "transition": "circleopen",
+   "x": 0.5,
+   "source": "Mixkit 30013 « Close-up handshake between formal dressed men »"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/04-documents.mp4",
+   "recherche": "reviewing documents on desk, signing contract close up",
+   "debut": 6.0,
+   "duree": 3.4,
+   "style": "soustitre",
+   "texte": "Commence par *Repreneuriat Québec* et le *Réseau accès PME* de ta MRC.",
+   "transition": "wipeleft",
+   "x": 0.55,
+   "source": "Mixkit 4533 « Woman doing accounts on a calculator »"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/05-region.mp4",
+   "recherche": "Quebec small town main street, rural road autumn",
+   "debut": 2.5,
+   "duree": 3.2,
+   "style": "soustitre",
+   "texte": "En région aussi, des entreprises cherchent *une relève.*",
+   "transition": "fade",
+   "x": 0.5,
+   "source": "Mixkit 3323 « Snowing on the streets of Canada »"
+  }
+ ],
+ "outro": "visuels/outils/exemples/outro-video.json"
 }

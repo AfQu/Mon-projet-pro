@@ -8,4 +8,4 @@
 | exemple (non publié) | Démonstration des formes (`outils/exemples/reel-formes.mp4`) | mythe | mythe, compteur, liste, machine, logo | glisse, fondu, coupe, cercle |
 | mar. 6 oct. 2026 | Idée reçue : le financement d'abord (`2026-S41/s41-reel-idee-recue.mp4`) | mythe | mythe, compteur, machine, logo | glisse, coupe, cercle |
 | jeu. 8 oct. 2026 | Vidéo face caméra « Rouba répond » : par où commencer | face caméra | — | — |
-| à programmer (S42) | Reprendre une entreprise au Québec (`2026-S42/s42-reel-repreneuriat.mp4`, Reel vidéo) | accroche sur plan vidéo | 5 plans vidéo + logo | slideleft, circleopen, wipeleft, fade |
+| à programmer (S42) | Reprendre une entreprise au Québec (`2026-S42/s42-reel-repreneuriat.mp4`, Reel vidéo) | accroche sur plan vidéo | 5 plans vidéo réels (Mixkit) + logo | slideleft, circleopen, wipeleft, fade |

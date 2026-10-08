@@ -19,6 +19,8 @@ scenario.json :
 }
 - style : « accroche » (Caslon, grand, centré haut) ou « soustitre » (DM Sans gras, bas, bandeau).
 - *mot* : mot affiché en or.
+- x : position du recadrage vertical dans l'image (0 = gauche, 0,5 = centre, 1 = droite).
+- Les bleus et cyans sont désaturés automatiquement (charte : jamais de bleu).
 - transition : type xfade de ffmpeg vers ce plan (fade, slideleft, slideup, circleopen, wipeleft, smoothleft…).
 Le texte reste hors des 250 px du haut et du bas (zones des boutons Instagram).
 Toujours regarder des images clés avant de livrer.
@@ -92,8 +94,7 @@ def calque_texte(texte, style, chemin):
         x = (W - largeur) / 2
         for k, (mot, gold) in enumerate(ligne):
             mot_aff = mot + (" " if k < len(ligne) - 1 else "")
-            if style != "accroche":  # ombre douce pour la lisibilité sur image
-                d.text((x + 3, y + 3), mot_aff, font=f, fill=(0, 0, 0, 160))
+            d.text((x + 3, y + 3), mot_aff, font=f, fill=(0, 0, 0, 160))  # ombre douce pour la lisibilité
             d.text((x, y), mot_aff, font=f, fill=(OR if gold else BLANC) + (255,))
             x += d.textlength(mot_aff, font=f)
         y += interligne
@@ -106,8 +107,9 @@ def plan(p, i, tmp):
     png = os.path.join(tmp, f"texte{i:02d}.png"); calque_texte(p.get("texte", ""), p.get("style", "soustitre"), png)
     z = 0.06 / max(dur, 0.1)  # zoom progressif de 6 % sur la durée du plan
     vf = (f"[0:v]trim=start={p.get('debut', 0)}:duration={dur},setpts=PTS-STARTPTS,fps={FPS},"
-          f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}:(iw-{W})*{p.get('x', 0.5)}:(ih-{H})/2,"
           f"scale=w='iw*(1+{z}*t)':h='ih*(1+{z}*t)':eval=frame,crop={W}:{H},"
+          "huesaturation=colors=c+b:saturation=-1:strength=6,unsharp=5:5:0.6,"  # charte : jamais de bleu
           "eq=saturation=0.82:contrast=1.06:brightness=-0.02,colorbalance=rs=0.05:gs=0.01:bs=-0.06,"
           "vignette=PI/5[v];"
           f"[1:v]format=rgba,fade=in:st=0.15:d=0.45:alpha=1[t];[v][t]overlay=0:0,format=yuv420p[o]")

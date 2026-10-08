@@ -13,3 +13,9 @@ Vérifiées par recherche le 6 octobre 2026 (les pages officielles ne peuvent pa
 | Programme des entrepreneurs, volet 3 « Reprise d'entreprise » ; accompagnement d'un organisme spécialisé en repreneuriat exigé, avec offre de service | Québec.ca : https://www.quebec.ca/immigration/permanent/gens-affaires/entrepreneurs/reprise (version anglaise consultée : …/en/immigration/permanent/immigrate-business/entrepreneurs/takeover/conditions) |
 
 Note : le chiffre « 16 000 » du brief était attribué à Les Affaires ; l'article n'a pas été retrouvé, d'où le recours aux sources officielles ci-dessus. Les conseils (étapes, pièges) sont des pratiques générales d'accompagnement, sans statistique ni avis individuel.
+
+## Reel vidéo « Reprendre une entreprise au Québec » (s42-reel-repreneuriat.mp4)
+
+- Chiffre « près de 16 000 dirigeants » : mêmes sources que le carrousel ci-dessus.
+- Organismes nommés (Repreneuriat Québec, Réseau accès PME) : voir le carrousel.
+- Plans vidéo : Mixkit, Stock Video Free License (détail et liens dans `clips/LISEZMOI.md`). Musique : synthétisée par `outils/musique.py` (libre de droits).
