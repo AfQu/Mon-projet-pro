@@ -39,11 +39,13 @@ Les premières portes :
 → Repreneuriat Québec, pour être accompagné et rencontrer des cédants
 → le Réseau accès PME de ta MRC, pour connaître les entreprises à reprendre près de chez toi
 
-Tu ne sais pas par où commencer ? On est là pour t'accompagner. Premier appel de cadrage sans frais : lien en bio.
+Tu ne sais pas par où commencer ? On est là pour t'accompagner.
+
+🎙 Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », le vendredi 23 octobre à 19 h (heure de Montréal), en ligne. Inscription : lien en bio.
 
 📌 Les 4 étapes et les pièges à éviter sont dans notre carrousel sur le repreneuriat.
 
-#Repreneuriat #RepriseDEntreprise #ReleveDEntreprise #EntrepreneuriatImmigrant #AffairesQuébec #Québec #Région
+#Repreneuriat #RepriseDEntreprise #ReleveDEntreprise #EntrepreneuriatImmigrant #Webinaire #AffairesQuébec #Québec #Région
 
 ### Facebook
 Vous voulez démarrer une entreprise au Québec ? Avez-vous pensé au repreneuriat ?
@@ -52,6 +54,9 @@ Près de 16 000 dirigeants d'entreprise veulent vendre ou transférer leur entre
 
 Premières portes : Repreneuriat Québec et le Réseau accès PME de votre MRC.
 
-Vous ne savez pas par où commencer ? On est là pour vous accompagner. Premier appel de cadrage sans frais : https://affairesquebec.ca
+Vous ne savez pas par où commencer ? On est là pour vous accompagner.
+
+Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », le vendredi 23 octobre 2026 à 19 h (heure de Montréal), en ligne.
+Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
 
 #Repreneuriat #EntrepreneuriatImmigrant
