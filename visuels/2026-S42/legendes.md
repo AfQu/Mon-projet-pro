@@ -12,7 +12,7 @@ Dans ce carrousel : les 4 étapes avant toute offre, qui peut t'accompagner (Rep
 
 📌 Sauvegarde-le pour le jour où tu passes à l'action.
 
-Premier appel de cadrage sans frais : lien en bio.
+🎙 Pour aller plus loin : webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », vendredi 23 octobre à 19 h (heure de Montréal), en ligne. Inscription : lien en bio.
 
 #Repreneuriat #RepriseDEntreprise #EntrepreneuriatImmigrant #AffairesQuébec #Entrepreneuriat #ReleveDEntreprise #Québec #Montréal #TroisRivières #Sherbrooke #RéseauDAffaires
 
@@ -21,7 +21,8 @@ Reprendre une entreprise au Québec : des clients, une équipe et un réseau dé
 
 Près de 16 000 dirigeants d'entreprise disent vouloir vendre ou transférer leur entreprise (Gouvernement du Québec, juin 2026). Voici par où commencer, qui peut vous accompagner et les pièges à éviter.
 
-Premier appel de cadrage sans frais : https://affairesquebec.ca
+Pour aller plus loin : webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », vendredi 23 octobre 2026 à 19 h (heure de Montréal), en ligne.
+Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
 
 Reprendre plutôt que créer : est-ce que vous y aviez déjà pensé ?
 
@@ -60,3 +61,6 @@ Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Qu�
 Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
 
 #Repreneuriat #EntrepreneuriatImmigrant
+
+## 3. Story J-14 du webinaire (vendredi 9 octobre)
+Fichier : `s42-02-story-j14.png`. Pas de légende. Ajouter le sticker « Lien » dans l'espace vide sous « Inscription : touche le lien ci-dessous », vers https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379 (texte du sticker : « S'inscrire »). L'ajouter ensuite à la bulle « À la une » Événements.
