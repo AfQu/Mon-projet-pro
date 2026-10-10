@@ -64,3 +64,38 @@ Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-
 
 ## 3. Story J-14 du webinaire (vendredi 9 octobre)
 Fichier : `s42-02-story-j14.png`. Pas de légende. Ajouter le sticker « Lien » dans l'espace vide sous « Inscription : touche le lien ci-dessous », vers https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379 (texte du sticker : « S'inscrire »). L'ajouter ensuite à la bulle « À la une » Événements.
+
+## 4. Reel vidéo « Entreprendre en région »
+Fichier : `s42-reel-regions.mp4` (23,7 s, 1080 × 1920, musique incluse). Sujet 3 (régions et secteurs). Mot-clé : « s'installer en région Québec ». Couverture conseillée : image de la 1re seconde (« Entreprendre en région ? Voici les secteurs qui portent. »). Fin : carton AQ « Webinaire gratuit · rendez-vous le 23.10.26 · 19 h ».
+
+### Instagram
+Entreprendre en région ? Voici les secteurs qui portent.
+
+En 2026, Québec soutient 24 créneaux d'excellence dans 14 régions. Quelques exemples :
+→ Bas-Saint-Laurent, Gaspésie, Côte-Nord : ressources et technologies marines
+→ Chaudière-Appalaches, Estrie, Laurentides : bois et construction
+→ Mauricie, Centre-du-Québec : conception et fabrication de machines
+→ Saguenay–Lac-Saint-Jean : agriculture nordique ; Bas-Saint-Laurent et Chaudière-Appalaches : érable
+→ Partout : le tourisme, ajouté en juin 2026 aux secteurs prioritaires en immigration
+
+S'installer en région, c'est souvent moins de concurrence, des entreprises à reprendre et des réseaux plus accessibles. Ton point de départ : le Réseau accès PME de la MRC où tu veux t'installer (services gratuits).
+
+🎙 Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », vendredi 23 octobre à 19 h (heure de Montréal), en ligne. Inscription : lien en bio.
+
+📌 Sauvegarde ce Reel et dis-nous en commentaire quelle région t'attire.
+
+#EntreprendreEnRégion #SinstallerEnRégion #Régions #EntrepreneuriatImmigrant #RéseauAccèsPME #Webinaire #AffairesQuébec #Québec
+
+### Facebook
+Vous voulez entreprendre en région au Québec ? Voici les secteurs qui portent.
+
+En mai 2026, Québec a renouvelé son soutien à 24 créneaux d'excellence répartis dans 14 régions (6 M$ sur 3 ans). Parmi eux : les ressources et technologies marines (Bas-Saint-Laurent, Gaspésie, Côte-Nord), le bois et la construction (Chaudière-Appalaches, Estrie, Laurentides), la conception et fabrication de machines (Mauricie, Centre-du-Québec), l'agriculture nordique (Saguenay–Lac-Saint-Jean) et l'érable. Le tourisme a aussi été ajouté en juin 2026 aux secteurs prioritaires en immigration.
+
+Premier réflexe : le Réseau accès PME de la MRC visée, qui accompagne gratuitement les entrepreneurs.
+
+Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », vendredi 23 octobre 2026 à 19 h (heure de Montréal), en ligne.
+Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
+
+Quelle région vous attire ?
+
+#EntreprendreEnRégion #EntrepreneuriatImmigrant

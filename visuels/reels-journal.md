@@ -9,3 +9,4 @@
 | mar. 6 oct. 2026 | Idée reçue : le financement d'abord (`2026-S41/s41-reel-idee-recue.mp4`) | mythe | mythe, compteur, machine, logo | glisse, coupe, cercle |
 | jeu. 8 oct. 2026 | Vidéo face caméra « Rouba répond » : par où commencer | face caméra | — | — |
 | à programmer (S42) | Reprendre une entreprise au Québec (`2026-S42/s42-reel-repreneuriat.mp4`, Reel vidéo) | question au spectateur sur plan vidéo | 7 plans vidéo réels (Mixkit) : question, chiffre, 4 plans, appel à l’accompagnement + logo | fade, slideleft, circleopen, wipeleft, fade, slideup |
+| à programmer (S42) | Entreprendre en région : secteurs porteurs (`2026-S42/s42-reel-regions.mp4`, Reel vidéo) | question sur vue aérienne | accroche, 5 « fiches secteur » (région + secteur), sous-titre, carton webinaire | slideleft, slideup, wipeleft, circleopen, fade |

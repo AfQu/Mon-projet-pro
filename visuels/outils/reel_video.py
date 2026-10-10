@@ -17,7 +17,8 @@ scenario.json :
   ],
   "outro": "visuels/outils/exemples/outro-video.json"
 }
-- style : « accroche » (Caslon, grand, centré haut) ou « soustitre » (DM Sans gras, bas, bandeau).
+- style : « accroche » (Caslon, grand, centré haut), « soustitre » (DM Sans gras, bas, bandeau)
+  ou « fiche » (étiquette en petites capitales or, champ « etiquette », puis titre Caslon en bas).
 - *mot* : mot affiché en or. « \n » force un retour à la ligne.
 - voile : assombrissement du haut pour l'accroche (1 par défaut ; jusqu'à 2,2 sur une image claire).
 - x : position du recadrage vertical dans l'image (0 = gauche, 0,5 = centre, 1 = droite).
@@ -65,18 +66,79 @@ def lignes(txt, f, maxw):
     return res
 
 
+def _mots(txt):
+    """Mots en « runs » [(texte, or)], sans couper un mot à la frontière d'un passage en or."""
+    mots, cur = [], []
+    for seg, gold in segments(txt):
+        parts = seg.split(" ")
+        for k, part in enumerate(parts):
+            if k > 0 and cur:
+                mots.append(cur); cur = []
+            if part:
+                cur.append((part, gold))
+    if cur: mots.append(cur)
+    return mots
+
+
+def _texte(mot):
+    return "".join(t for t, _ in mot)
+
+
 def _lignes(txt, f, maxw):
     d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
-    mots = [(m, gold) for seg, gold in segments(txt) for m in seg.split(" ") if m]
     res, cur = [], []
-    for m in mots:
-        essai = " ".join(x for x, _ in cur + [m])
+    for m in _mots(txt):
+        essai = " ".join(_texte(x) for x in cur + [m])
         if cur and d.textlength(essai, font=f) > maxw:
             res.append(cur); cur = [m]
         else:
             cur.append(m)
     if cur: res.append(cur)
     return res
+
+
+def dessine_ligne(d, ligne, f, y, ombre=True):
+    largeur = d.textlength(" ".join(_texte(m) for m in ligne), font=f)
+    x = (W - largeur) / 2
+    for k, mot in enumerate(ligne):
+        runs = mot + ([(" ", False)] if k < len(ligne) - 1 else [])
+        for t, gold in runs:
+            if ombre:
+                d.text((x + 3, y + 3), t, font=f, fill=(0, 0, 0, 160))
+            d.text((x, y), t, font=f, fill=(OR if gold else BLANC) + (255,))
+            x += d.textlength(t, font=f)
+
+
+def calque_fiche(texte, etiquette, chemin):
+    """Style « fiche » : étiquette (régions) en petites capitales or + secteur en Caslon, bas de l'image."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    grad = Image.new("L", (1, H))
+    for y in range(H):
+        grad.putpixel((0, y), int(min(255, max(0, (y - 800) / 1120) * 235)))
+    img = Image.composite(Image.new("RGBA", (W, H), NOIR + (255,)), img, grad.resize((W, H)))
+    d = ImageDraw.Draw(img)
+    f = police("LibreCaslonDisplay-Regular.ttf", 96); interligne = 104
+    ls = lignes(texte, f, 900)
+    y = 1600 - len(ls) * interligne
+    fe = police("DMSans[opsz,wght].ttf", 30, 600)
+    et = etiquette.upper()
+    esp = 5  # espacement des lettres
+    larg = sum(d.textlength(c, font=fe) + esp for c in et) - esp
+    lignes_et = [et] if larg <= 960 else [x.strip() for x in et.split("·")]
+    if len(lignes_et) > 1:  # trop long : une région par ligne, séparées par « · » implicite
+        lignes_et = [" · ".join(lignes_et[i:i + 2]) for i in range(0, len(lignes_et), 2)]
+    ye = y - 40 - 46 * len(lignes_et)
+    for le in lignes_et:
+        lw = sum(d.textlength(c, font=fe) + esp for c in le) - esp
+        x = (W - lw) / 2
+        for c in le:
+            d.text((x, ye), c, font=fe, fill=OR + (255,)); x += d.textlength(c, font=fe) + esp
+        ye += 46
+    d.line([(W / 2 - 48, y - 22), (W / 2 + 48, y - 22)], fill=OR + (255,), width=2)
+    for ligne in ls:
+        dessine_ligne(d, ligne, f, y)
+        y += interligne
+    img.save(chemin)
 
 
 def calque_texte(texte, style, chemin, voile=1.0):
@@ -100,13 +162,7 @@ def calque_texte(texte, style, chemin, voile=1.0):
     if style != "accroche":
         y = 1640 - len(ls) * interligne
     for ligne in ls:
-        largeur = d.textlength(" ".join(m for m, _ in ligne), font=f)
-        x = (W - largeur) / 2
-        for k, (mot, gold) in enumerate(ligne):
-            mot_aff = mot + (" " if k < len(ligne) - 1 else "")
-            d.text((x + 3, y + 3), mot_aff, font=f, fill=(0, 0, 0, 160))  # ombre douce pour la lisibilité
-            d.text((x, y), mot_aff, font=f, fill=(OR if gold else BLANC) + (255,))
-            x += d.textlength(mot_aff, font=f)
+        dessine_ligne(d, ligne, f, y)  # ombre douce pour la lisibilité
         y += interligne
     img.save(chemin)
 
@@ -114,7 +170,11 @@ def calque_texte(texte, style, chemin, voile=1.0):
 def plan(p, i, tmp):
     """Un plan : recadrage vertical, étalonnage, lent zoom, texte en fondu."""
     dur = float(p["duree"]); out = os.path.join(tmp, f"plan{i:02d}.mp4")
-    png = os.path.join(tmp, f"texte{i:02d}.png"); calque_texte(p.get("texte", ""), p.get("style", "soustitre"), png, p.get("voile", 1.0))
+    png = os.path.join(tmp, f"texte{i:02d}.png")
+    if p.get("style") == "fiche":
+        calque_fiche(p.get("texte", ""), p.get("etiquette", ""), png)
+    else:
+        calque_texte(p.get("texte", ""), p.get("style", "soustitre"), png, p.get("voile", 1.0))
     z = 0.06 / max(dur, 0.1)  # zoom progressif de 6 % sur la durée du plan
     vf = (f"[0:v]trim=start={p.get('debut', 0)}:duration={dur},setpts=PTS-STARTPTS,fps={FPS},"
           f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}:(iw-{W})*{p.get('x', 0.5)}:(ih-{H})/2,"

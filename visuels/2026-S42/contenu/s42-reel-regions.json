@@ -1,0 +1,82 @@
+{
+ "titre": "Reel vidéo « Entreprendre en région »",
+ "note": "Secteurs = créneaux d'excellence ACCORD soutenus par Québec (annonce du 14 mai 2026) + tourisme ajouté aux secteurs prioritaires du PSTQ (juin 2026). Voir sources.md.",
+ "plans": [
+  {
+   "clip": "visuels/2026-S42/clips/r0-village.mp4",
+   "source": "Mixkit 3874 « Village surrounded by fields seen from the air »",
+   "debut": 1.0,
+   "duree": 3.4,
+   "x": 0.5,
+   "style": "accroche",
+   "voile": 1.3,
+   "texte": "Entreprendre en région ?\n*Voici les secteurs qui portent.*"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/r1-port.mp4",
+   "source": "Mixkit 40076 « Aerial tour of a port at sunset »",
+   "debut": 4.0,
+   "duree": 3.0,
+   "x": 0.5,
+   "style": "fiche",
+   "transition": "slideleft",
+   "etiquette": "Bas-Saint-Laurent · Gaspésie · Côte-Nord",
+   "texte": "Ressources et technologies *marines*"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/r2-bois.mp4",
+   "source": "Mixkit 39690 « Sawdust falling into a machine in a carpentry »",
+   "debut": 1.0,
+   "duree": 3.0,
+   "x": 0.5,
+   "style": "fiche",
+   "transition": "slideup",
+   "etiquette": "Chaudière-Appalaches · Estrie · Laurentides",
+   "texte": "*Bois* et construction"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/r3-machines.mp4",
+   "source": "Mixkit 778 « Carpenter marking a piece of wood »",
+   "debut": 8.0,
+   "duree": 3.0,
+   "x": 0.5,
+   "style": "fiche",
+   "transition": "wipeleft",
+   "etiquette": "Mauricie · Centre-du-Québec",
+   "texte": "Conception et fabrication de *machines*"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/r4-champs.mp4",
+   "source": "Mixkit 41397 « Farm fields in an aerial view on a cloudy day »",
+   "debut": 2.0,
+   "duree": 3.0,
+   "x": 0.5,
+   "style": "fiche",
+   "transition": "circleopen",
+   "etiquette": "Saguenay–Lac-Saint-Jean · Bas-Saint-Laurent · Chaudière-Appalaches",
+   "texte": "Agriculture *nordique*\n*et\u00a0érable*"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/r5-tourisme.mp4",
+   "source": "Mixkit 3363 « Chairs of a cable car in a Canadian forest »",
+   "debut": 1.0,
+   "duree": 3.2,
+   "x": 0.5,
+   "style": "fiche",
+   "transition": "slideleft",
+   "etiquette": "Partout au Québec",
+   "texte": "*Tourisme*, secteur prioritaire depuis juin 2026"
+  },
+  {
+   "clip": "visuels/2026-S42/clips/r6-accompagnement.mp4",
+   "source": "Mixkit 30005 « Woman giving her hand to a couple of men »",
+   "debut": 2.0,
+   "duree": 3.6,
+   "x": 0.55,
+   "style": "soustitre",
+   "transition": "fade",
+   "texte": "Ton point de départ : le *Réseau accès PME* de la MRC où tu veux t’installer."
+  }
+ ],
+ "outro": "visuels/2026-S42/contenu/outro-webinaire.json"
+}
