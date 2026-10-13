@@ -1,0 +1,28 @@
+{
+  "id": "s42-06-linkedin-mauricie",
+  "titre": "Post LinkedIn : Mauricie",
+  "format": "linkedin",
+  "pilier": "Contexte et opportunités · sujet 3 — vouvoiement",
+  "slides": [
+    {
+      "gabarit": "ressources",
+      "surtitre": "Fiche région · Mauricie",
+      "titre": "Trois repères pour un projet en région",
+      "items": [
+        {
+          "nom": "Près de 24 400 emplois à pourvoir",
+          "texte": "Entre 2025 et 2029, selon Services Québec."
+        },
+        {
+          "nom": "Fabrication à 12,9 % de l'emploi",
+          "texte": "Contre 10,8 % pour l'ensemble du Québec."
+        },
+        {
+          "nom": "Un réseau que nous connaissons",
+          "texte": "Notre cofondateur a été commissaire industriel à IDÉ Trois-Rivières."
+        }
+      ],
+      "source": "Sources : Services Québec ; Ministère de l'Économie du Québec."
+    }
+  ]
+}

@@ -64,7 +64,7 @@
         },
         {
           "nom": "Entoure-toi avant de signer",
-          "texte": "Comptable et avocat pour évaluer l'entreprise et sécuriser la transaction."
+          "texte": "Comptable et avocat pour la transaction ; Affaires Québec pour structurer le projet et le financement."
         }
       ]
     },
@@ -73,6 +73,10 @@
       "surtitre": "Les ressources",
       "titre": "Qui peut t'accompagner",
       "items": [
+        {
+          "nom": "Affaires Québec",
+          "texte": "Évaluer l'occasion, monter le plan et le financement, te présenter aux bons interlocuteurs."
+        },
         {
           "nom": "Repreneuriat Québec (ex-CTEQ)",
           "texte": "Plus de 42 000 entrepreneurs accompagnés et plus de 3 600 transferts amorcés."
@@ -135,7 +139,7 @@
       "titre": "Reprendre une entreprise au Québec ? Parlons-en.",
       "taille": "l",
       "sous_titre": "Premier appel de cadrage sans frais sur affairesquebec.ca",
-      "note": "Nous t'aidons à structurer le projet et à ouvrir les bonnes portes."
+      "note": "Affaires Québec t'aide à structurer la reprise, à la financer et à ouvrir les bonnes portes."
     }
   ]
 }

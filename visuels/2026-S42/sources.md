@@ -33,3 +33,18 @@ Note : le chiffre « 16 000 » du brief était attribué à Les Affaires ; l'art
 | Réseau accès PME : services gratuits, points de service dans les MRC de toutes les régions | Gouvernement du Québec, « Réseau accès PME » : https://www.quebec.ca/entreprises-et-travailleurs-autonomes/accompagnement-services/points-service |
 
 Note : quebec.ca n'était pas accessible depuis l'environnement de production ; le contenu a été vérifié par les extraits de recherche et les reprises de presse. **[À VÉRIFIER]** par Rénald : ouvrir le communiqué du 14 mai 2026 et confirmer les régions de chaque créneau (en particulier Côte-Nord pour les ressources marines et Estrie pour l'acéricole). Les créneaux d'excellence sont des secteurs stratégiques soutenus par Québec, pas une mesure de la demande de main-d'œuvre.
+
+## Fiche région Mauricie (s42-03, s42-06) — reprise du lot de la routine du 8 octobre
+
+Vérifiées par recherche le 8 octobre 2026 par la routine ; les pages officielles ne s'ouvrent pas depuis l'environnement. **À revérifier par Rénald avant publication.**
+
+| Affirmation | Source |
+| --- | --- |
+| Près de 24 400 emplois à pourvoir entre 2025 et 2029 ; départs à la retraite = moteur principal | Services Québec, Portrait de la Mauricie : https://www.quebec.ca/emploi/informer-metier-profession/marche-travail/portrait-mauricie |
+| Fabrication 12,9 % de l'emploi (Québec 10,8 %) | Ministère de l'Économie, Portrait socioéconomique de la Mauricie : https://www.quebec.ca/gouvernement/ministeres-organismes/economie/publications/portraits-socioeconomiques/mauricie |
+| Créneau d'excellence « Conception et fabrication de machines » (Mauricie, Centre-du-Québec) | Communiqué du 14 mai 2026 (voir section Reel « Entreprendre en région ») |
+| Trois-Rivières et Shawinigan ; agriculture au sud, forêt et tourisme au Haut-Saint-Maurice | Développement économique Canada : https://www.canada.ca/fr/developpement-economique-regions-quebec/a-propos/informations-regionales/mauricie.html |
+| IDÉ Trois-Rivières, services de développement économique de Shawinigan, SADC (Shawinigan, Maskinongé, Haut-Saint-Maurice) | Liste des partenaires régionaux de DEC (même page) |
+| SANA de Trois-Rivières, de Shawinigan et de la MRC de Maskinongé | Québec.ca, communiqué MIFI (2022) : https://www.quebec.ca/nouvelles/actualites/details/le-ministre-jean-boulet-annonce-un-investissement-de-plus-de-21-m-pour-lattraction-et-letablissement-des-personnes-immigrantes-en-mauricie-38575 **[À VÉRIFIER]** (2022) |
+| CCI3R | https://www.cci3r.com |
+| Rénald Rabathaly, ancien commissaire industriel à IDÉ Trois-Rivières | Skill AQ, `references/legendes.md` (fait validé) |

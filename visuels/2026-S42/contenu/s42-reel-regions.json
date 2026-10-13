@@ -54,7 +54,7 @@
    "style": "fiche",
    "transition": "circleopen",
    "etiquette": "Saguenay–Lac-Saint-Jean · Bas-Saint-Laurent · Chaudière-Appalaches",
-   "texte": "Agriculture *nordique*\n*et\u00a0érable*"
+   "texte": "Agriculture *nordique*\n*et érable*"
   },
   {
    "clip": "visuels/2026-S42/clips/r5-tourisme.mp4",
@@ -75,7 +75,7 @@
    "x": 0.55,
    "style": "soustitre",
    "transition": "fade",
-   "texte": "Ton point de départ : le *Réseau accès PME* de la MRC où tu veux t’installer."
+   "texte": "Ton point de départ : le *Réseau accès PME* de ta MRC. Et *Affaires Québec* pour structurer ton projet."
   }
  ],
  "outro": "visuels/2026-S42/contenu/outro-webinaire.json"

@@ -1,0 +1,122 @@
+{
+  "id": "s42-03-fiche-mauricie",
+  "titre": "Fiche région : Mauricie",
+  "format": "post",
+  "pilier": "Contexte et opportunités · sujet 3 (régions et secteurs) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Fiche région · Mauricie",
+      "titre": "S'installer en région Québec : la Mauricie",
+      "sous_titre": "Emplois, économie, organismes : l'essentiel avant de choisir."
+    },
+    {
+      "gabarit": "chiffre",
+      "centre": true,
+      "surtitre": "Le contexte",
+      "avant": "Près de",
+      "chiffre": "24 400",
+      "texte": "emplois à pourvoir en Mauricie entre 2025 et 2029.",
+      "suite": "Les départs à la retraite sont le moteur principal de ces besoins.",
+      "source": "Source : Services Québec, Portrait de la Mauricie (Québec.ca)."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "L'économie en bref",
+      "titre": "Une région industrielle et de services",
+      "items": [
+        {
+          "nom": "Fabrication",
+          "texte": "12,9 % de l'emploi, contre 10,8 % pour l'ensemble du Québec."
+        },
+        {
+          "nom": "Un créneau d'excellence",
+          "texte": "Conception et fabrication de machines, soutenu par Québec en 2026."
+        },
+        {
+          "nom": "Deux pôles urbains",
+          "texte": "Trois-Rivières et Shawinigan ; agriculture au sud, forêt et tourisme au Haut-Saint-Maurice."
+        }
+      ],
+      "source": "Sources : Ministère de l'Économie, Portrait socioéconomique de la Mauricie ; communiqué du 14 mai 2026 ; DEC."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Reprendre en région",
+      "titre": "Entreprises à reprendre",
+      "items": [
+        {
+          "nom": "Repreneuriat Québec",
+          "texte": "Accompagnement et mise en relation entre repreneurs et cédants, dans toutes les régions."
+        },
+        {
+          "nom": "Ton service de développement économique",
+          "texte": "IDÉ Trois-Rivières, les services de développement économique de Shawinigan, ou ta MRC."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On t'aide à évaluer une occasion de reprise et à monter le dossier de financement."
+        }
+      ],
+      "source": "Source : Repreneuriat Québec, rapport annuel 2026."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les organismes clés",
+      "titre": "À qui parler en Mauricie",
+      "items": [
+        {
+          "nom": "IDÉ Trois-Rivières · SDE Shawinigan",
+          "texte": "Développement économique local, accompagnement des entreprises."
+        },
+        {
+          "nom": "SADC et CCI3R",
+          "texte": "Les SADC pour le financement des PME, la CCI3R pour le réseau d'affaires."
+        },
+        {
+          "nom": "SANA",
+          "texte": "L'accueil des nouveaux arrivants à Trois-Rivières, Shawinigan et Maskinongé."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "Rénald, notre cofondateur, a été commissaire industriel à IDÉ Trois-Rivières : on connaît le réseau et on t'y présente."
+        }
+      ],
+      "source": "Sources : Développement économique Canada, partenaires de la Mauricie ; sites des organismes."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Avant de t'installer",
+      "titre": "Quatre vérifications",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Appelle le Réseau accès PME de la MRC",
+          "texte": "Il t'oriente vers les programmes et les fonds locaux."
+        },
+        {
+          "nom": "Valide ton marché",
+          "texte": "Profil du recensement de Statistique Canada pour la ville visée."
+        },
+        {
+          "nom": "Rencontre le réseau local",
+          "texte": "Chambre de commerce, SADC, SANA : une visite avant le déménagement."
+        },
+        {
+          "nom": "Fais structurer ton projet",
+          "texte": "Affaires Québec prépare avec toi le plan, le financement et les rencontres."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton projet en Mauricie",
+      "titre": "On connaît le terrain. Parlons-en.",
+      "taille": "l",
+      "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+      "note": "Affaires Québec : structurer ton projet, le financer et t'ouvrir le réseau mauricien."
+    }
+  ]
+}

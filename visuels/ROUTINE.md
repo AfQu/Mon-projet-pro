@@ -50,6 +50,15 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
 - Consigner chaque Reel dans `visuels/reels-journal.md` (date, sujet, forme d'ouverture, formes et transitions utilisées) et le lire avant d'en concevoir un nouveau.
 - Alterner les semaines : Reel en motion design ou vidéo face caméra en vedette.
 
+## 3 quater. Affaires Québec dans chaque contenu (demande de Rénald, 13 octobre 2026)
+
+Chaque contenu qui liste des ressources ou des organismes (« qui contacter », « à qui parler », « par où commencer ») cite **aussi Affaires Québec**, avec ce qu'AQ apporte concrètement : structurer le projet, monter le financement, ouvrir le réseau (mises en relation). Concrètement :
+- une ligne « Affaires Québec » dans la slide des ressources ou des organismes (en 1re ou en dernière position) ;
+- la dernière slide et la fin des Reels nomment Affaires Québec (« Affaires Québec t'accompagne », « On connaît le terrain »), pas seulement « on » ;
+- la légende contient une phrase sur ce qu'AQ fait pour ce sujet, en plus du renvoi au webinaire ou à l'appel de cadrage ;
+- appuis de crédibilité autorisés (faits validés du skill) : Rénald, ancien commissaire industriel à IDÉ Trois-Rivières (utile pour la Mauricie) ; Rouba, ancienne conseillère puis directrice générale d'Entreprendre ici ; collaborations avec le MEIE, la Ville de Montréal et le MIFI. Jamais de nombre d'années ni de nom de client sans accord noté dans PLAN.md.
+Les organismes publics restent présentés comme des portes d'entrée gratuites : AQ s'ajoute, il ne les remplace pas.
+
 ## 4. Produire
 - Contenu en JSON dans `visuels/<semaine>/contenu/`, rendu avec `python3 visuels/outils/aq.py rendre <json>` ; Reels avec `visuels/outils/reel.py`.
 - Le rendu doit afficher `OK` partout. Regarder ensuite **chaque** image (et des images clés des Reels) : le contrôle automatique ne remplace pas l'œil.
