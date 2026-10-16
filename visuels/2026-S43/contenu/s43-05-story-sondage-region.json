@@ -1,0 +1,16 @@
+{
+  "id": "s43-05-story-sondage-region",
+  "titre": "Story : sondage démarche",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton avis",
+      "titre": "Quelle démarche te bloque le plus ?",
+      "taille": "l",
+      "espace": 330,
+      "note": "Immatriculation, taxes ou permis : ton vote guide nos prochains contenus."
+    }
+  ]
+}

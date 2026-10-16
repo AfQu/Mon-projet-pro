@@ -1,0 +1,15 @@
+{
+  "id": "s43-13-couverture-reel-organismes",
+  "titre": "Couverture Reel : organismes",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Qui fait quoi",
+      "titre": "Les organismes, c'est trop compliqué ?",
+      "taille": "l",
+      "sous_titre": "Un premier appel suffit."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "s43-11-qui-fait-quoi",
+  "titre": "Qui fait quoi : les organismes à connaître",
+  "format": "post",
+  "pilier": "Guides pratiques · sujet 4 (ressources et partenaires) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Qui fait quoi",
+      "titre": "Cinq organismes à connaître pour entreprendre au Québec",
+      "taille": "l",
+      "sous_titre": "Pour ne plus te perdre dans les services aux entreprises."
+    },
+    {
+      "gabarit": "texte",
+      "surtitre": "Le constat",
+      "titre": "Beaucoup de portes, peu de mode d'emploi",
+      "paragraphes": [
+        "Réseau accès PME, PME MTL, SADC, CAE : les sigles s'accumulent et on ne sait pas qui appeler en premier.",
+        "Voici qui fait quoi, et par où commencer."
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les organismes",
+      "titre": "Cinq portes d'entrée",
+      "items": [
+        {
+          "nom": "Réseau accès PME",
+          "texte": "Dans chaque MRC : plus de 450 conseillers, services gratuits."
+        },
+        {
+          "nom": "PME MTL",
+          "texte": "À Montréal : 6 pôles de services, soutien et financement."
+        },
+        {
+          "nom": "SADC et CAE",
+          "texte": "57 SADC et 10 CAE appuient les entreprises en région."
+        },
+        {
+          "nom": "Entreprendre ici",
+          "texte": "À Montréal, pour les entrepreneurs issus de l'immigration."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On s'ajoute à ces portes : structurer, financer, mises en relation."
+        }
+      ],
+      "source": "Sources : Québec.ca ; PME MTL ; Réseau des SADC et CAE."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Par où commencer",
+      "titre": "Choisis selon ta situation",
+      "items": [
+        {
+          "nom": "Tu es à Montréal",
+          "texte": "PME MTL, puis Entreprendre ici."
+        },
+        {
+          "nom": "Tu vises une région",
+          "texte": "Le Réseau accès PME de la MRC et la SADC locale."
+        },
+        {
+          "nom": "Tu hésites",
+          "texte": "Écris-nous : Affaires Québec t'oriente et structure ton projet."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Avant l'appel",
+      "titre": "Prépare ton premier appel",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Une page sur ton projet",
+          "texte": "Pas un plan de 40 pages."
+        },
+        {
+          "nom": "Une question précise",
+          "texte": "Quels programmes s'appliquent à mon projet ?"
+        },
+        {
+          "nom": "Un nom de plus",
+          "texte": "Demande qui rencontrer ensuite."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Webinaire gratuit · vendredi 23 octobre, 19 h (heure de Montréal)",
+      "titre": "Les organismes ouvrent des portes. Affaires Québec t'aide à les franchir.",
+      "taille": "l",
+      "sous_titre": "Structure, financement, mises en relation.",
+      "note": "Inscription : lien en bio."
+    }
+  ]
+}

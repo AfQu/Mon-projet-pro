@@ -1,0 +1,107 @@
+{
+  "id": "s43-10-demarches",
+  "titre": "Démarrer son entreprise au Québec : les démarches dans l'ordre",
+  "format": "post",
+  "pilier": "Guides pratiques · sujet 5 (démarrage) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Démarrage · à sauvegarder",
+      "titre": "Démarrer son entreprise au Québec : les démarches dans l'ordre",
+      "taille": "l",
+      "sous_titre": "Quatre étapes administratives, et qui peut t'aider."
+    },
+    {
+      "gabarit": "texte",
+      "surtitre": "Le constat",
+      "titre": "L'administratif fait peur, à tort",
+      "paragraphes": [
+        "On croit souvent qu'il faut tout savoir avant de commencer.",
+        "En réalité, les démarches suivent un ordre précis, et plusieurs se font en ligne.",
+        "Voici l'ordre, avec les organismes à qui t'adresser."
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les démarches",
+      "titre": "Quatre étapes dans l'ordre",
+      "items": [
+        {
+          "nom": "Choisis ta forme juridique",
+          "texte": "Entreprise individuelle, société ou compagnie : valide avec un comptable."
+        },
+        {
+          "nom": "Immatricule ton entreprise",
+          "texte": "Au Registraire des entreprises du Québec : tu obtiens ton NEQ."
+        },
+        {
+          "nom": "Inscris-toi aux taxes",
+          "texte": "TPS et TVQ, Revenu Québec : obligatoire au-delà de 30 000 $ de ventes taxables."
+        },
+        {
+          "nom": "Vérifie permis et licences",
+          "texte": "Selon ton secteur et ta municipalité."
+        }
+      ]
+    },
+    {
+      "gabarit": "texte",
+      "surtitre": "Ta situation",
+      "titre": "Statut et permis : valide avant de te lancer",
+      "paragraphes": [
+        "Ce que tu as le droit de faire dépend de ton statut d'immigration.",
+        "Selon ta situation, valide avec un conseiller en immigration avant de t'engager.",
+        "Nous ne donnons pas d'avis juridique individuel."
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Qui t'aide",
+      "titre": "Où demander de l'aide",
+      "items": [
+        {
+          "nom": "Réseau accès PME de ta MRC",
+          "texte": "Services gratuits : un conseiller t'oriente."
+        },
+        {
+          "nom": "Entreprendre ici",
+          "texte": "À Montréal, pour les entrepreneurs issus de l'immigration."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On structure ton projet, on monte le financement et on te présente aux bons contacts."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Cette semaine",
+      "titre": "Trois gestes simples",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Écris ton projet en une page",
+          "texte": "Qui, quoi, pour quels clients."
+        },
+        {
+          "nom": "Cherche ton nom au Registraire",
+          "texte": "Vérifie qu'il est libre avant d'aller plus loin."
+        },
+        {
+          "nom": "Prends rendez-vous",
+          "texte": "Réseau accès PME de ta MRC ou Affaires Québec."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Webinaire gratuit · vendredi 23 octobre, 19 h (heure de Montréal)",
+      "titre": "Les démarches, c'est le début. Affaires Québec t'accompagne après.",
+      "taille": "l",
+      "sous_titre": "Structurer, financer, ouvrir les bonnes portes.",
+      "note": "Inscription : lien en bio."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "s43-02-reseau-affaires",
+  "titre": "Réseau d'affaires immigrant : où se faire connaître",
+  "format": "post",
+  "pilier": "Contexte et opportunités · sujet 1 (réseautage) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Réseau d'affaires immigrant",
+      "titre": "Où se faire connaître quand on arrive ?",
+      "sous_titre": "Quatre types de lieux pour construire ton réseau d'affaires au Québec."
+    },
+    {
+      "gabarit": "texte",
+      "surtitre": "Le constat",
+      "titre": "Un réseau ne s'achète pas, il se construit",
+      "paragraphes": [
+        "Beaucoup d'entrepreneurs issus de l'immigration le disent : le plus dur n'est pas d'avoir une idée, c'est de connaître les bonnes personnes.",
+        "Bonne nouvelle : il existe des lieux faits pour ça. Voici comment les utiliser."
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Où se faire connaître",
+      "titre": "Quatre types de lieux",
+      "items": [
+        {
+          "nom": "Les chambres de commerce",
+          "texte": "Rencontres, cocktails, conférences. À Montréal : la CCMM ; en région, la chambre locale."
+        },
+        {
+          "nom": "Les organismes d'accompagnement",
+          "texte": "Réseau accès PME, SADC, PME MTL : activités et mises en relation."
+        },
+        {
+          "nom": "Les organismes pour nouveaux arrivants",
+          "texte": "Entreprendre ici à Montréal ; les services d'accueil en région, comme le SANA en Mauricie."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On ouvre notre réseau d'organismes et de partenaires à ton projet."
+        }
+      ],
+      "source": "Sources : sites des organismes cités ; CCMM."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Sur place",
+      "titre": "Comment se présenter à un événement",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Prépare 20 secondes",
+          "texte": "Ton nom, ce que tu fais, ce que tu cherches."
+        },
+        {
+          "nom": "Vise trois conversations",
+          "texte": "Mieux vaut trois vrais échanges que trente cartes."
+        },
+        {
+          "nom": "Demande un nom de plus",
+          "texte": "« Qui devrais-je rencontrer ? » ouvre plus de portes qu'une vente."
+        },
+        {
+          "nom": "Relance sous 48 heures",
+          "texte": "Un court message avec un souvenir précis de votre échange."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Ce mois-ci",
+      "titre": "Un premier rendez-vous de réseau",
+      "items": [
+        {
+          "nom": "Vendredi 23 octobre, 19 h",
+          "texte": "Notre webinaire gratuit, en ligne (heure de Montréal). Tu y rencontres l'équipe d'Affaires Québec."
+        },
+        {
+          "nom": "Inscription",
+          "texte": "Lien en bio."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Affaires Québec",
+      "titre": "Un réseau d'affaires, ça commence par une porte ouverte.",
+      "taille": "l",
+      "sous_titre": "On structure ton projet, on le finance et on te présente aux bons interlocuteurs.",
+      "note": "Webinaire gratuit le 23 octobre, 19 h (heure de Montréal). Lien en bio."
+    }
+  ]
+}

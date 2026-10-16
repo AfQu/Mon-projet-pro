@@ -1,0 +1,6 @@
+[
+  {"type": "machine", "duree": 5.0, "surtitre": "QUESTION", "texte": "Comment trouver tes premiers clients au Québec ?", "reponse": "Par le réseau, avant la publicité."},
+  {"type": "compteur", "duree": 4.2, "transition": "glisse", "prefixe": "Plus de", "valeur": 450, "label": ["conseillers", "dans les MRC du Québec"], "source": "Source : Gouvernement du Québec, Réseau accès PME"},
+  {"type": "liste", "duree": 4.8, "transition": "fondu", "titre": "Cette semaine", "items": ["Appelle le Réseau accès PME de ta MRC", "Va à une rencontre de la chambre de commerce", "Repère trois appels d'offres sur le SEAO"]},
+  {"type": "logo", "duree": 4.4, "transition": "cercle", "accroche": "AFFAIRES QUÉBEC T'ACCOMPAGNE", "petit": "WEBINAIRE GRATUIT LE", "grand": "23.10.26", "note": "19 h · heure de Montréal · lien en bio"}
+]

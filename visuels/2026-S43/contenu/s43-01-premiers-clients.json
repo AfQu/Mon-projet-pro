@@ -1,0 +1,128 @@
+{
+  "id": "s43-01-premiers-clients",
+  "titre": "Tes 10 premiers clients au Québec",
+  "format": "post",
+  "pilier": "Guides pratiques · sujet 1 (réseautage et accès au marché) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Accès au marché · à sauvegarder",
+      "titre": "Tes 10 premiers clients au Québec",
+      "sous_titre": "Où les trouver, comment les approcher, par où commencer cette semaine."
+    },
+    {
+      "gabarit": "texte",
+      "surtitre": "Le constat",
+      "titre": "Le produit est prêt. Les clients, non.",
+      "paragraphes": [
+        "Tu arrives avec un projet solide, mais personne ici ne te connaît encore.",
+        "Au Québec, les premiers clients viennent presque toujours d'un contact, d'une recommandation ou d'un appel d'offres, rarement d'une publicité.",
+        "Bonne nouvelle : les portes sont connues et souvent gratuites."
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Où les trouver",
+      "titre": "Cinq portes pour ton marché",
+      "items": [
+        {
+          "nom": "Réseau accès PME de ta MRC",
+          "texte": "Services gratuits, conseillers locaux."
+        },
+        {
+          "nom": "Chambre de commerce locale",
+          "texte": "Les décideurs s'y parlent."
+        },
+        {
+          "nom": "SEAO",
+          "texte": "Les appels d'offres publics : repère ceux de ton secteur."
+        },
+        {
+          "nom": "Entreprendre ici",
+          "texte": "Point de contact à Montréal pour entrepreneurs issus de l'immigration."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On structure ton offre et on te présente aux bons contacts."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Comment les approcher",
+      "titre": "Trois gestes avant le premier message",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Une phrase claire",
+          "texte": "Qui tu aides, pour quel problème, avec quel résultat."
+        },
+        {
+          "nom": "Une page de présentation",
+          "texte": "Offre, prix, références. Pas un plan de 40 pages."
+        },
+        {
+          "nom": "Une demande précise",
+          "texte": "Quinze minutes pour comprendre leurs besoins, pas une vente."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Ta semaine",
+      "titre": "Un plan simple pour dix contacts",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Lundi",
+          "texte": "Écris ta phrase d'offre et ta page de présentation."
+        },
+        {
+          "nom": "Mardi",
+          "texte": "Appelle le Réseau accès PME de ta MRC."
+        },
+        {
+          "nom": "Mercredi",
+          "texte": "Inscris-toi à une rencontre de la chambre de commerce."
+        },
+        {
+          "nom": "Jeudi",
+          "texte": "Repère trois appels d'offres sur le SEAO."
+        },
+        {
+          "nom": "Vendredi",
+          "texte": "Écris à cinq personnes rencontrées. Demande un nom de plus."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "À éviter",
+      "titre": "Trois erreurs à éviter",
+      "items": [
+        {
+          "nom": "Attendre d'être « prêt »",
+          "texte": "On apprend ce que le marché veut en parlant aux gens."
+        },
+        {
+          "nom": "Viser seulement ta communauté",
+          "texte": "Elle ouvre des portes, mais le marché québécois est plus large."
+        },
+        {
+          "nom": "Parler de toi avant du client",
+          "texte": "Pose d'abord des questions sur son problème."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Webinaire gratuit · vendredi 23 octobre, 19 h (heure de Montréal)",
+      "titre": "Ton réseau se construit. Affaires Québec t'aide à l'ouvrir.",
+      "taille": "l",
+      "sous_titre": "On structure ton projet, on monte le financement et on te met en relation.",
+      "note": "Inscription : lien en bio."
+    }
+  ]
+}

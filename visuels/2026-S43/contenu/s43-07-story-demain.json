@@ -1,0 +1,15 @@
+{
+  "id": "s43-07-story-demain",
+  "titre": "Story : webinaire demain",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "chiffre",
+      "centre": true,
+      "avant": "Webinaire gratuit · en ligne",
+      "chiffre": "Demain",
+      "texte": "De l'idée au financement : démarrer son entreprise au Québec",
+      "suite": "Vendredi 23 octobre, 19 h (heure de Montréal). Inscription : touche le lien ci-dessous."
+    }
+  ]
+}

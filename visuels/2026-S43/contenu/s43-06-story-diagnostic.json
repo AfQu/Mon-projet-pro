@@ -1,0 +1,17 @@
+{
+  "id": "s43-06-story-diagnostic",
+  "titre": "Story : Diagnostic express",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Diagnostic express",
+      "titre": "300 $, déduits du mandat",
+      "taille": "l",
+      "sous_titre": "Un regard extérieur sur ton projet avant de t'engager.",
+      "espace": 120,
+      "note": "Écris-nous en message privé."
+    }
+  ]
+}

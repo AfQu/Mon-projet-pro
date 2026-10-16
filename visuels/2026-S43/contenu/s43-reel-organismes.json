@@ -1,0 +1,6 @@
+[
+  {"type": "compteur", "duree": 4.4, "prefixe": "Il existe", "valeur": 57, "label": ["SADC", "dans les régions du Québec"], "source": "Source : Réseau des SADC et CAE"},
+  {"type": "mythe", "duree": 5.0, "transition": "coupe", "mythe": "Les organismes, c'est trop compliqué.", "realite": "Un premier appel suffit : le Réseau accès PME de ta MRC t'oriente."},
+  {"type": "liste", "duree": 4.8, "transition": "fondu", "titre": "Ton premier appel", "items": ["Réseau accès PME de ta MRC", "PME MTL si tu es à Montréal", "Affaires Québec pour structurer et financer"]},
+  {"type": "logo", "duree": 4.4, "transition": "cercle", "accroche": "ON T’ACCOMPAGNE", "petit": "WEBINAIRE GRATUIT LE", "grand": "23.10.26", "note": "19 h · heure de Montréal · lien en bio"}
+]
