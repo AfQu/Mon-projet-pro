@@ -1,0 +1,74 @@
+{
+ "titre": "Reel vidéo « Fiche région : Lanaudière »",
+ "plans": [
+  {
+   "clip": "visuels/2026-S43/clips/l0-riviere.mp4",
+   "source": "Mixkit 3315",
+   "debut": 1.0,
+   "duree": 3.4,
+   "style": "accroche",
+   "voile": 2.2,
+   "texte": "Entreprendre dans Lanaudière ?\n*Voici l’essentiel.*"
+  },
+  {
+   "clip": "visuels/2026-S43/clips/l1-village.mp4",
+   "source": "Mixkit 3874",
+   "debut": 3.0,
+   "duree": 3.0,
+   "style": "fiche",
+   "transition": "slideleft",
+   "etiquette": "5e région du Québec",
+   "texte": "Près de *570 000* habitants"
+  },
+  {
+   "clip": "visuels/2026-S43/clips/l2-atelier.mp4",
+   "source": "Mixkit 1445",
+   "debut": 1.0,
+   "duree": 3.2,
+   "style": "fiche",
+   "transition": "slideup",
+   "etiquette": "Salaire horaire moyen · 2025",
+   "texte": "*34,59 $* de l’heure"
+  },
+  {
+   "clip": "visuels/2026-S43/clips/l3-construction.mp4",
+   "source": "Mixkit 39699",
+   "debut": 4.0,
+   "duree": 3.0,
+   "style": "fiche",
+   "transition": "wipeleft",
+   "etiquette": "Construction",
+   "texte": "*12 %* des emplois de la région"
+  },
+  {
+   "clip": "visuels/2026-S43/clips/l4-industrie.mp4",
+   "source": "Mixkit 39700",
+   "debut": 1.0,
+   "duree": 3.0,
+   "style": "fiche",
+   "transition": "circleopen",
+   "etiquette": "Créneau d'excellence",
+   "texte": "Transformation *métallique*"
+  },
+  {
+   "clip": "visuels/2026-S43/clips/l5-poignee.mp4",
+   "source": "Mixkit 30011",
+   "debut": 2.0,
+   "duree": 3.6,
+   "style": "soustitre",
+   "transition": "fade",
+   "texte": "Tes premières portes : *Lanaudière Économique* et le *Réseau accès PME* de ta MRC."
+  },
+  {
+   "clip": "visuels/2026-S43/clips/l6-champs.mp4",
+   "source": "Mixkit 41397",
+   "debut": 3.0,
+   "duree": 3.6,
+   "style": "accroche",
+   "transition": "slideleft",
+   "voile": 2.4,
+   "texte": "Prêt à démarrer dans Lanaudière ?\n*Contacte Affaires Québec.*"
+  }
+ ],
+ "outro": "visuels/2026-S43/contenu/outro-contact.json"
+}

@@ -249,3 +249,41 @@ Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Qu�
 Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
 
 #EntrepreneuriatImmigrant #RéseauAccèsPME
+
+## 10. Carrousel « Fiche région : Lanaudière » et Reel « Lanaudière »
+Fichiers : `s43-14-fiche-lanaudiere-01.png` à `-06.png` ; Reel : `s43-reel-lanaudiere.mp4` (23,9 s, couverture `s43-15-couverture-reel-lanaudiere.png`). Sujet 3. Mot-clé : « s'installer en région Québec ». Le renvoi au webinaire ne vaut que jusqu'au 23 octobre : après, retirer la ligne 🎙.
+
+### Instagram
+S'installer en région Québec : la fiche Lanaudière.
+
+• Salaire horaire moyen : 34,59 $ en 2025, tout proche de la moyenne québécoise (35,05 $).
+• Près de 570 000 habitants : la 5e région la plus peuplée du Québec, aux portes de Montréal.
+• La construction représente 12 % des emplois (7 % au Québec), et la région porte le créneau d'excellence Alliance Métal Québec (transformation métallique).
+• À qui parler : Lanaudière Économique, le CRÉDIL à Joliette et le Réseau accès PME de ta MRC.
+
+Prêt à démarrer dans Lanaudière ? Contacte-nous : Affaires Québec structure ton projet, monte le financement et t'ouvre le réseau de la région. Premier appel de cadrage sans frais, lien en bio.
+
+🎙 Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », vendredi 23 octobre à 19 h (heure de Montréal), en ligne. Inscription : lien en bio.
+
+📌 Sauvegarde cette fiche.
+
+#SinstallerEnRégion #Lanaudière #Joliette #Terrebonne #Repentigny #EntrepreneuriatImmigrant #AffairesQuébec #Québec
+
+### Légende du Reel (Instagram)
+Entreprendre dans Lanaudière ? Voici l'essentiel : 34,59 $ de salaire horaire moyen, près de 570 000 habitants, la construction et la transformation métallique comme moteurs.
+
+Prêt à démarrer dans Lanaudière ? Contacte Affaires Québec : premier appel de cadrage sans frais, lien en bio. La fiche complète est dans notre carrousel.
+
+#Lanaudière #SinstallerEnRégion #EntrepreneuriatImmigrant #AffairesQuébec
+
+### Facebook
+S'installer en région Québec : la fiche Lanaudière.
+
+Salaire horaire moyen de 34,59 $ en 2025 (35,05 $ pour le Québec), près de 570 000 habitants aux portes de Montréal, une construction qui pèse 12 % des emplois et un créneau d'excellence en transformation métallique. Les premières portes : Lanaudière Économique, le CRÉDIL et le Réseau accès PME de votre MRC.
+
+Prêt à démarrer dans Lanaudière ? Contactez-nous : Affaires Québec structure votre projet, monte le financement et vous ouvre le réseau de la région. Premier appel de cadrage sans frais : https://affairesquebec.ca
+
+Webinaire gratuit « De l'idée au financement : démarrer son entreprise au Québec », vendredi 23 octobre 2026 à 19 h (heure de Montréal), en ligne.
+Inscription : https://www.eventbrite.com/x/de-lidee-au-financement-demarrer-son-entreprise-au-quebec-tickets-2002182374379
+
+#Lanaudière #EntrepreneuriatImmigrant

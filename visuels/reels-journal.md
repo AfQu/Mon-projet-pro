@@ -14,3 +14,4 @@
 | jeu. 22 oct. 2026 | Les organismes, c'est trop compliqué ? (`2026-S43/s43-reel-organismes.mp4`, motion design) | compteur (57 SADC) | compteur, mythe, liste, logo | coupe, fondu, cercle |
 | dim. 18 oct. 2026 | Vidéo face caméra Rénald : réseau d'affaires, 3 gestes (script `2026-S43/script-2026-10-18-renald.md`) | face caméra | — | — |
 | non repris | Reels S42 (repreneuriat, régions) : retirés du lot du 16 au 22 oct. pour éviter la répétition ; légendes à refaire sans inscription après le 23 oct. | — | — | — |
+| à programmer | Fiche région Lanaudière (`2026-S43/s43-reel-lanaudiere.mp4`, Reel vidéo) | question sur rivière | accroche, 4 « fiches » chiffrées (population, salaire, construction, créneau), sous-titre, appel « Contacte Affaires Québec », carton contact | slideleft, slideup, wipeleft, circleopen, fade |

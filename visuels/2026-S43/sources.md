@@ -27,3 +27,20 @@ Le Reel « premiers clients » reprend le chiffre « plus de 450 conseillers » 
 | Réseau accès PME : plus de 450 conseillers, services gratuits | `2026-S41/sources.md` |
 | Rouba, conseillère puis directrice générale d'Entreprendre ici ; Rénald, commissaire industriel à IDÉ Trois-Rivières | Faits validés du skill AQ |
 
+
+## Fiche région Lanaudière (s43-14, s43-reel-lanaudiere)
+
+Vérifiées par recherche le 16 octobre 2026 ; statistique.quebec.ca et quebec.ca ne s'ouvrent pas depuis l'environnement. **À revérifier par Rénald avant publication.**
+
+| Affirmation | Source |
+| --- | --- |
+| Salaire horaire moyen 34,59 $ en Lanaudière (2025) | ISQ, Principaux indicateurs sur le Québec et ses régions, Lanaudière : https://statistique.quebec.ca/fr/vitrine/region/14 **[À VÉRIFIER]** dans le tableau BDSO de la rémunération horaire par région |
+| Salaire horaire moyen 35,05 $ au Québec (2025) | ISQ, Faits saillants du Bilan du marché du travail au Québec en 2025 : https://statistique.quebec.ca/fr/produit/publication/faits-saillants-bilan-marche-travail-quebec-2025 |
+| 569 335 habitants en 2025, 5e région sur 17 | Ministère de l'Économie, Portrait socioéconomique de Lanaudière : https://www.quebec.ca/gouvernement/ministeres-organismes/economie/publications/portraits-socioeconomiques/lanaudiere |
+| Construction : 12,0 % des emplois (7,0 % au Québec) | Services Québec, Portrait de l'emploi et du marché du travail de Lanaudière : https://www.quebec.ca/emploi/informer-metier-profession/marche-travail/portrait-lanaudiere (année de référence à confirmer) |
+| Créneau d'excellence Alliance Métal Québec (Lanaudière) | Communiqué du 14 mai 2026 sur les créneaux d'excellence (voir sources S42) |
+| Lanaudière Économique, organisme pivot de la régionalisation de l'immigration depuis 2019 | Immigrant Québec : https://immigrantquebec.com/fr/identifier/lanaudiere-economique/ |
+| CRÉDIL, accueil des nouveaux arrivants à Joliette depuis 1995 | https://ccrweb.ca/soiree-bienvenue-et-reconnaissance |
+| Six MRC (D'Autray, Joliette, L'Assomption, Matawinie, Montcalm, Les Moulins) ; Réseau accès PME gratuit | Québec.ca, Réseau accès PME : https://www.quebec.ca/entreprises-et-travailleurs-autonomes/accompagnement-services/points-service |
+
+Plans vidéo (Mixkit, Stock Video Free License) : 3315, 3874, 1445, 39699, 39700, 30011, 41397 ; liens : https://assets.mixkit.co/videos/<id>/<id>-720.mp4 (fichiers non versionnés dans `clips/`).

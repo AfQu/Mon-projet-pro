@@ -1,0 +1,102 @@
+{
+  "id": "s43-14-fiche-lanaudiere",
+  "titre": "Fiche région : Lanaudière",
+  "format": "post",
+  "pilier": "Contexte et opportunités · sujet 3 (régions et secteurs) — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Fiche région · Lanaudière",
+      "titre": "S'installer en région Québec : Lanaudière",
+      "sous_titre": "Salaires, économie, organismes : l'essentiel avant de te lancer."
+    },
+    {
+      "gabarit": "chiffre",
+      "centre": true,
+      "surtitre": "Le salaire",
+      "avant": "Salaire horaire moyen",
+      "chiffre": "34,59 $",
+      "texte": "en Lanaudière en 2025.",
+      "suite": "Tout proche de la moyenne québécoise, à 35,05 $.",
+      "source": "Source : Institut de la statistique du Québec, indicateurs régionaux et Bilan du marché du travail 2025."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "L'économie en bref",
+      "titre": "Une région en croissance aux portes de Montréal",
+      "items": [
+        {
+          "nom": "Près de 570 000 habitants",
+          "texte": "5e région la plus peuplée du Québec en 2025."
+        },
+        {
+          "nom": "La construction pèse lourd",
+          "texte": "12 % des emplois de la région, contre 7 % pour l'ensemble du Québec."
+        },
+        {
+          "nom": "Un créneau d'excellence",
+          "texte": "Alliance Métal Québec : la transformation métallique, soutenue par Québec en 2026."
+        }
+      ],
+      "source": "Sources : Ministère de l'Économie, Portrait socioéconomique de Lanaudière ; Services Québec, Portrait de Lanaudière ; communiqué du 14 mai 2026."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les organismes clés",
+      "titre": "À qui parler dans Lanaudière",
+      "items": [
+        {
+          "nom": "Lanaudière Économique",
+          "texte": "Organisme pivot de la régionalisation de l'immigration depuis 2019, pour les personnes et les entreprises."
+        },
+        {
+          "nom": "CRÉDIL",
+          "texte": "Accueil et installation des nouveaux arrivants à Joliette depuis 1995."
+        },
+        {
+          "nom": "Réseau accès PME de ta MRC",
+          "texte": "D'Autray, Joliette, L'Assomption, Matawinie, Montcalm ou Les Moulins : services gratuits."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On structure ton projet, on monte le financement et on t'ouvre le réseau de la région."
+        }
+      ],
+      "source": "Sources : Immigrant Québec, fiche Lanaudière Économique ; Québec.ca, Réseau accès PME."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Avant de te lancer",
+      "titre": "Quatre vérifications",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Choisis ta MRC",
+          "texte": "Le sud est tourné vers Montréal, le nord vers Joliette et la Matawinie."
+        },
+        {
+          "nom": "Appelle le Réseau accès PME",
+          "texte": "Il t'oriente vers les programmes et les fonds locaux."
+        },
+        {
+          "nom": "Valide ton marché",
+          "texte": "Profil du recensement de Statistique Canada pour la ville visée."
+        },
+        {
+          "nom": "Fais structurer ton projet",
+          "texte": "Affaires Québec prépare avec toi le plan, le financement et les rencontres."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton projet dans Lanaudière",
+      "titre": "Prêt à démarrer dans Lanaudière ?<br>Contacte-nous.",
+      "taille": "l",
+      "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+      "note": "Affaires Québec : structurer ton projet, le financer et t'ouvrir le réseau lanaudois."
+    }
+  ]
+}
