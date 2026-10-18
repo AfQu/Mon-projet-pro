@@ -2,6 +2,17 @@
 
 Exécutée automatiquement chaque jeudi vers 17 h 45 (heure de Montréal). Elle prépare les publications **du vendredi au jeudi suivants**. Rénald valide et programme ; **la routine ne publie jamais**.
 
+## 0. Point de départ : Notion (demande de Rénald, 18 octobre 2026)
+
+Chaque semaine, **avant de créer quoi que ce soit** :
+1. Ouvrir dans Notion la base « 🎯 Thématiques de la semaine » (Affaires Québec — Espace des agents ; data source `collection://bceb5d7b-74c7-4289-b58e-212957090f08`) et prendre la ligne au statut **« Proposée »**. **S'il n'y en a aucune : ne rien faire** (ni visuel, ni commit, ni message autre qu'une ligne « aucune thématique proposée »).
+2. Passer cette ligne au statut **« Visuels en cours »**.
+3. Créer les visuels pour **chacune des 3 thématiques** de la ligne (champs Thématique, Angle, Publications prévues, Territoire, Semaine du), en suivant tout le reste de cette procédure (charte, sources, section 3 quater, Reels variés, QA).
+4. Ranger les visuels dans Google Drive, dossier **« AQ Visuels / Semaine du [date] »** (date = champ « Semaine du », format AAAA-MM-JJ). Créer « AQ Visuels » s'il n'existe pas. Limite technique : le connecteur Drive n'accepte que du contenu passé en texte ou en base64 dans l'appel ; les PNG légers peuvent y aller un par un, mais les MP4 et les gros lots non. Dans ce cas, déposer dans le dossier un Google Doc « Index — Semaine du [date] » (programme, légendes, liste des fichiers et chemin dans le dépôt GitHub) et livrer les fichiers lourds par SendUserFile.
+5. Coller le lien du dossier Drive dans « Dossier visuels » et passer la ligne au statut **« Visuels prêts »**.
+6. Ajouter une ligne dans « 📒 Journal AQ » (`collection://9856cbc3-22f3-4794-be5e-b76348dba628`) : Action = « Visuels de la semaine du [date] », Agent = AQ Croissance, Type = Publication, Statut = Fait, Date = aujourd'hui, Lien = dossier Drive, Détail = les 3 thématiques et les contenus produits.
+En cas de blocage (Drive, rendu, source), mettre la ligne du Journal au statut « Bloqué » ou « En attente de Rey » avec le motif, et laisser la thématique en « Visuels en cours ».
+
 ## 1. Préparer l'environnement
 ```
 pip install -q pillow playwright numpy faster-whisper
