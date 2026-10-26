@@ -42,6 +42,7 @@ L'audience est **au Québec**, même si Rey publie depuis la Martinique : heures
    - `references/problematiques.md` : problèmes des clients (entrepreneurs et organismes) et comment les traiter en post.
    - `references/calendrier.md` : méthode de lancement, trame hebdomadaire, promotion d'un événement.
    - `references/persuasion.md` : principes de persuasion compatibles avec le ton AQ.
+   - `references/langage-clair.md` : **obligatoire pour toute publication** (norme ISO 24495-1 langage clair, règles FALC et WCAG utiles) : phrases courtes, sigles expliqués, chiffres avec repère, lisibilité, texte alternatif.
 3. Produire, puis passer la checklist (section 5).
 4. Sortie mobile : Rey travaille sur téléphone, donc des réponses courtes, sans préambule, qui tiennent sur un écran, avec 5 tâches au maximum à la fois.
 
@@ -58,6 +59,9 @@ Script : `scripts/reel_motion.py` (Pillow + ffmpeg). Il génère un MP4 1080 × 
 - [ ] L'angle part d'un problème client quand c'est possible.
 - [ ] Légende adaptée à la plateforme (Instagram : « lien en bio » ; Facebook : lien direct, 1 ou 2 hashtags).
 - [ ] Visuel aux bonnes dimensions, fautes et doubles espaces vérifiés, pas de texte fantôme.
+- [ ] Langage clair (`references/langage-clair.md`) : phrases de 20 mots maximum dans les visuels (25 dans les légendes), chaque sigle développé à sa première apparition, au plus 2 chiffres par slide et 5 éléments par liste, chiffres avec un repère, texte courant de 30 px minimum, rien de justifié ni en majuscules prolongées.
+- [ ] `python3 visuels/outils/clair.py` passé sur les JSON et `legendes.md` ; chaque alerte corrigée ou justifiée.
+- [ ] Texte alternatif rédigé pour chaque publication (section « Texte alternatif » dans `legendes.md`).
 
 ## 6. Points ouverts à signaler si pertinents
 

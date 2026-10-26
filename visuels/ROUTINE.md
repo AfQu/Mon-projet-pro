@@ -88,6 +88,7 @@ Les organismes publics restent présentés comme des portes d'entrée gratuites 
 - Contenu en JSON dans `visuels/<semaine>/contenu/`, rendu avec `python3 visuels/outils/aq.py rendre <json>` ; Reels avec `visuels/outils/reel.py`.
 - Le rendu doit afficher `OK` partout. Regarder ensuite **chaque** image (et des images clés des Reels) : le contrôle automatique ne remplace pas l'œil.
 - Correcteur : `hunspell -i utf-8 -d fr_CA -l` sur tous les textes et légendes.
+- **Langage clair** (demande de Rénald, 26 octobre 2026) : écrire selon `.claude/skills/aq-creation-contenu/references/langage-clair.md`, puis lancer `python3 visuels/outils/clair.py visuels/<semaine>/contenu/*.json visuels/<semaine>/legendes.md`. Corriger chaque alerte (phrase trop longue, sigle non développé, slide trop chargée) ou noter dans les points à valider pourquoi elle est acceptable. Ajouter dans `legendes.md` un « Texte alternatif » (1 ou 2 phrases) par publication.
 - Légendes dans `legendes.md`, sources dans `sources.md`, planche `apercu.png` régénérée.
 
 ## 5. Livrer
