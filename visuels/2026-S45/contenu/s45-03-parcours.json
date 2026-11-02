@@ -1,0 +1,85 @@
+{
+  "id": "s45-03-parcours",
+  "titre": "Le parcours Affaires Québec",
+  "format": "post",
+  "pilier": "Cabinet — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Le cabinet",
+      "titre": "De l'idée au financement : notre parcours",
+      "sous_titre": "Structurer · Financer · Démontrer"
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Le parcours",
+      "titre": "Quatre étapes avec toi",
+      "items": [
+        {
+          "nom": "Un appel de cadrage",
+          "texte": "Sans frais. On comprend ton projet et d'où tu pars."
+        },
+        {
+          "nom": "Structurer",
+          "texte": "Ton plan d'affaires, ton modèle et les bons professionnels."
+        },
+        {
+          "nom": "Financer",
+          "texte": "Ton montage financier, avec les programmes et les prêteurs adaptés."
+        },
+        {
+          "nom": "Démontrer",
+          "texte": "Un dossier solide pour la banque, puis des mises en relation."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "L'équipe",
+      "titre": "Une équipe qui connaît le terrain",
+      "items": [
+        {
+          "nom": "Rouba Hamadi, cofondatrice et présidente",
+          "texte": "Ancienne conseillère, puis directrice générale d'Entreprendre ici."
+        },
+        {
+          "nom": "Rénald Rabathaly, cofondateur",
+          "texte": "Directeur des opérations, ancien commissaire industriel à IDÉ Trois-Rivières."
+        },
+        {
+          "nom": "Des collaborations publiques",
+          "texte": "Avec le ministère de l'Économie du Québec, la Ville de Montréal et le ministère de l'Immigration."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Ton projet depuis l'étranger",
+      "titre": "Chacun son métier",
+      "items": [
+        {
+          "nom": "Ton projet d'affaires",
+          "texte": "C'est notre métier : structure, financement, réseau."
+        },
+        {
+          "nom": "Ton dossier d'immigration",
+          "texte": "Un avocat ou un consultant réglementé en immigration s'en charge."
+        },
+        {
+          "nom": "Ta comptabilité",
+          "texte": "Un comptable professionnel agréé (CPA) tient tes comptes et tes impôts."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton projet",
+      "titre": "Parlons de ton projet.",
+      "taille": "l",
+      "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+      "note": "Depuis le Québec, la Martinique, l'Europe ou l'Afrique francophone."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "s45-04-story-quiz",
+  "titre": "Story sondage structure",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Sondage",
+      "titre": "Tu lances ton entreprise seul ou à plusieurs ?",
+      "taille": "l",
+      "espace": 330,
+      "note": "Réponds avec le sondage. La réponse change la structure à choisir."
+    }
+  ]
+}

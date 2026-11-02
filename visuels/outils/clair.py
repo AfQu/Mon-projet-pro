@@ -13,7 +13,8 @@ Les alertes sont des signaux : corriger, ou noter pourquoi l'exception est accep
 import json, re, sys
 
 MAX_VISUEL, MAX_LEGENDE = 20, 25
-SIGLES_LIBRES = {"AQ", "PME", "TPS", "TVQ", "PDF", "URL", "OK", "FB", "IG", "MP4", "PNG", "QC", "CV"}
+SIGLES_LIBRES = {"AQ", "PME", "TPS", "TVQ", "PDF", "URL", "OK", "FB", "IG", "MP4", "PNG", "QC", "CV",
+                 "MTL", "IDÉ"}  # noms propres (PME MTL, IDÉ Trois-Rivières)
 CHAMPS_IGNORES = {"id", "gabarit", "format", "pilier", "source", "clip", "transition", "style", "type",
                   "etiquette", "surtitre", "petit", "accroche", "chiffre", "grand"}
 RE_SIGLE = re.compile(r"\b([A-ZÀ-Ý][A-ZÀ-Ý0-9]{1,6})\b")
@@ -40,12 +41,21 @@ class Rapport:
     def add(self, ou, msg):
         self.alertes.append(f"  - {ou} : {msg}")
 
-    def texte(self, ou, t, maxi):
+    def texte(self, ou, t, maxi, sigles=True):
         t = nettoie(t)
         for p in phrases(t):
             n = len(mots(p))
             if n > maxi:
                 self.add(ou, f"phrase de {n} mots (max {maxi}) : « {p[:90]}{'…' if len(p) > 90 else ''} »")
+        if sigles:
+            self.sigles(ou, t)
+        if re.search(r"\b(?:[A-ZÀ-Ý]{2,}\s+){3,}[A-ZÀ-Ý]{2,}\b", t):
+            self.add(ou, "passage de plus de 3 mots en majuscules")
+        if re.search(r"\betc\b", t):
+            self.add(ou, "« etc. » : lister ou couper")
+
+    def sigles(self, ou, t):
+        """Un sigle est accepté s'il est développé (entre parenthèses, avant ou après) dans le même bloc."""
         for m in RE_SIGLE.finditer(t):
             s = m.group(1)
             if s in SIGLES_LIBRES or s in self.vus or not re.search(r"[A-Z]{2}", s):
@@ -53,11 +63,8 @@ class Rapport:
             self.vus.add(s)
             avant, apres = t[max(0, m.start() - 2):m.start()], t[m.end():m.end() + 2]
             if not (avant.endswith("(") or apres.startswith(" (") or apres.startswith("(")):
-                self.add(ou, f"sigle « {s} » non développé à sa première apparition (ex. « {s} (…) »)")
-        if re.search(r"\b(?:[A-ZÀ-Ý]{2,}\s+){3,}[A-ZÀ-Ý]{2,}\b", t):
-            self.add(ou, "passage de plus de 3 mots en majuscules")
-        if re.search(r"\betc\b", t):
-            self.add(ou, "« etc. » : lister ou couper")
+                if not re.search(r"\(\s*" + re.escape(s) + r"\s*\)|\b" + re.escape(s) + r"\s*\(", t):
+                    self.add(ou, f"sigle « {s} » non développé à sa première apparition (ex. « {s} (…) »)")
 
 
 def chaines(x, champ=None):
@@ -75,11 +82,16 @@ def chaines(x, champ=None):
 def controle_json(chemin):
     r = Rapport(chemin)
     d = json.load(open(chemin, encoding="utf-8"))
-    pages = d.get("slides") or d.get("plans") or (d if isinstance(d, list) else [d])
+    if isinstance(d, list):
+        pages, nom = d, "scène"
+    else:
+        pages = d.get("slides") or d.get("plans") or [d]
+        nom = "slide" if "slides" in d else "plan"
     for i, s in enumerate(pages, 1):
-        ou = f"slide {i}" if "slides" in d else f"plan {i}"
+        ou = f"{nom} {i}"
         for t in chaines(s):
-            r.texte(ou, t, MAX_VISUEL)
+            r.texte(ou, t, MAX_VISUEL, sigles=False)
+        r.sigles(ou, nettoie(" ".join(chaines(s))))
         items = s.get("items", []) if isinstance(s, dict) else []
         if len(items) > 5:
             r.add(ou, f"{len(items)} éléments (max 5)")

@@ -1,0 +1,100 @@
+{
+  "id": "s45-01-montreal",
+  "titre": "Fiche région : Montréal",
+  "format": "post",
+  "pilier": "Région · Montréal — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Fiche région · Montréal",
+      "titre": "Entreprendre à Montréal : par où commencer ?",
+      "sous_titre": "Les secteurs qui portent, les organismes à appeler, les premiers gestes."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "L'économie en bref",
+      "titre": "Cinq secteurs qui portent",
+      "items": [
+        {
+          "nom": "Intelligence artificielle",
+          "texte": "Siège de la supergrappe canadienne d'intelligence artificielle."
+        },
+        {
+          "nom": "Jeux vidéo et effets visuels",
+          "texte": "De grands studios et des sous-traitants."
+        },
+        {
+          "nom": "Sciences de la vie",
+          "texte": "Médicaments et technologies de la santé."
+        },
+        {
+          "nom": "Technologies propres",
+          "texte": "Énergie, économie circulaire, eau."
+        },
+        {
+          "nom": "Aérospatiale",
+          "texte": "Le premier pôle aérospatial du Canada."
+        }
+      ],
+      "source": "Sources : Montréal International ; Ville de Montréal."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les organismes clés",
+      "titre": "Qui t'accompagne à Montréal",
+      "items": [
+        {
+          "nom": "PME MTL",
+          "texte": "6 pôles de services sur l'île : conseil, formation et financement, gratuits."
+        },
+        {
+          "nom": "Centech",
+          "texte": "L'incubateur de l'École de technologie supérieure (ÉTS), pour les projets technologiques."
+        },
+        {
+          "nom": "Montréal International",
+          "texte": "L'agence qui attire à Montréal les investissements et les talents étrangers."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "On structure ton projet, on monte le financement et on t'ouvre le réseau."
+        }
+      ],
+      "source": "Sources : PME MTL ; ÉTS ; Montréal International."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Avant ton premier rendez-vous",
+      "titre": "Quatre gestes simples",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Trouve ton pôle PME MTL",
+          "texte": "Il dépend de l'arrondissement où tu t'installes."
+        },
+        {
+          "nom": "Prépare une page sur ton projet",
+          "texte": "Ton offre, tes clients visés, ton budget."
+        },
+        {
+          "nom": "Vérifie ton marché",
+          "texte": "Le profil du recensement de Statistique Canada décrit chaque quartier."
+        },
+        {
+          "nom": "Fais structurer ton projet",
+          "texte": "Affaires Québec prépare avec toi le plan, le financement et les rencontres."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton projet à Montréal",
+      "titre": "Prêt à démarrer à Montréal ?<br>Contacte-nous.",
+      "taille": "l",
+      "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+      "note": "Affaires Québec : structurer, financer, démontrer."
+    }
+  ]
+}

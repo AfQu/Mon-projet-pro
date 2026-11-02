@@ -1,0 +1,106 @@
+{
+  "id": "s45-02-structure",
+  "titre": "Société par actions ou SARL",
+  "format": "post",
+  "pilier": "Valeur ajoutée — tutoiement",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Démarrer · à sauvegarder",
+      "titre": "SARL en France, société par actions au Québec",
+      "sous_titre": "La SARL (société à responsabilité limitée) n'existe pas ici. Voici l'équivalent."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Le constat",
+      "titre": "La SARL n'existe pas au Québec",
+      "items": [
+        {
+          "nom": "La forme la plus proche",
+          "texte": "La société par actions, souvent appelée « inc. » ou « ltée »."
+        },
+        {
+          "nom": "Ta responsabilité est limitée",
+          "texte": "En principe, tes biens personnels sont séparés de ceux de l'entreprise."
+        },
+        {
+          "nom": "Deux lois possibles",
+          "texte": "La loi du Québec ou la loi fédérale (Canada). Les deux mènent au même registre québécois."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les formes juridiques",
+      "titre": "Trois choix au Québec",
+      "items": [
+        {
+          "nom": "Entreprise individuelle",
+          "texte": "Tu travailles seul. Tes biens et ceux de l'entreprise ne sont pas séparés."
+        },
+        {
+          "nom": "Société de personnes",
+          "texte": "Tu t'associes, par exemple en SENC (société en nom collectif)."
+        },
+        {
+          "nom": "Société par actions",
+          "texte": "L'entreprise est une personne distincte de toi, avec ses propres comptes."
+        }
+      ]
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Les étapes",
+      "titre": "Constituer ta société par actions",
+      "coche": true,
+      "items": [
+        {
+          "nom": "Choisis le nom et la loi",
+          "texte": "Québec ou fédérale, selon ton projet."
+        },
+        {
+          "nom": "Dépose les statuts de constitution",
+          "texte": "Au Registraire des entreprises du Québec (REQ)."
+        },
+        {
+          "nom": "Reçois ton NEQ (numéro d'entreprise du Québec)",
+          "texte": "Le Registraire te l'attribue tout de suite."
+        },
+        {
+          "nom": "Transmets la déclaration initiale",
+          "texte": "Dans un délai de 48 heures ou de 60 jours, selon le dépôt choisi."
+        }
+      ],
+      "source": "Source : Québec.ca, « Constituer une société par actions québécoise »."
+    },
+    {
+      "gabarit": "ressources",
+      "surtitre": "Avant de choisir",
+      "titre": "Entoure-toi des bonnes personnes",
+      "items": [
+        {
+          "nom": "Un comptable",
+          "texte": "Pour comparer l'impôt selon chaque forme."
+        },
+        {
+          "nom": "Un avocat ou un notaire",
+          "texte": "Pour rédiger les statuts et la convention entre associés."
+        },
+        {
+          "nom": "Affaires Québec",
+          "texte": "Pour structurer ton projet et monter ton financement."
+        }
+      ]
+    },
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Ton projet",
+      "titre": "La bonne structure dès le départ.<br>Parlons-en.",
+      "taille": "l",
+      "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+      "note": "Affaires Québec : structurer, financer, démontrer."
+    }
+  ]
+}

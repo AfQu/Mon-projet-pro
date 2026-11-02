@@ -1,0 +1,17 @@
+{
+  "id": "s45-05-story-parcours",
+  "titre": "Story parcours cabinet",
+  "format": "story",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "centre": true,
+      "surtitre": "Affaires Québec",
+      "titre": "Structurer.<br>Financer.<br>Démontrer.",
+      "taille": "l",
+      "sous_titre": "Notre parcours en 4 étapes, dans le carrousel.",
+      "espace": 200,
+      "note": "Premier appel de cadrage sans frais : touche le lien."
+    }
+  ]
+}

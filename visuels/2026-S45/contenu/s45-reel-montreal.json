@@ -1,0 +1,53 @@
+[
+ {
+  "type": "pile",
+  "duree": 4.2,
+  "mots": [
+   "Montréal.",
+   "Entreprendre",
+   "ici ?"
+  ],
+  "pied": "Fiche région · Affaires Québec"
+ },
+ {
+  "type": "liste",
+  "duree": 5.4,
+  "transition": "glisse",
+  "titre": "Cinq secteurs qui portent",
+  "items": [
+   "Intelligence artificielle",
+   "Jeux vidéo et effets visuels",
+   "Sciences de la vie",
+   "Technologies propres",
+   "Aérospatiale"
+  ]
+ },
+ {
+  "type": "machine",
+  "duree": 5.0,
+  "transition": "coupe",
+  "surtitre": "QUESTION",
+  "texte": "Par où commencer ?",
+  "reponse": "PME MTL : 6 pôles de services gratuits sur l'île."
+ },
+ {
+  "type": "titre",
+  "duree": 4.2,
+  "transition": "fondu",
+  "lignes": [
+   "Affaires Québec"
+  ],
+  "sous": [
+   "structure ton projet, le finance",
+   "et t'ouvre le réseau."
+  ]
+ },
+ {
+  "type": "logo",
+  "duree": 4.4,
+  "transition": "cercle",
+  "accroche": "PRÊT À DÉMARRER ?",
+  "petit": "AFFAIRESQUEBEC.CA",
+  "note": "Premier appel de cadrage sans frais"
+ }
+]
