@@ -2,30 +2,25 @@
 
 Exécutée automatiquement chaque jeudi vers 17 h 45 (heure de Montréal). Elle prépare les publications **du vendredi au jeudi suivants**. Rénald valide et programme ; **la routine ne publie jamais**.
 
-## 0. Point de départ : Notion (demande de Rénald, 18 octobre 2026 ; structure relue le 18 octobre)
+## 0. Point de départ : fichiers du dépôt (consigne de Rénald du 2 novembre 2026, remplace le circuit Notion)
 
-Contexte (page Notion « Orchestration de l'agent autonome ») : AQ Croissance (agent Hermès) choisit chaque semaine les thématiques dans Notion ; cette routine produit les visuels ; **Hermès les publie ensuite automatiquement sur Facebook et Instagram, sans validation humaine.** Conséquence : rien d'incertain ne doit rester dans un visuel ou une légende livrés. Pas de « [À VÉRIFIER] » dans les visuels : un chiffre non confirmé par une source officielle est retiré ou remplacé par une formulation sans chiffre, et noté dans les points à valider.
+Contexte : AQ Croissance (agent Hermès) choisit chaque semaine les thématiques ; cette routine produit les visuels ; **Hermès les publie ensuite automatiquement sur Facebook et Instagram, sans validation humaine.** Rien d'incertain ne doit donc rester dans un visuel ou une légende livrés : pas de « [À VÉRIFIER] » ; un chiffre non confirmé par une source officielle est retiré et noté dans les points à valider.
 
-Base « 🎯 Thématiques de la semaine » (`collection://bceb5d7b-74c7-4289-b58e-212957090f08`), champs : Thématique (titre), **Catégorie** (Région, Valeur ajoutée, Cabinet), **Territoire** (Québec, Martinique, Europe francophone, Afrique francophone, Tous), Angle, **Pistes de contenu**, Semaine du, Statut (Proposée → Visuels en cours → Visuels prêts → Publiée ; « Publiée » est mis par Hermès, jamais par la routine), Dossier visuels.
+Entrée : `aq/thematiques/AAAA-MM-JJ.md` (date du lundi de la semaine ; format décrit dans `aq/thematiques/README.md`). Chaque thématique a les champs Catégorie (Région, Valeur ajoutée, Cabinet), Territoire (Québec, Martinique, Europe francophone, Afrique francophone, Tous), Angle, Pistes de contenu, Statut (Proposée → Visuels en cours → Visuels prêts → Publiée ; « Publiée » est mis par Hermès, jamais par la routine).
 
 Chaque semaine, **avant de créer quoi que ce soit** :
-1. Lire toutes les lignes au statut **« Proposée »** (en principe 3, une par catégorie, même « Semaine du » ; s'il y en a plus, prendre la semaine la plus proche). **S'il n'y en a aucune : ne rien faire** (ni visuel, ni commit, ni page ; une seule ligne « aucune thématique proposée »).
-2. Passer ces lignes au statut **« Visuels en cours »**.
-3. Pour chaque thématique, créer les visuels selon sa catégorie, en suivant le reste de cette procédure (charte, sources, section 3 quater, Reels variés, QA) :
+1. Lire les thématiques au statut **« Proposée »** dans le fichier de la semaine. **S'il n'y en a aucune (ou pas de fichier) : ne rien faire** (ni visuel, ni commit ; une seule ligne « Aucune thématique proposée cette semaine »).
+2. Passer ces thématiques à **« Visuels en cours »**, commit et push.
+3. Créer les visuels selon la catégorie, en suivant le reste de cette procédure (charte, sources, section 3 quater, langage clair, Reels variés, QA) :
    - **Région** : fiche région (carrousel avec chiffres officiels, organismes, appel « Prêt à démarrer dans [région] ? Contacte-nous ») et un Reel ;
    - **Valeur ajoutée** : guide concret (étapes, outils, organismes nommés), carrousel et story ou Reel ;
-   - **Cabinet** : Affaires Québec lui-même (offre, méthode Structurer · Financer · Démontrer, équipe, appuis autorisés), post ou carrousel et story ; aucun nom de client ni témoignage sans accord noté dans PLAN.md.
-   Adapter au **Territoire** : Québec par défaut (heure de Montréal) ; Martinique, Europe francophone ou Afrique francophone = public qui prépare un projet d'entreprise au Québec depuis ce territoire (programmes d'immigration d'affaires, étapes avant l'arrivée, fuseau à préciser à côté de l'heure de Montréal) ; ne rien affirmer sur ces territoires sans source.
-   Suivre l'Angle et les Pistes de contenu de la ligne.
-4. Déposer les visuels **directement dans Notion** (Drive n'est plus utilisé) : une page **« Visuels — Semaine du [date] »** sous « Affaires Québec — Espace des agents » (page 3fd5aaca-cac2-81f9-bf77-dc71a5c4209e), avec en tête le programme proposé et les points à valider, puis **une sous-page par thématique** (« [Catégorie] — [Thématique] ») contenant, dans l'ordre de publication : les images (carrousel dans l'ordre, couverture, story), le Reel en MP4, puis les légendes **Instagram**, **Facebook** et **LinkedIn** sous des titres exactement nommés ainsi, prêtes à copier (Hermès les lit). Envoi de chaque fichier :
-   - appeler l'outil `notion-create-file-upload` avec le nom du fichier et le **type MIME exact** (`image/png`, `video/mp4`) ;
-   - lancer `visuels/outils/notion_envoi.sh <upload_url> "<authorization>" <fichier> <type MIME>` (même type MIME) ; la réponse doit contenir `"status":"uploaded"` ;
-   - placer `<image src="file-upload://…"></image>` ou `<video src="file-upload://…"></video>` dans la page **dans l'heure** (les envois non placés expirent) ;
-   - 20 Mo maximum par fichier ; au-delà, réencoder (`ffmpeg -crf 23`).
-   Le domaine `api.notion.com` est autorisé dans l'environnement depuis le 18 octobre 2026.
-5. Dans chaque ligne, coller le lien de **sa** sous-page dans « Dossier visuels » et passer la ligne au statut **« Visuels prêts »**.
-6. Ajouter une ligne dans « 📒 Journal AQ » (`collection://9856cbc3-22f3-4794-be5e-b76348dba628`) : Action = « Visuels de la semaine du [date] », Agent = AQ Croissance, Type = Publication, Statut = Fait, Date = aujourd'hui, Lien = page de la semaine, Détail = les 3 thématiques, les contenus produits et les points à valider.
-En cas de blocage (envoi Notion, rendu, source), mettre la ligne du Journal au statut « Bloqué » ou « En attente de Rey » avec le motif, et laisser les thématiques concernées en « Visuels en cours » (Hermès ne publie alors rien).
+   - **Cabinet** : Affaires Québec lui-même (offre, méthode Structurer · Financer · Démontrer, équipe, appuis autorisés), post ou carrousel et story ; aucun nom de client sans accord noté dans PLAN.md.
+   Territoire : Québec par défaut (heure de Montréal) ; Martinique, Europe ou Afrique francophone = public qui prépare un projet d'entreprise au Québec depuis ce territoire ; rien d'affirmé sur ces territoires sans source.
+4. Ranger dans `visuels/semaines/AAAA-MM-JJ/` : `README.md` (programme et points à valider), puis un dossier par thématique (`region`, `valeur-ajoutee`, `cabinet`) avec les images numérotées (01.png, 02.png…), `reel.mp4` (réencodé vers 2,2 Mb/s s'il dépasse 15 Mo) et `legendes.md` (titres « Instagram », « Facebook », « LinkedIn », « Texte alternatif »). Les fichiers de travail (JSON, rendus intermédiaires) peuvent rester dans le dossier de semaine habituel (`visuels/2026-Sxx/`).
+5. Sous chaque thématique du fichier de la semaine : ajouter « Dossier visuels : visuels/semaines/AAAA-MM-JJ/<dossier> » et passer le statut à **« Visuels prêts »**.
+6. Ajouter une ligne à la fin de `aq/journal.md` : `date | AQ Croissance (routine visuels) | Publication | Fait | Visuels de la semaine du [date] | détail`. En cas de blocage : statut « Bloqué » ou « En attente de Rey » avec le motif ; les thématiques concernées restent « Visuels en cours » (Hermès ne publie alors rien).
+
+Les bases Notion « 🎯 Thématiques de la semaine » et « 📒 Journal AQ » ne sont plus lues ni écrites par cette routine.
 
 ## 1. Préparer l'environnement
 ```
