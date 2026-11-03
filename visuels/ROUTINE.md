@@ -92,6 +92,7 @@ Les organismes publics restent présentés comme des portes d'entrée gratuites 
 3. Commit et push sur `claude/wonderful-bell-06kyk8`.
 4. Envoyer à Rénald (SendUserFile, statut « proactive ») : le zip, `apercu.png` et `programme.md`.
 5. Message final de 10 lignes maximum : ce qui est prêt, puis **au plus 5 points à valider** (chiffres, accords, photos manquantes).
+6. Exporter une copie .jpg de chaque .png dans le dossier de la semaine (qualité 92, fond opaque) — l'API Instagram n'accepte que le JPEG.
 
 ## Règles d'autonomie
 **La routine décide seule :** sujets, textes, mise en page, ordre et horaires proposés, dans le cadre ci-dessus.
