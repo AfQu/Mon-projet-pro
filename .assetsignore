@@ -4,7 +4,6 @@
 .agents
 .wrangler
 node_modules
-visuels
 aq
 *.md
 *.json
