@@ -1,7 +1,8 @@
 .git
-.github
+aq
+*.md
+*.json
+*.jsonc
+*.py
+visuels/outils
 .claude
-.agents
-.wrangler
-node_modules
-visuels
