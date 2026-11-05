@@ -1,6 +1,6 @@
 # Concept à importer n° 1 — L'épicerie itinérante (Reel test)
 
-Fichier : `reel.mp4` (9:16, 40 s, motion design, musique synthétisée libre de droits, sans voix off).
+Fichier : `reel.mp4` (9:16, 40 s, motion design, musique synthétisée libre de droits, voix off synthétisée : voix « SIWIS » de Piper, licence CC BY 4.0, mention à garder dans le dossier ; script de la voix dans `scenes.json`, clés « voix »).
 Statut : **À valider** — test, pas de publication automatique.
 
 ## Reel « Concept à importer » : épicerie itinérante
@@ -17,7 +17,7 @@ Pourquoi ça marche :
 • des aînés qui n'ont pas de voiture ;
 • des jeunes familles très occupées.
 
-Pourquoi au Québec ? Au Bas-Saint-Laurent, certains villages n'ont plus de dépanneur. Et l'épicerie la plus proche est souvent loin.
+Pourquoi au Québec ? Dans le Bas-Saint-Laurent, certains villages n'ont plus de dépanneur. Et l'épicerie la plus proche est souvent loin.
 
 Tu veux lancer ce projet ? Affaires Québec t'aide à structurer ton idée, à préparer ton financement et à trouver les bons contacts en région.
 

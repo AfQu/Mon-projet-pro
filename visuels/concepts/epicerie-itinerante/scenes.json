@@ -1,7 +1,7 @@
 [
  {
   "type": "titre",
-  "duree": 3.5,
+  "duree": 4.3,
   "lignes": [
    "Ce business",
    "sauve des villages",
@@ -10,56 +10,114 @@
   "sous": [
    "… et pourrait cartonner",
    "en région."
+  ],
+  "voix": [
+   {
+    "t": 0.15,
+    "texte": "Ce business sauve des villages en France…",
+    "dit": "Ce bizness sauve des villages en France."
+   },
+   {
+    "t": 2.5,
+    "texte": "… et pourrait cartonner en région.",
+    "dit": "Et pourrait cartonner en région."
+   }
   ]
  },
  {
   "type": "picto",
-  "duree": 4.5,
+  "duree": 4.4,
   "transition": "glisse",
   "icone": "camion",
   "surtitre": "LE CONCEPT",
   "titre": "Un camion-épicerie",
-  "texte": "Il roule de village en village."
+  "texte": "Il roule de village en village.",
+  "voix": [
+   {
+    "t": 0.3,
+    "texte": "Le concept : un camion-épicerie qui roule de village en village."
+   }
+  ]
  },
  {
   "type": "picto",
-  "duree": 4.5,
+  "duree": 4.8,
   "transition": "coupe",
   "icone": "carte",
   "surtitre": "LE CONCEPT",
   "titre": "Une tournée fixe",
-  "texte": "Chaque semaine : même jour, même arrêt."
+  "texte": "Chaque semaine : même jour, même arrêt.",
+  "voix": [
+   {
+    "t": 0.2,
+    "texte": "Il suit une tournée fixe, chaque semaine. Même jour, même arrêt."
+   }
+  ]
  },
  {
   "type": "liste",
-  "duree": 10,
+  "duree": 9.5,
   "transition": "volet",
   "titre": "Pourquoi ça marche",
-  "rythme": 1.6,
+  "rythme": 1.9,
   "items": [
    "Peu d'investissement au départ",
    "Une clientèle fidèle",
    "Des aînés sans voiture",
    "Des jeunes familles très occupées"
+  ],
+  "voix": [
+   {
+    "t": 0.0,
+    "texte": "Pourquoi ça marche ?"
+   },
+   {
+    "t": 1.0,
+    "texte": "Peu d'investissement au départ."
+   },
+   {
+    "t": 2.9,
+    "texte": "Une clientèle fidèle."
+   },
+   {
+    "t": 4.8,
+    "texte": "Des aînés sans voiture."
+   },
+   {
+    "t": 6.699999999999999,
+    "texte": "Et des jeunes familles très occupées."
+   }
   ]
  },
  {
   "type": "picto",
-  "duree": 5.5,
+  "duree": 5.2,
   "transition": "fondu",
   "icone": "village",
   "surtitre": "POURQUOI AU QUÉBEC",
-  "titre": "Au Bas-Saint-Laurent",
-  "texte": "certains villages n'ont plus de dépanneur."
+  "titre": "Dans le Bas-Saint-Laurent",
+  "texte": "certains villages n'ont plus de dépanneur.",
+  "voix": [
+   {
+    "t": 0.3,
+    "texte": "Pourquoi au Québec ? Dans le Bas-Saint-Laurent, certains villages n'ont plus de dépanneur."
+   }
+  ]
  },
  {
   "type": "picto",
-  "duree": 5.5,
+  "duree": 4.3,
   "transition": "coupe",
   "icone": "route",
   "surtitre": "POURQUOI AU QUÉBEC",
   "titre": "De grandes distances",
-  "texte": "L'épicerie la plus proche est souvent loin."
+  "texte": "L'épicerie la plus proche est souvent loin.",
+  "voix": [
+   {
+    "t": 0.6,
+    "texte": "Et l'épicerie la plus proche est souvent loin."
+   }
+  ]
  },
  {
   "type": "titre",
@@ -72,11 +130,17 @@
   "sous": [
    "Affaires Québec t'accompagne.",
    "affairesquebec.ca"
+  ],
+  "voix": [
+   {
+    "t": 0.2,
+    "texte": "Tu veux le lancer ? Affaires Québec t'accompagne."
+   }
   ]
  },
  {
   "type": "logo",
-  "duree": 3,
+  "duree": 4.0,
   "transition": "fondu",
   "accroche": "ON T'ACCOMPAGNE"
  }

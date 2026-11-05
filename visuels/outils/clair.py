@@ -16,7 +16,7 @@ MAX_VISUEL, MAX_LEGENDE = 20, 25
 SIGLES_LIBRES = {"AQ", "PME", "TPS", "TVQ", "PDF", "URL", "OK", "FB", "IG", "MP4", "PNG", "QC", "CV",
                  "MTL", "IDÉ"}  # noms propres (PME MTL, IDÉ Trois-Rivières)
 CHAMPS_IGNORES = {"id", "gabarit", "format", "pilier", "source", "clip", "transition", "style", "type",
-                  "etiquette", "surtitre", "petit", "accroche", "chiffre", "grand"}
+                  "etiquette", "surtitre", "petit", "accroche", "chiffre", "grand", "dit"}
 RE_SIGLE = re.compile(r"\b([A-ZÀ-Ý][A-ZÀ-Ý0-9]{1,6})\b")
 RE_NOMBRE = re.compile(r"\d[\d\s ,.]*\d|\d")
 
