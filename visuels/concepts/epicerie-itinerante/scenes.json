@@ -1,0 +1,83 @@
+[
+ {
+  "type": "titre",
+  "duree": 3.5,
+  "lignes": [
+   "Ce business",
+   "sauve des villages",
+   "en France…"
+  ],
+  "sous": [
+   "… et pourrait cartonner",
+   "en région."
+  ]
+ },
+ {
+  "type": "picto",
+  "duree": 4.5,
+  "transition": "glisse",
+  "icone": "camion",
+  "surtitre": "LE CONCEPT",
+  "titre": "Un camion-épicerie",
+  "texte": "Il roule de village en village."
+ },
+ {
+  "type": "picto",
+  "duree": 4.5,
+  "transition": "coupe",
+  "icone": "carte",
+  "surtitre": "LE CONCEPT",
+  "titre": "Une tournée fixe",
+  "texte": "Chaque semaine : même jour, même arrêt."
+ },
+ {
+  "type": "liste",
+  "duree": 10,
+  "transition": "volet",
+  "titre": "Pourquoi ça marche",
+  "rythme": 1.6,
+  "items": [
+   "Peu d'investissement au départ",
+   "Une clientèle fidèle",
+   "Des aînés sans voiture",
+   "Des jeunes familles très occupées"
+  ]
+ },
+ {
+  "type": "picto",
+  "duree": 5.5,
+  "transition": "fondu",
+  "icone": "village",
+  "surtitre": "POURQUOI AU QUÉBEC",
+  "titre": "Au Bas-Saint-Laurent",
+  "texte": "certains villages n'ont plus de dépanneur."
+ },
+ {
+  "type": "picto",
+  "duree": 5.5,
+  "transition": "coupe",
+  "icone": "route",
+  "surtitre": "POURQUOI AU QUÉBEC",
+  "titre": "De grandes distances",
+  "texte": "L'épicerie la plus proche est souvent loin."
+ },
+ {
+  "type": "titre",
+  "duree": 3.5,
+  "transition": "cercle",
+  "lignes": [
+   "Tu veux",
+   "le lancer ?"
+  ],
+  "sous": [
+   "Affaires Québec t'accompagne.",
+   "affairesquebec.ca"
+  ]
+ },
+ {
+  "type": "logo",
+  "duree": 3,
+  "transition": "fondu",
+  "accroche": "ON T'ACCOMPAGNE"
+ }
+]

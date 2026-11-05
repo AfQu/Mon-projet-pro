@@ -16,3 +16,4 @@
 | non repris | Reels S42 (repreneuriat, régions) : retirés du lot du 16 au 22 oct. pour éviter la répétition ; légendes à refaire sans inscription après le 23 oct. | — | — | — |
 | à programmer | Fiche région Lanaudière (`2026-S43/s43-reel-lanaudiere.mp4`, Reel vidéo) | question sur rivière | accroche, 4 « fiches » chiffrées (population, salaire, construction, créneau), sous-titre, appel « Contacte Affaires Québec », carton contact | slideleft, slideup, wipeleft, circleopen, fade |
 | jeu 5 nov. 2026 | Montréal, entreprendre ici ? (`semaines/2026-11-02/region/reel.mp4`, motion design) | pile | pile, liste, machine, titre, logo | glisse, coupe, fondu, cercle |
+| à valider (test) | Concept à importer n° 1 : épicerie itinérante, France rurale → Bas-Saint-Laurent (`concepts/epicerie-itinerante/reel.mp4`, motion design, or #E6AD19) | titre | titre, picto (camion, carte, village, route), liste, logo | glisse, coupe, volet, fondu, cercle |

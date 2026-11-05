@@ -18,6 +18,8 @@ Formes ajoutées pour varier : "compteur" (chiffre qui défile), "liste" (cases 
              {"type": "liste", "titre": "…", "items": ["…", "…"]}
              {"type": "machine", "surtitre": "QUESTION", "texte": "…", "reponse": "…"}
              {"type": "mythe", "mythe": "…", "realite": "…"}
+  "picto" : icône or tracée trait par trait (camion, carte, village, route), puis surtitre, titre et texte.
+             {"type": "picto", "icone": "camion", "surtitre": "LE CONCEPT", "titre": "…", "texte": "…"}
 Transitions (clé "transition" de la scène qui arrive) : volet (défaut), fondu, glisse, cercle, coupe. Musique : musique.py (synthétisée, libre de droits).
 Dépendances : Pillow, ffmpeg. Toujours contrôler quelques images clés avant de livrer.
 """
@@ -28,6 +30,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, "..", "assets")
 W, H, FPS = 1080, 1920, 30
 BG = (35, 31, 32); GOLD = (228, 168, 58); DIM = (150, 120, 60); SUB = (228, 168, 58)
+if os.environ.get("AQ_OR"):  # ex. AQ_OR=E6AD19 : or demandé pour un Reel précis (jamais de bleu)
+    GOLD = SUB = tuple(int(os.environ["AQ_OR"].lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
 BEAT = 0.5
 SERIF = os.path.join(ASSETS, "fonts", "LibreCaslonDisplay-Regular.ttf")
 SANS = os.path.join(ASSETS, "fonts", "DMSans[opsz,wght].ttf")
@@ -214,6 +218,96 @@ def s_mythe(img, sc, lt):
         reveal(img, l, fr, y, (lt - 2.6 - 0.3 * k) / 0.6); y += int(fr.size * 1.04)
 
 NOUVELLES = {"compteur": s_compteur, "liste": s_liste, "machine": s_machine, "mythe": s_mythe}
+
+# ---------- Pictos tracés (icônes au trait, dessinées progressivement) ----------
+def _cercle(cx, cy, r, n=28):
+    return [(cx + r * math.cos(2 * math.pi * k / n), cy + r * math.sin(2 * math.pi * k / n)) for k in range(n + 1)]
+
+def _epingle(cx, cy, r=26):
+    """Épingle de carte (goutte), pointe en (cx, cy)."""
+    yc = cy - 2.2 * r
+    arc = [(cx + r * math.cos(math.radians(t)), yc + r * math.sin(math.radians(t))) for t in range(130, 411, 14)]
+    return [(cx, cy)] + arc + [(cx, cy)]
+
+# Chaque icône : liste de traits (polylignes) dans une boîte 400 x 400 ; (trait, pointillé)
+PICTOS = {
+    "camion": [
+        ([(40, 130), (250, 130), (250, 280), (40, 280), (40, 130)], False),
+        ([(40, 130), (61, 150), (82, 130), (103, 150), (124, 130), (145, 150), (166, 130), (187, 150), (208, 130), (229, 150), (250, 130)], False),
+        ([(250, 175), (335, 175), (370, 225), (370, 280), (250, 280)], False),
+        ([(268, 192), (326, 192), (348, 222), (268, 222), (268, 192)], False),
+        ([(90, 195), (90, 240), (200, 240), (200, 195)], False),
+        (_cercle(110, 290, 30), False), (_cercle(310, 290, 30), False),
+        ([(0, 330), (400, 330)], True),
+    ],
+    "carte": [
+        ([(40, 90), (150, 50), (250, 90), (360, 50), (360, 320), (250, 360), (150, 320), (40, 360), (40, 90)], False),
+        ([(150, 50), (150, 320)], False), ([(250, 90), (250, 360)], False),
+        ([(85, 300), (120, 250), (175, 235), (215, 190), (270, 175), (300, 130)], True),
+        (_cercle(85, 300, 10, 14), False), (_cercle(215, 190, 10, 14), False),
+        (_epingle(300, 130, 22), False),
+    ],
+    "village": [
+        ([(10, 310), (390, 310)], False),
+        ([(30, 310), (30, 215), (90, 165), (150, 215), (150, 310)], False),
+        ([(75, 310), (75, 265), (105, 265), (105, 310)], False),
+        ([(170, 310), (170, 175), (220, 135), (270, 175), (270, 310)], False),
+        ([(220, 135), (220, 70)], False), ([(203, 92), (237, 92)], False),
+        ([(205, 310), (205, 250), (220, 235), (235, 250), (235, 310)], False),
+        ([(290, 310), (290, 230), (335, 195), (380, 230), (380, 310)], False),
+        ([(318, 250), (352, 250), (352, 280), (318, 280), (318, 250)], False),
+    ],
+    "route": [
+        ([(40, 380), (180, 120)], False), ([(360, 380), (220, 120)], False),
+        ([(200, 380), (200, 125)], True),
+        ([(0, 120), (130, 120)], False), ([(270, 120), (400, 120)], False),
+        (_epingle(200, 100, 26), False),
+    ],
+}
+
+def trace(img, nom, p, cx, cy, taille=440, dx=0, ep=9):
+    """Dessine l'icône jusqu'à la fraction p de sa longueur (rendu 2x pour lisser)."""
+    if p <= 0: return
+    k = 2 * taille / 400; can = Image.new("RGBA", (2 * taille + 40, 2 * taille + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(can)
+    traits = PICTOS[nom]
+    longs = [sum(math.dist(a, b) for a, b in zip(t, t[1:])) for t, _ in traits]
+    reste = p * sum(longs)
+    for (pts, pointille), L in zip(traits, longs):
+        if reste <= 0: break
+        fait = 0.0
+        for a, b in zip(pts, pts[1:]):
+            seg = math.dist(a, b)
+            if reste <= 0: break
+            u = min(1, reste / seg) if seg else 1
+            q = (a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u)
+            A = (20 + a[0] * k, 20 + a[1] * k); Q = (20 + q[0] * k, 20 + q[1] * k)
+            if pointille:  # tirets de 24 px
+                n = max(1, int(seg * u / 24))
+                for j in range(0, n, 2):
+                    t0, t1 = j / n, min(1, (j + 1) / n)
+                    d.line([(A[0] + (Q[0] - A[0]) * t0, A[1] + (Q[1] - A[1]) * t0), (A[0] + (Q[0] - A[0]) * t1, A[1] + (Q[1] - A[1]) * t1)], fill=GOLD + (255,), width=2 * ep)
+            else:
+                d.line([A, Q], fill=GOLD + (255,), width=2 * ep, joint="curve")
+                d.ellipse([Q[0] - ep, Q[1] - ep, Q[0] + ep, Q[1] + ep], fill=GOLD + (255,))
+            reste -= seg; fait += seg
+    sm = can.resize((can.width // 2, can.height // 2), Image.LANCZOS)
+    img.alpha_composite(sm, (int(cx - sm.width / 2 + dx), int(cy - sm.height / 2)))
+
+def s_picto(img, sc, lt):
+    """Icône tracée (le camion arrive en roulant), puis surtitre, titre serif et texte court."""
+    y = 330
+    if sc.get("surtitre"): reveal(img, sc["surtitre"], font("n", 34), y, lt / 0.5, spacing=12)
+    dx = 0
+    if sc["icone"] == "camion": dx = int((1 - eo((lt - 0.1) / 1.3)) * -900)
+    trace(img, sc["icone"], 1.0 if sc["icone"] == "camion" and lt > 0.1 else eio((lt - 0.2) / 1.5), W / 2, 700, dx=dx)
+    ft = font("s", sc.get("taille", 104)); y = 1010
+    for k, l in enumerate(wrap(sc.get("titre", ""), ft, 920)):
+        reveal(img, l, ft, y, (lt - 1.1 - 0.3 * k) / 0.6); y += int(ft.size * 1.04)
+    y += 30; fx = font("n", 50)
+    for k, l in enumerate(wrap(sc.get("texte", ""), fx, 900)):
+        reveal(img, l, fx, y, (lt - 1.7 - 0.3 * k) / 0.6, color=TXT); y += 70
+
+NOUVELLES["picto"] = s_picto
 
 def transition(img, kind, u):
     """Transitions variées : volet (or diagonal), fondu, glisse (panneau vertical), cercle, coupe (sèche)."""
