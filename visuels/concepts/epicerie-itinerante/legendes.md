@@ -1,6 +1,6 @@
 # Concept à importer n° 1 — L'épicerie itinérante (Reel test)
 
-Fichier : `reel.mp4` (9:16, 40 s, motion design, musique synthétisée libre de droits, voix off synthétisée : voix « SIWIS » de Piper, licence CC BY 4.0, mention à garder dans le dossier ; script de la voix dans `scenes.json`, clés « voix »).
+Fichier : `reel.mp4` (9:16, 40 s, motion design, musique synthétisée libre de droits, sans voix off).
 Statut : **À valider** — test, pas de publication automatique.
 
 ## Reel « Concept à importer » : épicerie itinérante

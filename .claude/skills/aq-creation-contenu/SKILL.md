@@ -48,6 +48,8 @@ L'audience est **au Québec**, même si Rey publie depuis la Martinique : heures
 
 ## 4. Vidéo Reel motion design
 
+**Sans voix off** (choix de Rénald, 5 nov. 2026) : texte à l'écran et musique seulement, sauf demande explicite ou voix enregistrée fournie par l'équipe.
+
 Script : `scripts/reel_motion.py` (Pillow + ffmpeg). Il génère un MP4 1080 × 1920 à 30 i/s avec des transitions en volet or, des révélations de texte en masque et une musique synthétisée libre de droits (`scripts/musique.py`). Les scènes se définissent dans un JSON (voir l'en-tête du script). Contrôle toujours quelques images clés avant de livrer.
 
 ## 5. Checklist avant de livrer
