@@ -91,8 +91,15 @@ img{max-width:100%;display:block}
 /* ---------- Hero ---------- */
 .hero{padding-block:76px 80px}
 .hero .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center}
+.hero-title-wrap{position:relative}
 .hero h1{font-size:clamp(38px,5.4vw,66px);line-height:0.98;margin-bottom:24px}
 .hero h1 em{font-style:normal;color:var(--marigold)}
+.hero h1.tw-hidden{opacity:0}
+.tw-overlay{position:absolute;inset:0}
+.tw-overlay em{font-style:normal;color:var(--marigold)}
+.tw-cursor{display:inline-block;width:3px;height:0.78em;margin-left:2px;vertical-align:-0.08em;background:var(--marigold);animation:twBlink 1s steps(1) infinite}
+@keyframes twBlink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.tw-cursor{animation:none}}
 .hero-sub{font-size:19px;color:var(--ink-muted-2);max-width:480px;margin-bottom:32px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:20px}
 .hero-trust{font-size:14px;color:var(--ink-muted);letter-spacing:0.01em}
@@ -188,10 +195,21 @@ h2{font-size:clamp(30px,3.6vw,46px);letter-spacing:0.005em;line-height:1.02}
 .sign-list li:not(:last-child)::after{content:"◆";font-size:10px;color:var(--marigold);margin:0 22px;transform:translateY(-2px)}
 
 /* ---------- Questions ---------- */
-.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px 44px;margin-top:40px}
-.faq-item{padding-top:18px;border-top:1.5px solid var(--line)}
-.faq-item h3{font-family:'Work Sans',sans-serif;text-transform:none;letter-spacing:0;font-weight:700;font-size:18px;margin-bottom:8px;color:var(--green)}
-.faq-item p{color:var(--ink-muted-2);font-size:15.5px}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px 44px;margin-top:40px;align-content:start}
+.faq-item{border-top:1.5px solid var(--line)}
+.faq-item summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  min-height:44px;padding-block:14px;
+  font-family:'Work Sans',sans-serif;font-weight:700;font-size:17.5px;color:var(--green);
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-icon{position:relative;width:18px;height:18px;flex-shrink:0}
+.faq-icon::before,.faq-icon::after{content:"";position:absolute;background:var(--marigold);border-radius:1px}
+.faq-icon::before{left:0;top:50%;width:100%;height:2px;margin-top:-1px}
+.faq-icon::after{top:0;left:50%;width:2px;height:100%;margin-left:-1px;transition:transform .25s var(--ease-out)}
+.faq-item[open] .faq-icon::after{transform:scaleY(0)}
+.faq-body p{color:var(--ink-muted-2);font-size:15.5px;padding-bottom:18px}
+@media(prefers-reduced-motion:reduce){.faq-icon::after{transition:none}}
 
 /* ---------- Contact ---------- */
 .contact{background:var(--green-deep);color:var(--cream)}
@@ -212,6 +230,28 @@ footer{background:var(--green-deep);color:#7C9185;font-size:13.5px;border-top:1p
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
 footer a{color:#9DB3A6;text-decoration:underline;text-underline-offset:2px}
 footer a:hover{color:var(--cream)}
+
+/* ---------- Barre collante mobile ---------- */
+.sticky-cta{display:none}
+@media(max-width:768px){
+  body{padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  .sticky-cta{
+    display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--cream);border-top:1px solid var(--line);
+    padding:14px max(20px,env(safe-area-inset-left,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-right,0px));
+    transform:translateY(0);transition:transform .3s var(--ease-out);
+  }
+  .sticky-cta.hide{transform:translateY(130%)}
+}
+.sticky-cta-btn{
+  display:flex;align-items:center;justify-content:center;width:100%;
+  background:var(--marigold);color:var(--green-deep);font-weight:700;font-size:15.5px;
+  padding:14px;border-radius:2px;min-height:48px;
+  transition:transform .16s var(--ease-out),background-color .2s;
+}
+.sticky-cta-btn:hover{background:var(--marigold-deep)}
+.sticky-cta-btn:active{transform:scale(.97)}
+@media(prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
 
 /* ---------- Reveal on scroll ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
@@ -245,7 +285,9 @@ footer a:hover{color:var(--cream)}
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Réseaux sociaux clés en main · Montréal et Québec</span>
-      <h1>Votre vitrine, tenue chaque semaine<em>.</em></h1>
+      <div class="hero-title-wrap">
+        <h1 id="heroTitle">Votre vitrine, tenue chaque semaine<em>.</em></h1>
+      </div>
       <p class="hero-sub">Restaurants, salons, boutiques, travailleurs autonomes : on publie pour vous 3 fois par semaine sur Instagram et Facebook. Vous approuvez en un clic, par texto — le reste est automatique.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-marigold">Recevoir 3 exemples gratuits</a>
@@ -397,22 +439,22 @@ footer a:hover{color:var(--cream)}
   <div class="wrap">
     <h2 class="reveal">Vos questions</h2>
     <div class="faq">
-      <div class="faq-item reveal">
-        <h3>Dois-je donner mes mots de passe ?</h3>
-        <p>Jamais. Vous nous donnez un accès partenaire depuis votre compte Meta, que vous pouvez retirer à tout moment.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Et si une publication ne me plaît pas ?</h3>
-        <p>Vous voyez tout avant publication et vous pouvez demander une modification chaque semaine.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Faut-il fournir des photos ?</h3>
-        <p>Oui, une dizaine au départ, puis quelques-unes de temps en temps. Vos vraies photos donnent les meilleurs résultats.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Puis-je arrêter ?</h3>
-        <p>Après les 3 premiers mois, vous arrêtez quand vous voulez, avec un mois de préavis. Vos contenus restent à vous.</p>
-      </div>
+      <details class="faq-item reveal">
+        <summary>Dois-je donner mes mots de passe ?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Jamais. Vous nous donnez un accès partenaire depuis votre compte Meta, que vous pouvez retirer à tout moment.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Et si une publication ne me plaît pas ?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Vous voyez tout avant publication et vous pouvez demander une modification chaque semaine.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Faut-il fournir des photos ?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Oui, une dizaine au départ, puis quelques-unes de temps en temps. Vos vraies photos donnent les meilleurs résultats.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Puis-je arrêter ?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Après les 3 premiers mois, vous arrêtez quand vous voulez, avec un mois de préavis. Vos contenus restent à vous.</p></div>
+      </details>
     </div>
   </div>
 </section>
@@ -438,6 +480,10 @@ footer a:hover{color:var(--cream)}
   </div>
 </footer>
 
+<div class="sticky-cta" id="stickyCta">
+  <a href="sms:" class="sticky-cta-btn">Texte-nous pour 3 exemples gratuits</a>
+</div>
+
 <script>
 (function(){
   const toggle=document.getElementById('navToggle');
@@ -460,6 +506,83 @@ footer a:hover{color:var(--cream)}
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
   },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   els.forEach(el=>io.observe(el));
+})();
+
+// Titre "tapé à la machine" : le texte complet est déjà dans le HTML (SEO, lecteurs
+// d'écran) ; on le rend juste transparent et on le retape visuellement par-dessus.
+(function(){
+  const h1=document.getElementById('heroTitle');
+  if(!h1||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const full=h1.textContent;
+  const overlay=document.createElement('span');
+  overlay.className='tw-overlay';
+  overlay.setAttribute('aria-hidden','true');
+  const cursor=document.createElement('span');
+  cursor.className='tw-cursor';
+  h1.classList.add('tw-hidden');
+  h1.parentNode.appendChild(overlay);
+  const total=full.length,duration=2000,delay=duration/total;
+  let i=0;
+  function tick(){
+    i++;
+    if(i<total){
+      overlay.textContent=full.slice(0,i);
+      overlay.appendChild(cursor);
+      setTimeout(tick,delay);
+    }else{
+      overlay.innerHTML=full.slice(0,-1)+'<em>'+full.slice(-1)+'</em>';
+      overlay.appendChild(cursor);
+      setTimeout(()=>{h1.classList.remove('tw-hidden');overlay.remove()},280);
+    }
+  }
+  setTimeout(tick,150);
+})();
+
+// FAQ en accordéon : <details>/<summary> natifs (clavier gratuit), animation de
+// hauteur en JS seulement — désactivée d'un bloc si prefers-reduced-motion (le
+// natif reste instantané, donc rien ne manque).
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.querySelectorAll('.faq-item').forEach(d=>{
+    const summary=d.querySelector('summary');
+    const body=d.querySelector('.faq-body');
+    let anim=null,closing=false,expanding=false;
+    summary.addEventListener('click',e=>{
+      e.preventDefault();
+      d.style.overflow='hidden';
+      if(closing||!d.open)expand();
+      else if(expanding||d.open)shrink();
+    });
+    function run(from,to,opening){
+      if(anim)anim.cancel();
+      anim=d.animate({height:[from,to]},{duration:220,easing:'ease-out'});
+      anim.onfinish=()=>{d.open=opening;d.style.height=d.style.overflow='';anim=null;closing=expanding=false};
+      anim.oncancel=()=>{closing=expanding=false};
+    }
+    function shrink(){
+      closing=true;
+      run(d.offsetHeight+'px',summary.offsetHeight+'px',false);
+    }
+    function expand(){
+      d.style.height=d.offsetHeight+'px';
+      d.open=true;
+      requestAnimationFrame(()=>{
+        expanding=true;
+        run(d.offsetHeight+'px',(summary.offsetHeight+body.offsetHeight)+'px',true);
+      });
+    }
+  });
+})();
+
+// Barre "Texte-nous" collante (mobile) : disparaît quand #contact est à l'écran.
+(function(){
+  const bar=document.getElementById('stickyCta');
+  const contact=document.getElementById('contact');
+  if(!bar||!contact||!('IntersectionObserver' in window))return;
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>bar.classList.toggle('hide',e.isIntersecting));
+  },{threshold:0.01});
+  io.observe(contact);
 })();
 </script>
 </body>
