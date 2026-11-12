@@ -1,0 +1,10 @@
+[
+ {"type": "titre", "duree": 3.5, "lignes": ["Ce modèle de crèche", "se multiplie en France…"], "sous": ["… et les familles d'ici", "cherchent des places."]},
+ {"type": "picto", "duree": 4.5, "transition": "glisse", "icone": "immeuble", "surtitre": "LE CONCEPT", "titre": "La micro-crèche", "texte": "Un petit groupe d'enfants, au rez-de-chaussée d'un immeuble."},
+ {"type": "picto", "duree": 4.5, "transition": "coupe", "icone": "feuille", "surtitre": "LE CONCEPT", "titre": "Version écologique", "texte": "Matériaux sains, jeux dehors, contact avec la nature."},
+ {"type": "liste", "duree": 9.5, "transition": "volet", "titre": "Pourquoi ça marche", "rythme": 1.6, "items": ["Petits groupes, ambiance familiale", "Au cœur du quartier, près des parents", "Un projet écologique qui attire", "Des parents qui cherchent une\u00a0place"]},
+ {"type": "machine", "duree": 6, "transition": "fondu", "surtitre": "POURQUOI AU QUÉBEC", "texte": "Trouver une place en garderie ?", "reponse": "Beaucoup de familles québécoises attendent encore une place."},
+ {"type": "picto", "duree": 6, "transition": "coupe", "icone": "document", "surtitre": "À SAVOIR", "titre": "Un permis obligatoire", "texte": "Au Québec, une garderie doit avoir un permis du ministère de la Famille."},
+ {"type": "titre", "duree": 3.5, "transition": "cercle", "lignes": ["Tu veux", "le lancer ?"], "sous": ["Affaires Québec t'accompagne.", "affairesquebec.ca"]},
+ {"type": "logo", "duree": 2.5, "transition": "fondu", "accroche": "ON T'ACCOMPAGNE"}
+]

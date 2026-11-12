@@ -11,3 +11,5 @@ Types : Publication, Prospection, Thématique, Devis, Relance, KPI, Autre. Statu
 2026-11-03 | AQ Croissance | Publication | Fait | Région — Montréal | Carrousel publié sur Instagram et Facebook (media_id=18080042954405842)
 2026-11-09 | AQ Croissance | Proposition | Fait | Thématiques de la semaine | Région / Valeur ajoutée / Cabinet
 2026-11-09 | Alfred | Correction | Fait | Thématiques 2026-11-09 complétées | Rédaction des 4 sections + sources + push après squelette vide d'AQ Croissance
+2026-11-12 | AQ Croissance (routine visuels) | Publication | Fait | Visuels de la semaine du 2026-11-09 | Région Capitale-Nationale (carrousel 6 slides + Reel 20 s) et Concept à importer micro-crèches (Reel 40 s) prêts dans visuels/semaines/2026-11-09/ ; chiffres non sourcés retirés (voir README)
+2026-11-12 | AQ Croissance (routine visuels) | Publication | Bloqué | Valeur ajoutée « PEQ entrepreneur » et Cabinet comptabilité | Non produites : programme inexistant sous ce nom, volets 2026 non confirmés ; offre comptable AQ et étude de cas client non confirmées dans PLAN.md

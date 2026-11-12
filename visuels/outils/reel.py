@@ -18,7 +18,7 @@ Formes ajoutées pour varier : "compteur" (chiffre qui défile), "liste" (cases 
              {"type": "liste", "titre": "…", "items": ["…", "…"]}
              {"type": "machine", "surtitre": "QUESTION", "texte": "…", "reponse": "…"}
              {"type": "mythe", "mythe": "…", "realite": "…"}
-  "picto" : icône or tracée trait par trait (camion, carte, village, route), puis surtitre, titre et texte.
+  "picto" : icône or tracée trait par trait (camion, carte, village, route, immeuble, feuille, document), puis surtitre, titre et texte.
              {"type": "picto", "icone": "camion", "surtitre": "LE CONCEPT", "titre": "…", "texte": "…"}
 Transitions (clé "transition" de la scène qui arrive) : volet (défaut), fondu, glisse, cercle, coupe. Musique : musique.py (synthétisée, libre de droits).
 Dépendances : Pillow, ffmpeg. Toujours contrôler quelques images clés avant de livrer.
@@ -262,6 +262,31 @@ PICTOS = {
         ([(200, 380), (200, 125)], True),
         ([(0, 120), (130, 120)], False), ([(270, 120), (400, 120)], False),
         (_epingle(200, 100, 26), False),
+    ],
+    "immeuble": [
+        ([(20, 370), (380, 370)], False),
+        ([(90, 370), (90, 60), (310, 60), (310, 370)], False),
+        ([(125, 95), (165, 95), (165, 135), (125, 135), (125, 95)], False), ([(235, 95), (275, 95), (275, 135), (235, 135), (235, 95)], False),
+        ([(125, 165), (165, 165), (165, 205), (125, 205), (125, 165)], False), ([(235, 165), (275, 165), (275, 205), (235, 205), (235, 165)], False),
+        ([(90, 250), (310, 250)], False),
+        ([(110, 370), (110, 280), (170, 280), (170, 370)], False),
+        ([(225, 300), (285, 300), (285, 345), (225, 345), (225, 300)], False),
+        (_cercle(140, 325, 9, 12), False),
+    ],
+    "feuille": [
+        ([(200, 360), (200, 290)], False),
+        ([(200, 290), (130, 250), (95, 180), (110, 90), (200, 40), (290, 90), (305, 180), (270, 250), (200, 290)], False),
+        ([(200, 290), (200, 70)], False),
+        ([(200, 140), (150, 100)], False), ([(200, 140), (250, 100)], False),
+        ([(200, 200), (140, 160)], False), ([(200, 200), (260, 160)], False),
+        ([(60, 360), (340, 360)], True),
+    ],
+    "document": [
+        ([(90, 40), (250, 40), (310, 100), (310, 360), (90, 360), (90, 40)], False),
+        ([(250, 40), (250, 100), (310, 100)], False),
+        ([(130, 140), (270, 140)], False), ([(130, 185), (270, 185)], False), ([(130, 230), (220, 230)], False),
+        (_cercle(250, 295, 38, 24), False),
+        ([(232, 296), (246, 310), (270, 282)], False),
     ],
 }
 

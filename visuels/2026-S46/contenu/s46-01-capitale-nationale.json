@@ -1,0 +1,80 @@
+{
+ "id": "s46-01-capitale-nationale",
+ "titre": "Fiche région : Capitale-Nationale",
+ "format": "post",
+ "pilier": "Région · Capitale-Nationale — tutoiement",
+ "slides": [
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Fiche région · Capitale-Nationale",
+   "titre": "Québec, une ville de fonctionnaires ? Pas seulement.",
+   "sous_titre": "L'emploi, l'économie, les bons contacts pour entreprendre dans la région."
+  },
+  {
+   "gabarit": "chiffre",
+   "centre": true,
+   "surtitre": "L'emploi",
+   "avant": "Emplois dans la Capitale-Nationale en 2025",
+   "chiffre": "435 800",
+   "texte": "soit près de 9,4 % des emplois du Québec.",
+   "suite": "C'est la 3e région du Québec pour l'emploi.",
+   "source": "Source : ministère de l'Emploi et de la Solidarité sociale, bulletin régional du marché du travail 2025.",
+   "taille_chiffre": 210
+  },
+  {
+   "gabarit": "chiffre",
+   "centre": true,
+   "surtitre": "Ça bouge",
+   "avant": "Emplois créés en un an",
+   "chiffre": "+ 14 300",
+   "texte": "dans la région, entre 2024 et 2025.",
+   "suite": "Presque tous sont des postes à temps plein.",
+   "source": "Source : ministère de l'Emploi et de la Solidarité sociale, bulletin régional du marché du travail 2025.",
+   "taille_chiffre": 210
+  },
+  {
+   "gabarit": "chiffre",
+   "centre": true,
+   "surtitre": "L'économie",
+   "avant": "Part de l'administration publique",
+   "chiffre": "17,1 %",
+   "texte": "du produit intérieur brut (PIB) de la région en 2024.",
+   "suite": "Le reste de l'économie, soit plus de 80 %, vient d'autres secteurs : santé, commerce, services, industrie.",
+   "source": "Source : Institut de la statistique du Québec, Coup d'œil sur la Capitale-Nationale, édition 2026."
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Les organismes clés",
+   "titre": "Qui t'accompagne à Québec",
+   "items": [
+    {
+     "nom": "Québec International",
+     "texte": "L'agence de développement économique de la région de Québec."
+    },
+    {
+     "nom": "Entrepreneuriat Laval",
+     "texte": "Le centre d'entrepreneuriat de l'Université Laval."
+    },
+    {
+     "nom": "Parc technologique du Québec métropolitain",
+     "texte": "Un parc d'affaires pour les entreprises technologiques."
+    },
+    {
+     "nom": "Affaires Québec",
+     "texte": "On structure ton projet, on monte le financement et on t'ouvre le réseau."
+    }
+   ],
+   "source": "Sources : Québec International ; Université Laval ; Parc technologique du Québec métropolitain."
+  },
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Ton projet à Québec",
+   "titre": "Prêt à démarrer<br>dans la Capitale-Nationale ?<br>Contacte-nous.",
+   "taille": "m",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+   "note": "Affaires Québec : structurer, financer, démontrer."
+  }
+ ]
+}

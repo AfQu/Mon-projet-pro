@@ -122,7 +122,7 @@ def g_chiffre(d):
     <div class="corps">
       {f'<div class="surtitre">{t(d["surtitre"])}</div>' if d.get("surtitre") else ""}
       {f'<p class="chiffre-pre">{t(d["avant"])}</p>' if d.get("avant") else ""}
-      <p class="chiffre">{t(d["chiffre"])}</p>
+      <p class="chiffre"{f' style="font-size:{d["taille_chiffre"]}px"' if d.get("taille_chiffre") else ""}>{t(d["chiffre"])}</p>
       <p class="chiffre-txt">{t(d["texte"])}</p>
       {f'<p class="chapeau">{t(d["suite"])}</p>' if d.get("suite") else ""}
       {f'<p class="source">{t(d["source"])}</p>' if d.get("source") else ""}

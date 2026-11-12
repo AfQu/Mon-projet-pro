@@ -1,0 +1,39 @@
+[
+ {
+  "type": "mythe",
+  "duree": 5.0,
+  "mythe": "Québec ? Une ville de fonctionnaires.",
+  "realite": "L'administration publique : 17,1 % de l'économie."
+ },
+ {
+  "type": "compteur",
+  "duree": 4.8,
+  "transition": "coupe",
+  "prefixe": "En 2025",
+  "valeur": 14300,
+  "label": [
+   "nouveaux emplois",
+   "dans la Capitale-Nationale"
+  ],
+  "source": "Source : ministère de l'Emploi et de la Solidarité sociale"
+ },
+ {
+  "type": "liste",
+  "duree": 5.4,
+  "transition": "fondu",
+  "titre": "Qui t'accompagne",
+  "rythme": 0.9,
+  "items": [
+   "Québec International",
+   "Entrepreneuriat Laval",
+   "Affaires Québec"
+  ]
+ },
+ {
+  "type": "logo",
+  "duree": 4.5,
+  "transition": "cercle",
+  "accroche": "PRÊT À DÉMARRER ?",
+  "note": "affairesquebec.ca"
+ }
+]
