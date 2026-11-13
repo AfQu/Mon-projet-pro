@@ -1,0 +1,29 @@
+{
+ "id": "s46-10-marches-publics",
+ "titre": "Série premiers clients 1/3 : vendre au secteur public",
+ "format": "post",
+ "pilier": "Réseautage et accès au marché — tutoiement",
+ "slides": [
+  {"gabarit": "couverture", "centre": true, "surtitre": "Trouver tes premiers clients · 1/3",
+   "titre": "Ton premier client ? Peut-être le secteur public.",
+   "sous_titre": "Où trouver les appels d'offres au Québec et au Canada."},
+  {"gabarit": "ressources", "surtitre": "Où chercher", "titre": "Deux sites officiels à connaître",
+   "items": [
+    {"nom": "SEAO", "texte": "Le Système électronique d'appel d'offres du Québec. Ministères, réseau de la santé, écoles et municipalités y publient leurs avis."},
+    {"nom": "AchatsCanada", "texte": "Le site officiel des appels d'offres du gouvernement du Canada."},
+    {"nom": "Affaires Québec", "texte": "On t'aide à structurer ton offre et à préparer ton dossier."}
+   ],
+   "source": "Sources : gouvernement du Québec (quebec.ca) ; gouvernement du Canada (AchatsCanada)."},
+  {"gabarit": "ressources", "surtitre": "Avant ta première réponse", "titre": "Quatre gestes simples", "coche": true,
+   "items": [
+    {"nom": "Inscris ton entreprise comme fournisseur", "texte": "Sur AchatsCanada, l'inscription est gratuite."},
+    {"nom": "Active les alertes", "texte": "Tu reçois par courriel les avis de ton secteur."},
+    {"nom": "Lis tout le devis", "texte": "Une seule condition manquante peut rejeter ta soumission."},
+    {"nom": "Commence par un petit contrat", "texte": "Il te donne une première référence publique."}
+   ]},
+  {"gabarit": "couverture", "centre": true, "surtitre": "Ton projet",
+   "titre": "Tu veux vendre au secteur public ?<br>Contacte-nous.", "taille": "m",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+   "note": "Affaires Québec : structurer, financer, démontrer."}
+ ]
+}
