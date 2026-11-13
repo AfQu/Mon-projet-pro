@@ -1,0 +1,10 @@
+[
+ {"type": "machine", "duree": 5, "surtitre": "CONCEPT À IMPORTER", "texte": "Des pavés faits avec nos déchets plastiques\u00a0?", "reponse": "Au Kenya, une entreprise le fait déjà."},
+ {"type": "picto", "duree": 5, "transition": "glisse", "icone": "recyclage", "surtitre": "LE CONCEPT · NAIROBI", "titre": "Plastique + sable", "texte": "Le mélange est chauffé et compressé pour former des pavés."},
+ {"type": "picto", "duree": 4.5, "transition": "coupe", "icone": "pave", "surtitre": "LE CONCEPT", "titre": "Des pavés pour la ville", "texte": "Trottoirs, cours, allées : un déchet devient un matériau."},
+ {"type": "liste", "duree": 9, "transition": "volet", "titre": "Pourquoi ça marche", "rythme": 1.5, "items": ["Une matière première qui ne coûte presque rien", "Moins de plastique dans la nature", "Des emplois créés sur place", "Des acheteurs : villes et chantiers"]},
+ {"type": "picto", "duree": 6, "transition": "fondu", "icone": "flocon", "surtitre": "POUR LE CANADA", "titre": "Passer l'hiver", "texte": "Il faudra tester les pavés au gel et au dégel."},
+ {"type": "picto", "duree": 4.5, "transition": "coupe", "icone": "document", "surtitre": "POUR LE CANADA", "titre": "Respecter les normes", "texte": "Les acheteurs demandent des matériaux conformes."},
+ {"type": "titre", "duree": 3.5, "transition": "cercle", "lignes": ["Tu veux le lancer", "au Canada ?"], "sous": ["Affaires Québec t'accompagne.", "affairesquebec.ca"]},
+ {"type": "logo", "duree": 2.5, "transition": "fondu", "accroche": "ON T'ACCOMPAGNE"}
+]
