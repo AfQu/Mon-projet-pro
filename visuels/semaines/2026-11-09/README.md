@@ -7,6 +7,8 @@ Produits le jeudi 12 novembre 2026 par la routine visuels, à partir de `aq/them
 | --- | --- | --- |
 | Région — Capitale-Nationale | `region/` | Carrousel 6 slides (01 à 06.png), Reel 20 s sans voix off (`reel.mp4`, couverture 07), légendes Instagram, Facebook, LinkedIn, texte alternatif |
 | Concept à importer — micro-crèches écologiques | `concept/` | Reel 40 s sans voix off (`reel.mp4`, couverture 01), légendes Instagram, Facebook, LinkedIn, texte alternatif |
+| Série « Trouver tes premiers clients » 1/3 — vendre au secteur public (ajout du 13 nov.) | `serie-clients-1/` | Carrousel 4 slides (01 à 04.png), story de relais (05-story.png), légendes Instagram, Facebook, LinkedIn, texte alternatif. **Publié par Hermès** |
+| Concept à importer — pavés en plastique recyclé, Kenya → Canada (ajout du 13 nov.) | `concept-paves/` | Reel 40 s sans voix off (`reel.mp4`), légendes, commentaire épinglé, texte alternatif. **Publié par Hermès** |
 | Valeur ajoutée — « PEQ entrepreneur » | — | **Bloquée** : non produite (voir ci-dessous) |
 | Cabinet — comptabilité proactive | — | **Bloquée** : non produite (voir ci-dessous) |
 
@@ -15,4 +17,5 @@ Produits le jeudi 12 novembre 2026 par la routine visuels, à partir de `aq/them
 2. **Cabinet bloquée.** L'angle présente Affaires Québec comme offrant la comptabilité, un « forfait Starter » et une étude de cas client. Ces offres ne figurent pas dans `PLAN.md`, et aucun accord client n'y est noté. À confirmer par Rénald avant toute publication.
 3. **Région.** Les chiffres viennent du bulletin régional 2025 du ministère de l'Emploi et de la Solidarité sociale et du Coup d'œil 2026 de l'Institut de la statistique du Québec. Ils ont été lus dans les extraits de recherche, car les PDF sont bloqués par le réseau. Retirés : les « 4 piliers avec taux de croissance » et la comparaison avec Montréal (pas de source), « CentrINNOV » et « AEETS » (introuvables).
 4. **Micro-crèches.** Retirés : « 95 % d'occupation » et « rentable dès la première année » (aucune source). Corrigé : les centres de la petite enfance sont des CPE, pas des « CLE » (centres locaux d'emploi). Ajouté : le permis obligatoire du ministère de la Famille. « Se multiplie en France » et « beaucoup de familles attendent une place » sont des constats généraux sans chiffre.
-5. Le dossier `concept/` est une nouvelle catégorie : à confirmer qu'Hermès sait la publier (Reel seul, sans carrousel).
+5. **Ajouts du 13 nov.** Le SEAO (Système électronique d'appel d'offres) : gratuité de l'inscription non vérifiée, donc non affirmée. Pavés : « plus solides que le béton » et chiffres de l'entreprise écartés (non vérifiés). Hermès a publié ces deux contenus le 13 nov. vers 6 h (heure de Montréal), et non à 19 h et 20 h 30 comme demandé : il ne lit pas encore la ligne « Publication demandée ».
+6. Le dossier `concept/` est une nouvelle catégorie : à confirmer qu'Hermès sait la publier (Reel seul, sans carrousel).
