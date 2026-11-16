@@ -17,3 +17,4 @@ Types : Publication, Prospection, Thématique, Devis, Relance, KPI, Autre. Statu
 2026-11-13 | AQ Croissance | Publication | Fait | Série clients 1/3 — Marchés publics | Carrousel IG (media_id=17904804924370622) + FB (post_id=1426525663871518_122121823113498743) + story IG (media_id=18347673559274448) + FB (photo_id=122121823599498743)
 2026-11-13 | AQ Croissance | Publication | Fait | Concept à importer — Pavés plastique recyclé | Reel IG (media_id=18139154629646106) + vidéo FB (video_id=1119626784318288)
 2026-11-16 | AQ Croissance | Proposition | Fait | Thématiques de la semaine | Région / Valeur ajoutée / Cabinet
+2026-11-16 | AQ Croissance (session visuels) | Publication | Fait | Série premiers clients 2/3 confiée à Hermès | Reel chambre de commerce, Visuels prêts dans aq/thematiques/2026-11-16.md, publication demandée ce soir 19 h

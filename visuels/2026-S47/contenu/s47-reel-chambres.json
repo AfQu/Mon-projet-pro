@@ -1,0 +1,6 @@
+[
+ {"type": "pile", "duree": 4.5, "mots": ["Réseauter.", "Te faire connaître.", "Trouver des clients."], "pied": "La chambre de commerce, ça sert à ça."},
+ {"type": "compteur", "duree": 4.5, "transition": "coupe", "prefixe": "Plus de", "valeur": 100, "label": ["chambres de commerce", "au Québec"], "source": "Source : Fédération des chambres de commerce du Québec, 2025"},
+ {"type": "liste", "duree": 7, "transition": "glisse", "titre": "Avant ton premier 5 à 7", "rythme": 1.1, "items": ["Choisis la chambre de ta ville", "Prépare ta présentation en 30 secondes", "Apporte une carte ou un code QR", "Relance tes contacts dans la\u00a0semaine"]},
+ {"type": "logo", "duree": 4, "transition": "cercle", "accroche": "ON T'OUVRE LE RÉSEAU", "note": "affairesquebec.ca"}
+]
