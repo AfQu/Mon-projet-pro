@@ -5,7 +5,7 @@
 | --- | --- | --- |
 | Série « Trouver tes premiers clients » 2/3 — la chambre de commerce, ça sert à quoi ? Reel 20 s sans voix off, couverture, légendes Instagram, Facebook, LinkedIn, texte alternatif | `serie-clients-2/` | Lundi 16 novembre, 19 h (heure de Montréal), confié à Hermès |
 
-Les thématiques Région, Valeur ajoutée et Cabinet de `aq/thematiques/2026-11-16.md` sont encore vides (« À définir ») : la routine de jeudi ne pourra rien produire tant qu'Hermès ne les a pas remplies.
+Les thématiques Région, Valeur ajoutée et Cabinet de `aq/thematiques/2026-11-16.md` sont encore vides (« À définir ») : la routine du jeudi 19 novembre n'a donc rien produit (journal : « En attente de Rey »). Dès qu'elles sont remplies, une session peut les produire hors routine.
 
 ## Points à valider
 1. « Plus de 100 chambres de commerce au Québec » : la Fédération des chambres de commerce du Québec en déclare environ 120 dans son mémoire de juillet 2025 ; arrondi volontairement à la baisse.
