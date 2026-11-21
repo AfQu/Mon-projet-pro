@@ -1,12 +1,22 @@
 # Visuels de la semaine du 16 novembre 2026
 
-## Programme
-| Contenu | Dossier | Publication demandée |
+## Programme proposé (heure de Montréal ; c'est Hermès qui programme et publie)
+
+| Jour | Heure | Plateforme | Contenu | Dossier |
+| --- | --- | --- | --- | --- |
+| Lun 16 nov. | 19 h | Instagram + Facebook | Reel « La chambre de commerce, ça sert à quoi ? » (série clients 2/3) — déjà publié | `serie-clients-2/reel.mp4` |
+| Dim 22 nov. | 18 h 30 | Instagram + Facebook | Carrousel « Entreprendre en Estrie : par où commencer ? » | `region/01-05.png` |
+
+Suite du programme (lundi 23 au mercredi 25 novembre) : voir `visuels/semaines/2026-11-23/README.md`.
+
+| Thématique | Dossier | Contenus |
 | --- | --- | --- |
-| Région — Entreprendre en Estrie (choisie par la session visuels, 21 nov.) | `region/` | Carrousel 5 slides, Reel 20 s sans voix off (couverture 06), légendes — Visuels prêts, confié à Hermès |
-| Valeur ajoutée — TPS et TVQ : quand dois-tu t'inscrire ? | `valeur-ajoutee/` | Carrousel 5 slides, story (06-story.png), légendes — Visuels prêts, confié à Hermès |
-| Cabinet — Ton projet au Québec commence avant ton arrivée | `cabinet/` | Carrousel 5 slides, story (06-story.png), légendes — Visuels prêts, confié à Hermès |
-| Série « Trouver tes premiers clients » 2/3 — la chambre de commerce, ça sert à quoi ? Reel 20 s sans voix off, couverture, légendes Instagram, Facebook, LinkedIn, texte alternatif | `serie-clients-2/` | Lundi 16 novembre, 19 h (heure de Montréal), confié à Hermès |
+| Région — Entreprendre en Estrie (choisie par la session visuels, 21 nov.) | `region/` | Carrousel 5 slides, Reel 20 s sans voix off (couverture 06), légendes |
+| Valeur ajoutée — TPS et TVQ : quand dois-tu t'inscrire ? | `valeur-ajoutee/` | Carrousel 5 slides, story (06-story.png), légendes |
+| Cabinet — Ton projet au Québec commence avant ton arrivée | `cabinet/` | Carrousel 5 slides, story (06-story.png), légendes |
+| Série « Trouver tes premiers clients » 2/3 | `serie-clients-2/` | Reel 20 s, couverture, légendes — Publiée |
+
+Légendes Instagram, Facebook, LinkedIn et texte alternatif : `legendes.md` de chaque dossier.
 
 Les squelettes vides d'Hermès ont été remplacés le 21 novembre : sur décision de Rénald, la session visuels choisit désormais les thématiques (voir `visuels/ROUTINE.md`, section 0).
 
