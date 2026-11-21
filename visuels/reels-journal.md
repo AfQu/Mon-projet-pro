@@ -21,3 +21,4 @@
 | sem. du 9 nov. 2026 | Concept à importer n° 2 : micro-crèches écologiques (`semaines/2026-11-09/concept/reel.mp4`, motion design, or #E6AD19) | titre | titre, picto (immeuble, feuille, document), liste, machine, logo | glisse, coupe, volet, fondu, cercle |
 | ven. 13 nov. 2026 (soir) | Concept à importer n° 3 : pavés en plastique recyclé, Kenya → Canada (`semaines/2026-11-09/concept-paves/reel.mp4`, motion design, or #E6AD19) | machine | machine, picto (recyclage, pave, flocon, document), liste, titre, logo | glisse, coupe, volet, fondu, cercle |
 | lun. 16 nov. 2026 | Série premiers clients 2/3 : la chambre de commerce (`semaines/2026-11-16/serie-clients-2/reel.mp4`, motion design) | pile | pile, compteur, liste, logo | coupe, glisse, cercle |
+| sam. 21 nov. 2026 | Entreprendre en Estrie (`semaines/2026-11-16/region/reel.mp4`, motion design) | compteur | compteur, machine, liste, logo | coupe, glisse, cercle |

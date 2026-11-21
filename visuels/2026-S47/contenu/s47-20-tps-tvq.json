@@ -1,0 +1,79 @@
+{
+ "id": "s47-20-tps-tvq",
+ "titre": "TPS et TVQ : quand t'inscrire ?",
+ "format": "post",
+ "pilier": "Guide pratique — tutoiement",
+ "slides": [
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Guide pratique · Démarrage",
+   "titre": "TPS et TVQ : quand dois-tu t'inscrire ?",
+   "sous_titre": "La règle du petit fournisseur, expliquée simplement."
+  },
+  {
+   "gabarit": "chiffre",
+   "centre": true,
+   "surtitre": "Le seuil",
+   "avant": "Le seuil du petit fournisseur",
+   "chiffre": "30 000 $",
+   "texte": "de ventes taxables, en un trimestre ou sur 4 trimestres de suite.",
+   "suite": "Au-dessus, l'inscription aux fichiers de la TPS et de la TVQ est obligatoire.",
+   "source": "Source : Revenu Québec, « Particularités concernant le petit fournisseur ».",
+   "taille_chiffre": 200
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Dans le calcul",
+   "titre": "Ce qui compte",
+   "coche": true,
+   "items": [
+    {
+     "nom": "Toutes tes ventes taxables",
+     "texte": "Même celles faites hors du Québec."
+    },
+    {
+     "nom": "Les ventes de tes associés",
+     "texte": "Elles s'ajoutent aux tiennes."
+    },
+    {
+     "nom": "Un seul trimestre peut suffire",
+     "texte": "Si tu dépasses le seuil en 3 mois, tu n'es plus petit fournisseur."
+    }
+   ]
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Les règles à retenir",
+   "titre": "Avant de t'inscrire",
+   "items": [
+    {
+     "nom": "TVQ et TPS vont ensemble",
+     "texte": "Un petit fournisseur qui s'inscrit à la TVQ s'inscrit aussi à la TPS."
+    },
+    {
+     "nom": "Une inscription dure au moins un an",
+     "texte": "Même si tu t'inscris sans y être obligé."
+    },
+    {
+     "nom": "Certaines activités font exception",
+     "texte": "Elles exigent la TVQ dès le départ. La liste est sur le site de Revenu Québec."
+    },
+    {
+     "nom": "Les bons professionnels",
+     "texte": "Un comptable professionnel agréé (CPA) tient tes comptes. Affaires Québec structure ton projet."
+    }
+   ],
+   "source": "Source : Revenu Québec."
+  },
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Ton projet",
+   "titre": "Tu lances ton entreprise ?<br>Contacte-nous.",
+   "taille": "l",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+   "note": "Affaires Québec : structurer, financer, démontrer."
+  }
+ ]
+}

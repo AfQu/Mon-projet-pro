@@ -4,12 +4,19 @@ Exécutée automatiquement chaque jeudi vers 17 h 45 (heure de Montréal). Elle 
 
 ## 0. Point de départ : fichiers du dépôt (consigne de Rénald du 2 novembre 2026, remplace le circuit Notion)
 
-Contexte : AQ Croissance (agent Hermès) choisit chaque semaine les thématiques ; cette routine produit les visuels ; **Hermès les publie ensuite automatiquement sur Facebook et Instagram, sans validation humaine.** Rien d'incertain ne doit donc rester dans un visuel ou une légende livrés : pas de « [À VÉRIFIER] » ; un chiffre non confirmé par une source officielle est retiré et noté dans les points à valider.
+Contexte : cette routine choisit chaque semaine les thématiques (depuis le 21 nov. 2026) et produit les visuels ; **Hermès les publie ensuite automatiquement sur Facebook et Instagram, sans validation humaine.** Rien d'incertain ne doit donc rester dans un visuel ou une légende livrés : pas de « [À VÉRIFIER] » ; un chiffre non confirmé par une source officielle est retiré et noté dans les points à valider.
 
-Entrée : `aq/thematiques/AAAA-MM-JJ.md` (date du lundi de la semaine ; format décrit dans `aq/thematiques/README.md`). Chaque thématique a les champs Catégorie (Région, Valeur ajoutée, Cabinet), Territoire (Québec, Martinique, Europe francophone, Afrique francophone, Tous), Angle, Pistes de contenu, Statut (Proposée → Visuels en cours → Visuels prêts → Publiée ; « Publiée » est mis par Hermès, jamais par la routine).
+Entrée : `aq/thematiques/AAAA-MM-JJ.md` (date du lundi de la semaine ; format décrit dans `aq/thematiques/README.md`), écrit par la routine elle-même (voir ci-dessous). Chaque thématique a les champs Catégorie (Région, Valeur ajoutée, Cabinet), Territoire (Québec, Martinique, Europe francophone, Afrique francophone, Tous), Angle, Pistes de contenu, Statut (Proposée → Visuels en cours → Visuels prêts → Publiée ; « Publiée » est mis par Hermès, jamais par la routine).
+
+**Depuis le 21 novembre 2026 (décision de Rénald), c'est cette routine qui choisit les thématiques** ; AQ Croissance (Hermès) ne les propose plus, il publie seulement.
 
 Chaque semaine, **avant de créer quoi que ce soit** :
-1. Lire les thématiques au statut **« Proposée »** dans le fichier de la semaine. **S'il n'y en a aucune (ou pas de fichier) : ne rien faire** (ni visuel, ni commit ; une seule ligne « Aucune thématique proposée cette semaine »).
+1. Ouvrir `aq/thematiques/AAAA-MM-JJ.md` (lundi de la semaine en cours) ; le créer s'il n'existe pas. Si Rénald y a écrit des thématiques « Proposée » **remplies** (angle et pistes), les produire telles quelles. Sinon (fichier absent, vide ou squelettes « À définir »), **choisir 3 thématiques** et les écrire dans le fichier au format de `aq/thematiques/README.md`, avec la mention « Thématique choisie par la routine visuels » :
+   - **Région** : une région pas encore couverte (voir `visuels/reels-journal.md`, `visuels/semaines/*/README.md` ; déjà faites : Mauricie, Lanaudière, Montréal, Capitale-Nationale, Estrie), avec chiffres officiels trouvables par recherche web ;
+   - **Valeur ajoutée** : un guide concret tiré des 6 sujets de `PLAN.md` (priorité réseau et accès au marché ; financement au plus 1 fois par semaine), vérifiable sur des sources officielles ;
+   - **Cabinet** : Affaires Québec lui-même, uniquement avec des formulations déjà validées (méthode Structurer · Financer · Démontrer, parcours de `2026-S45/contenu/s45-03-parcours.json`, messages de `references/marque.md`) ; jamais d'offre, de forfait ou de cas client non confirmés ;
+   - facultatif : un **Concept à importer** (Reel 40 s, sans voix off) ou l'épisode suivant d'une série en cours.
+   Ne jamais reprendre un sujet déjà publié (`aq/journal.md`, `visuels/publie.md`).
 2. Passer ces thématiques à **« Visuels en cours »**, commit et push.
 3. Créer les visuels selon la catégorie, en suivant le reste de cette procédure (charte, sources, section 3 quater, langage clair, Reels variés, QA) :
    - **Région** : fiche région (carrousel avec chiffres officiels, organismes, appel « Prêt à démarrer dans [région] ? Contacte-nous ») et un Reel ;

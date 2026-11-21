@@ -1,0 +1,75 @@
+{
+ "id": "s47-30-avant-arrivee",
+ "titre": "Ton projet commence avant ton arrivée",
+ "format": "post",
+ "pilier": "Cabinet — tutoiement",
+ "slides": [
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Le cabinet · Martinique · Europe · Afrique",
+   "titre": "Ton projet au Québec commence avant ton arrivée.",
+   "sous_titre": "Ce que tu peux préparer dès maintenant, depuis chez toi."
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Depuis chez toi",
+   "titre": "Quatre choses à préparer",
+   "coche": true,
+   "items": [
+    {
+     "nom": "Ton idée en une page",
+     "texte": "Ton offre, tes clients visés, ton budget."
+    },
+    {
+     "nom": "Ta région d'arrivée",
+     "texte": "Chaque région a ses secteurs forts et ses organismes."
+    },
+    {
+     "nom": "Ton marché",
+     "texte": "Qui achète déjà au Québec ce que tu veux vendre ?"
+    },
+    {
+     "nom": "Ton budget de départ",
+     "texte": "Ce que tu peux investir, et ce qu'il faudra financer."
+    }
+   ]
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Chacun son métier",
+   "titre": "Qui fait quoi pour toi",
+   "items": [
+    {
+     "nom": "Ton projet d'affaires",
+     "texte": "C'est le métier d'Affaires Québec : structure, financement et réseau."
+    },
+    {
+     "nom": "Ton dossier d'immigration",
+     "texte": "Un avocat ou un consultant réglementé en immigration s'en charge."
+    },
+    {
+     "nom": "Ta comptabilité",
+     "texte": "Un comptable professionnel agréé (CPA) tient tes comptes et tes impôts."
+    }
+   ]
+  },
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Affaires Québec",
+   "titre": "Le pont entre ta vision et la réalité locale.",
+   "taille": "l",
+   "sous_titre": "Structurer · Financer · Démontrer"
+  },
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Ton projet",
+   "titre": "Parlons de ton projet.",
+   "taille": "l",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+   "note": "Depuis le Québec, la Martinique, l'Europe ou l'Afrique francophone."
+  }
+ ]
+}

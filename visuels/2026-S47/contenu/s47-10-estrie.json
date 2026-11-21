@@ -1,0 +1,69 @@
+{
+ "id": "s47-10-estrie",
+ "titre": "Fiche région : Estrie",
+ "format": "post",
+ "pilier": "Région · Estrie — tutoiement",
+ "slides": [
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Fiche région · Estrie",
+   "titre": "Entreprendre en Estrie : par où commencer ?",
+   "sous_titre": "L'emploi, les organismes, les premiers gestes."
+  },
+  {
+   "gabarit": "chiffre",
+   "centre": true,
+   "surtitre": "L'emploi",
+   "avant": "Emplois en Estrie en 2025",
+   "chiffre": "174 000",
+   "taille_chiffre": 210,
+   "texte": "en Estrie, selon Services Québec.",
+   "suite": "Sherbrooke est la plus grande ville de la région.",
+   "source": "Source : Services Québec, bulletin régional du marché du travail, Estrie 2025."
+  },
+  {
+   "gabarit": "chiffre",
+   "centre": true,
+   "surtitre": "Le chômage",
+   "avant": "Taux de chômage en Estrie en 2025",
+   "chiffre": "4,9 %",
+   "texte": "en 2025, en Estrie.",
+   "suite": "Services Québec décrit un marché du travail vigoureux, avec un faible niveau de chômage.",
+   "source": "Sources : Services Québec, bulletin régional 2025 et plan d'action régional 2025-2026."
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Les organismes clés",
+   "titre": "Qui t'accompagne en Estrie",
+   "items": [
+    {
+     "nom": "Sherbrooke Innopole",
+     "texte": "Le développement économique de Sherbrooke : conseil, financement, mentorat."
+    },
+    {
+     "nom": "Entreprendre Sherbrooke",
+     "texte": "L'organisme de la Ville pour les commerces et les entrepreneurs locaux."
+    },
+    {
+     "nom": "Les SADC",
+     "texte": "Les Sociétés d'aide au développement des collectivités, hors des grands centres."
+    },
+    {
+     "nom": "Affaires Québec",
+     "texte": "On structure ton projet, on monte le financement et on t'ouvre le réseau."
+    }
+   ],
+   "source": "Sources : Sherbrooke Innopole ; Ville de Sherbrooke ; Développement économique Canada."
+  },
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Ton projet en Estrie",
+   "titre": "Prêt à démarrer en Estrie ?<br>Contacte-nous.",
+   "taille": "l",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+   "note": "Affaires Québec : structurer, financer, démontrer."
+  }
+ ]
+}
