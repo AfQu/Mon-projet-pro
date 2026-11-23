@@ -73,7 +73,15 @@ Chromium est déjà installé (`/opt/pw-browsers/chromium`, utilisé par `visuel
 - Moteur : `visuels/outils/reel.py`. Formes disponibles : `titre`, `pile`, `compteur` (chiffre qui défile), `liste` (cases cochées dans une seule scène), `machine` (question tapée puis réponse), `mythe` (idée reçue barrée puis la réalité), `picto` (icône or tracée trait par trait : camion, carte, village, route), `logo`. Transitions : `volet`, `fondu`, `glisse`, `cercle`, `coupe`. Exemple complet : `visuels/outils/exemples/reel-formes.json`.
 - **Reel vidéo** (vrais plans) : `visuels/outils/reel_video.py scenario.json sortie.mp4`. Plans libres de droits (Mixkit, Pexels) ou tournés par l'équipe, dans `visuels/<semaine>/clips/`, étalonnage chaud, lent zoom, textes animés, transitions xfade variées, carton de fin AQ. Exemple : `2026-S42/contenu/s42-reel-repreneuriat.json`. Jamais de visuel « lifestyle » ni de gros plan de visage d'inconnu ; noter la source de chaque plan dans `sources.md`. Alterner Reel vidéo et Reel en motion design.
 - **Reels sans voix off** (choix de Rénald, 5 nov. 2026) : texte à l'écran et musique seulement. Ne pas utiliser `visuels/outils/voix.py` sauf demande explicite ; une voix enregistrée par l'équipe reste possible si elle est fournie.
-- Chaque Reel dure de 12 à 20 s (sauf format demandé, ex. « Concept à importer » en 40 s), mélange **au moins 3 formes différentes** et **au moins 2 types de transitions**, sans enchaîner plus de 2 scènes de la même forme.
+- **Phrases d'accroche (consigne de Rénald, 23 nov. 2026)** : chaque Reel utilise **2 ou 3** de ces 6 phrases, adaptées au sujet, et pas toujours les mêmes d'un Reel à l'autre (noter lesquelles dans `reels-journal.md`) :
+  1. « Imagine la scène… » (ouverture : mettre le spectateur dans la situation) ;
+  2. « Voilà pourquoi ça te concerne… » (lien avec sa vie ou son projet) ;
+  3. « Et toi, tu ferais quoi ? » (question, avant la fin) ;
+  4. « Pour résumer… » (récapitulatif) ;
+  5. « Voilà ce que je veux que tu retiennes… » (le message clé) ;
+  6. « Dis-moi ce que tu as retenu, en commentaire. » (appel à réagir, juste avant le logo).
+  Tutoiement sur Instagram. Les formes `machine` (surtitre + question tapée) et `titre` s'y prêtent bien. Reprendre la phrase 3 ou 6 dans la légende Instagram pour inviter aux commentaires.
+- Chaque Reel dure de 15 à 25 s (sauf format demandé, ex. « Concept à importer » en 40 s), mélange **au moins 3 formes différentes** et **au moins 2 types de transitions**, sans enchaîner plus de 2 scènes de la même forme.
 - **Changer de forme d'ouverture à chaque Reel** (ex. : idée reçue, puis chiffre clé, puis question tapée, puis checklist). Le format « titre puis titre puis titre » ne doit pas revenir deux fois de suite.
 - Consigner chaque Reel dans `visuels/reels-journal.md` (date, sujet, forme d'ouverture, formes et transitions utilisées) et le lire avant d'en concevoir un nouveau.
 - Alterner les semaines : Reel en motion design ou vidéo face caméra en vedette.

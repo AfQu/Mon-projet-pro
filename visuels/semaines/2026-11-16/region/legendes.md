@@ -1,6 +1,6 @@
 # Région — Entreprendre en Estrie
 
-Carrousel : 01.png à 05.png. Reel : reel.mp4 (20 s, sans voix off, couverture 06-couverture-reel.png).
+Carrousel : 01.png à 05.png. Reel : reel.mp4 (23 s, sans voix off, couverture 06-couverture-reel.png).
 
 ## Instagram
 Entreprendre en Estrie : par où commencer ?
@@ -12,6 +12,8 @@ Pour démarrer, appelle Sherbrooke Innopole, Entreprendre Sherbrooke ou la SADC 
 Affaires Québec structure ton projet, monte ton financement et t'ouvre le réseau. Premier appel de cadrage sans frais : lien en bio.
 
 📌 Sauvegarde cette fiche.
+
+Et toi, tu ferais quoi en arrivant en Estrie ? Dis-le-moi en commentaire.
 
 #EntreprendreEnEstrie #Sherbrooke #SInstallerEnRegion #EntrepreneuriatImmigrant #AffairesQuebec
 
@@ -40,4 +42,4 @@ Premier appel de cadrage sans frais : https://affairesquebec.ca
 ## Texte alternatif
 Carrousel : fiche région de l'Estrie sur fond noir, texte or. Il montre 174 000 emplois en 2025, un chômage de 4,9 %, les organismes à contacter et l'appel « Prêt à démarrer en Estrie ? Contacte-nous ».
 
-Reel : animation or sur fond noir. Le chiffre de 174 000 emplois défile, puis la question « Par où commencer ? », la liste des organismes et le logo Affaires Québec.
+Reel : animation or sur fond noir. « Imagine la scène : tu arrives en Estrie avec ton projet. » Puis 174 000 emplois, les organismes à retenir, la question « Et toi, tu ferais quoi ? » et le logo Affaires Québec.

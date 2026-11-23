@@ -1,41 +1,7 @@
 [
- {
-  "type": "compteur",
-  "duree": 4.8,
-  "prefixe": "En Estrie, en 2025",
-  "valeur": 174000,
-  "label": [
-   "emplois",
-   "et un chômage de 4,9 %"
-  ],
-  "source": "Source : Services Québec"
- },
- {
-  "type": "machine",
-  "duree": 4.8,
-  "transition": "coupe",
-  "surtitre": "QUESTION",
-  "texte": "Par où commencer ?",
-  "reponse": "Par les organismes qui connaissent la\u00a0région."
- },
- {
-  "type": "liste",
-  "duree": 5.8,
-  "transition": "glisse",
-  "titre": "Qui t'accompagne",
-  "rythme": 0.9,
-  "items": [
-   "Sherbrooke Innopole",
-   "Entreprendre Sherbrooke",
-   "Les SADC (Sociétés d'aide au développement des collectivités)",
-   "Affaires Québec"
-  ]
- },
- {
-  "type": "logo",
-  "duree": 4.3,
-  "transition": "cercle",
-  "accroche": "PRÊT À DÉMARRER ?",
-  "note": "affairesquebec.ca"
- }
+ {"type": "machine", "duree": 5.2, "surtitre": "IMAGINE LA SCÈNE", "texte": "Tu arrives en Estrie avec ton projet.", "reponse": "Par où commencer ?"},
+ {"type": "compteur", "duree": 4.5, "transition": "coupe", "prefixe": "En Estrie, en 2025", "valeur": 174000, "label": ["emplois", "et un chômage de 4,9 %"], "source": "Source : Services Québec"},
+ {"type": "liste", "duree": 6.2, "transition": "glisse", "titre": "Voilà ce que je veux\u00a0que\u00a0tu\u00a0retiennes", "taille": 84, "rythme": 0.9, "items": ["Sherbrooke Innopole", "Entreprendre Sherbrooke", "Les SADC (Sociétés d'aide au développement des collectivités)", "Affaires Québec"]},
+ {"type": "titre", "duree": 3.4, "transition": "fondu", "lignes": ["Et toi,", "tu ferais quoi ?"], "sous": ["Dis-le-moi en commentaire."]},
+ {"type": "logo", "duree": 3.9, "transition": "cercle", "accroche": "PRÊT À DÉMARRER ?", "note": "affairesquebec.ca"}
 ]

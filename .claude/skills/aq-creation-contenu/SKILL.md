@@ -50,6 +50,8 @@ L'audience est **au Québec**, même si Rey publie depuis la Martinique : heures
 
 **Sans voix off** (choix de Rénald, 5 nov. 2026) : texte à l'écran et musique seulement, sauf demande explicite ou voix enregistrée fournie par l'équipe.
 
+**Phrases d'accroche** (23 nov. 2026) : 2 ou 3 par Reel, adaptées et variées, parmi « Imagine la scène… », « Voilà pourquoi ça te concerne… », « Et toi, tu ferais quoi ? », « Pour résumer… », « Voilà ce que je veux que tu retiennes… », « Dis-moi ce que tu as retenu, en commentaire. » (détail dans `visuels/ROUTINE.md`, section 3 ter).
+
 Script : `scripts/reel_motion.py` (Pillow + ffmpeg). Il génère un MP4 1080 × 1920 à 30 i/s avec des transitions en volet or, des révélations de texte en masque et une musique synthétisée libre de droits (`scripts/musique.py`). Les scènes se définissent dans un JSON (voir l'en-tête du script). Contrôle toujours quelques images clés avant de livrer.
 
 ## 5. Checklist avant de livrer
