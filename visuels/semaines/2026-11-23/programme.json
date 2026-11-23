@@ -1,0 +1,109 @@
+{
+  "semaine": "2026-11-23",
+  "fuseau": "America/Montreal",
+  "publications": [
+    {
+      "date": "2026-11-23",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "carrousel",
+      "titre": "Carrousel « Entreprendre en Estrie : par où commencer ? »",
+      "fichiers": [
+        "visuels/semaines/2026-11-16/region/01.png",
+        "visuels/semaines/2026-11-16/region/02.png",
+        "visuels/semaines/2026-11-16/region/03.png",
+        "visuels/semaines/2026-11-16/region/04.png",
+        "visuels/semaines/2026-11-16/region/05.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-16/region/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-24",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "carrousel",
+      "titre": "Carrousel « TPS et TVQ : quand dois-tu t'inscrire ? »",
+      "fichiers": [
+        "visuels/semaines/2026-11-16/valeur-ajoutee/01.png",
+        "visuels/semaines/2026-11-16/valeur-ajoutee/02.png",
+        "visuels/semaines/2026-11-16/valeur-ajoutee/03.png",
+        "visuels/semaines/2026-11-16/valeur-ajoutee/04.png",
+        "visuels/semaines/2026-11-16/valeur-ajoutee/05.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-16/valeur-ajoutee/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-24",
+      "heure": "18:45",
+      "plateformes": [
+        "instagram_story",
+        "facebook_story"
+      ],
+      "type": "story",
+      "titre": "Story relais TPS et TVQ",
+      "fichiers": [
+        "visuels/semaines/2026-11-16/valeur-ajoutee/06-story.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-16/valeur-ajoutee/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-25",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "carrousel",
+      "titre": "Carrousel « Ton projet au Québec commence avant ton arrivée »",
+      "fichiers": [
+        "visuels/semaines/2026-11-16/cabinet/01.png",
+        "visuels/semaines/2026-11-16/cabinet/02.png",
+        "visuels/semaines/2026-11-16/cabinet/03.png",
+        "visuels/semaines/2026-11-16/cabinet/04.png",
+        "visuels/semaines/2026-11-16/cabinet/05.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-16/cabinet/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-25",
+      "heure": "18:45",
+      "plateformes": [
+        "instagram_story",
+        "facebook_story"
+      ],
+      "type": "story",
+      "titre": "Story relais Cabinet",
+      "fichiers": [
+        "visuels/semaines/2026-11-16/cabinet/06-story.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-16/cabinet/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-26",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "reel",
+      "titre": "Reel « Entreprendre en Estrie » (couverture 06-couverture-reel.png)",
+      "fichiers": [
+        "visuels/semaines/2026-11-16/region/reel.mp4",
+        "visuels/semaines/2026-11-16/region/06-couverture-reel.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-16/region/legendes.md",
+      "statut": "à publier"
+    }
+  ]
+}

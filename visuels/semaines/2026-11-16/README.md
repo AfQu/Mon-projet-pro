@@ -5,9 +5,8 @@
 | Jour | Heure | Plateforme | Contenu | Dossier |
 | --- | --- | --- | --- | --- |
 | Lun 16 nov. | 19 h | Instagram + Facebook | Reel « La chambre de commerce, ça sert à quoi ? » (série clients 2/3) — déjà publié | `serie-clients-2/reel.mp4` |
-| Dim 22 nov. | 18 h 30 | Instagram + Facebook | Carrousel « Entreprendre en Estrie : par où commencer ? » | `region/01-05.png` |
 
-Suite du programme (lundi 23 au mercredi 25 novembre) : voir `visuels/semaines/2026-11-23/README.md`.
+Suite du programme (lundi 23 au jeudi 26 novembre ; le carrousel Estrie prévu dimanche 22 n'a pas été publié, il est reporté au lundi 23) : voir `visuels/semaines/2026-11-23/README.md`.
 
 | Thématique | Dossier | Contenus |
 | --- | --- | --- |
