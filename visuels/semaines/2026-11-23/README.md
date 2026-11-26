@@ -15,4 +15,22 @@ Les fichiers sont dans le dossier de la semaine précédente : `visuels/semaines
 
 Versions lisibles par un script : `programme.md` et `programme.json` (dates ISO) dans ce dossier.
 
+### Lot du 26 novembre (thématiques choisies par la routine, fichiers dans ce dossier)
+
+| Jour | Heure | Plateforme | Contenu | Dossier |
+| --- | --- | --- | --- | --- |
+| Ven 27 nov. | 18 h 30 | Instagram + Facebook | Carrousel « Entreprendre en Outaouais : par où commencer ? » | `visuels/semaines/2026-11-23/region/` |
+| Sam 28 nov. | 18 h 30 | Instagram + Facebook | Carrousel « Trouver tes premiers clients 3/3 : pour résumer » | `visuels/semaines/2026-11-23/valeur-ajoutee/` |
+| Sam 28 nov. | 18 h 45 | Story Instagram + Story Facebook | Story sondage « Ton premier client, tu l'as trouvé comment ? » | `visuels/semaines/2026-11-23/valeur-ajoutee/` |
+| Dim 29 nov. | 18 h 30 | Instagram + Facebook | Carrousel « Qui est derrière Affaires Québec ? » | `visuels/semaines/2026-11-23/cabinet/` |
+| Dim 29 nov. | 18 h 45 | Story Instagram + Story Facebook | Story relais « Qui est derrière Affaires Québec ? » | `visuels/semaines/2026-11-23/cabinet/` |
+
+Suite : lundi 30 novembre, Reel Outaouais (voir `visuels/semaines/2026-11-30/programme.json`).
+
 Légendes Instagram, Facebook, LinkedIn et texte alternatif : `legendes.md` de chaque dossier.
+
+## Points à valider (lot du 26 novembre)
+1. Aucune publication du programme du 23 au 26 novembre n'est marquée « publié » dans `programme.json`, et `aq/journal.md` n'a aucune ligne de publication depuis le 21 : à vérifier auprès d'Hermès.
+2. Outaouais : 6,6 % et 5,6 % viennent du bilan 2025 du gouvernement du Québec, lu dans les extraits de recherche (sites officiels bloqués par le réseau de la session).
+3. Le Panier Bleu, envisagé pour l'épisode 3/3, a été écarté : entreprise privée avec commission, gratuité non confirmée.
+4. Cabinet : bios reprises mot pour mot du parcours validé (S45) ; aucune collaboration publique mentionnée.

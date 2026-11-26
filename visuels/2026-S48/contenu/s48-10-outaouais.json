@@ -1,0 +1,18 @@
+{"id": "s48-10-outaouais", "titre": "Fiche région : Outaouais", "format": "post", "pilier": "Région · Outaouais — tutoiement",
+ "slides": [
+  {"gabarit": "couverture", "centre": true, "surtitre": "Fiche région · Outaouais", "titre": "Entreprendre en Outaouais : par où commencer ?", "sous_titre": "Le marché, les organismes, les premiers gestes."},
+  {"gabarit": "chiffre", "centre": true, "surtitre": "Le marché du travail", "avant": "Taux de chômage en Outaouais en 2025", "chiffre": "6,6 %",
+   "texte": "contre 5,6 % pour l'ensemble du Québec.", "suite": "Depuis 2017, la région était le plus souvent sous la moyenne québécoise.",
+   "source": "Source : gouvernement du Québec, portrait socioéconomique de l'Outaouais."},
+  {"gabarit": "couverture", "centre": true, "surtitre": "L'atout de la région", "titre": "Ottawa est juste en face.", "taille": "l",
+   "sous_titre": "Gatineau et Ottawa se font face sur la rivière des Outaouais.<br>Deux provinces, deux marchés, une même région."},
+  {"gabarit": "ressources", "surtitre": "Les organismes clés", "titre": "Qui t'accompagne en Outaouais",
+   "items": [
+    {"nom": "ID Gatineau", "texte": "Le développement économique de Gatineau : accompagnement et fonds pour les entreprises."},
+    {"nom": "Chambre de commerce de Gatineau", "texte": "Réseautage, formations et accompagnement."},
+    {"nom": "Export Outaouais", "texte": "Pour vendre hors du Québec, avec la Chambre de commerce de Gatineau."},
+    {"nom": "Affaires Québec", "texte": "On structure ton projet, on monte le financement et on t'ouvre le réseau."}],
+   "source": "Sources : Ville de Gatineau ; Développement économique Canada."},
+  {"gabarit": "couverture", "centre": true, "surtitre": "Ton projet en Outaouais", "titre": "Prêt à démarrer en Outaouais ?<br>Contacte-nous.", "taille": "l",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca", "note": "Affaires Québec : structurer, financer, démontrer."}
+ ]}

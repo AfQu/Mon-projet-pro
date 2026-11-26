@@ -1,0 +1,22 @@
+{
+  "semaine": "2026-11-30",
+  "fuseau": "America/Montreal",
+  "publications": [
+    {
+      "date": "2026-11-30",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "reel",
+      "titre": "Reel « Entreprendre en Outaouais » (couverture 06-couverture-reel.png)",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/region/reel.mp4",
+        "visuels/semaines/2026-11-23/region/06-couverture-reel.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/region/legendes.md",
+      "statut": "à publier"
+    }
+  ]
+}

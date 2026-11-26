@@ -1,0 +1,7 @@
+[
+ {"type": "pile", "duree": 4.6, "mots": ["Gatineau.", "Ottawa.", "Deux marchés."], "pied": "Face à face sur la rivière des Outaouais."},
+ {"type": "machine", "duree": 5.6, "transition": "coupe", "surtitre": "VOILÀ POURQUOI ÇA TE CONCERNE", "taille": 92, "texte": "Tes clients peuvent être des deux côtés de la rivière.", "reponse": "Québec et Ontario : une même région, deux provinces."},
+ {"type": "liste", "duree": 6.2, "transition": "glisse", "titre": "Pour résumer, appelle", "rythme": 0.9, "items": ["ID Gatineau", "La Chambre de commerce de Gatineau", "Export Outaouais", "Affaires Québec"]},
+ {"type": "titre", "duree": 3.4, "transition": "fondu", "lignes": ["Dis-moi ce que", "tu as retenu."], "sous": ["En commentaire."]},
+ {"type": "logo", "duree": 3.9, "transition": "cercle", "accroche": "PRÊT À DÉMARRER ?", "note": "affairesquebec.ca"}
+]

@@ -104,6 +104,91 @@
       ],
       "legendes": "visuels/semaines/2026-11-16/region/legendes.md",
       "statut": "à publier"
+    },
+    {
+      "date": "2026-11-27",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "carrousel",
+      "titre": "Carrousel « Entreprendre en Outaouais : par où commencer ? »",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/region/01.png",
+        "visuels/semaines/2026-11-23/region/02.png",
+        "visuels/semaines/2026-11-23/region/03.png",
+        "visuels/semaines/2026-11-23/region/04.png",
+        "visuels/semaines/2026-11-23/region/05.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/region/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-28",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "carrousel",
+      "titre": "Carrousel « Trouver tes premiers clients 3/3 : pour résumer »",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/valeur-ajoutee/01.png",
+        "visuels/semaines/2026-11-23/valeur-ajoutee/02.png",
+        "visuels/semaines/2026-11-23/valeur-ajoutee/03.png",
+        "visuels/semaines/2026-11-23/valeur-ajoutee/04.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/valeur-ajoutee/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-28",
+      "heure": "18:45",
+      "plateformes": [
+        "instagram_story",
+        "facebook_story"
+      ],
+      "type": "story",
+      "titre": "Story sondage « Ton premier client, tu l'as trouvé comment ? »",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/valeur-ajoutee/05-story-sondage.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/valeur-ajoutee/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-29",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "carrousel",
+      "titre": "Carrousel « Qui est derrière Affaires Québec ? »",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/cabinet/01.png",
+        "visuels/semaines/2026-11-23/cabinet/02.png",
+        "visuels/semaines/2026-11-23/cabinet/03.png",
+        "visuels/semaines/2026-11-23/cabinet/04.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/cabinet/legendes.md",
+      "statut": "à publier"
+    },
+    {
+      "date": "2026-11-29",
+      "heure": "18:45",
+      "plateformes": [
+        "instagram_story",
+        "facebook_story"
+      ],
+      "type": "story",
+      "titre": "Story relais « Qui est derrière Affaires Québec ? »",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/cabinet/05-story.png"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/cabinet/legendes.md",
+      "statut": "à publier"
     }
   ]
 }

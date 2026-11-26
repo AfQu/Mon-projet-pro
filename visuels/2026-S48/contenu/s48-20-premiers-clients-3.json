@@ -1,0 +1,14 @@
+{"id": "s48-20-premiers-clients-3", "titre": "Série premiers clients 3/3", "format": "post", "pilier": "Réseautage et accès au marché — tutoiement",
+ "slides": [
+  {"gabarit": "couverture", "centre": true, "surtitre": "Trouver tes premiers clients · 3/3", "titre": "Pour résumer : trois portes vers tes premiers clients.", "sous_titre": "Ce qu'on a vu dans la série, sur une seule page."},
+  {"gabarit": "ressources", "surtitre": "Les trois portes", "titre": "À ouvrir cette semaine", "coche": true,
+   "items": [
+    {"nom": "Le secteur public", "texte": "Inscris-toi comme fournisseur sur le SEAO (Système électronique d'appel d'offres) et sur AchatsCanada."},
+    {"nom": "La chambre de commerce", "texte": "Il y en a plus de 100 au Québec. Va à un 5 à 7 avec ta présentation de 30 secondes."},
+    {"nom": "Le développement économique de ta MRC", "texte": "La MRC (municipalité régionale de comté) connaît les entreprises de ton territoire."}],
+   "source": "Sources : gouvernement du Québec ; gouvernement du Canada ; Fédération des chambres de commerce du Québec."},
+  {"gabarit": "couverture", "centre": true, "surtitre": "Voilà ce que je veux que tu retiennes", "titre": "Un premier client se trouve rarement seul.", "taille": "l",
+   "sous_titre": "Combine les trois portes, et relance chaque contact dans la semaine."},
+  {"gabarit": "couverture", "centre": true, "surtitre": "Ton projet", "titre": "Tu cherches tes premiers clients ?<br>Contacte-nous.", "taille": "m",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca", "note": "Affaires Québec : structurer, financer, démontrer."}
+ ]}

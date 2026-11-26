@@ -1,0 +1,58 @@
+{
+ "id": "s48-30-equipe",
+ "titre": "Qui est derrière Affaires Québec",
+ "format": "post",
+ "pilier": "Cabinet — tutoiement",
+ "slides": [
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Le cabinet",
+   "titre": "Qui est derrière Affaires Québec ?",
+   "sous_titre": "Une équipe qui connaît le terrain du développement économique."
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "L'équipe",
+   "titre": "Les cofondateurs",
+   "items": [
+    {
+     "nom": "Rouba Hamadi, cofondatrice et présidente",
+     "texte": "Ancienne conseillère, puis directrice générale d'Entreprendre ici."
+    },
+    {
+     "nom": "Rénald Rabathaly, cofondateur",
+     "texte": "Directeur des opérations, ancien commissaire industriel à IDÉ Trois-Rivières."
+    }
+   ]
+  },
+  {
+   "gabarit": "ressources",
+   "surtitre": "Notre méthode",
+   "titre": "Trois étapes avec toi",
+   "items": [
+    {
+     "nom": "Structurer",
+     "texte": "Ton plan d'affaires, ton modèle et les bons professionnels."
+    },
+    {
+     "nom": "Financer",
+     "texte": "Ton montage financier, avec les programmes et les prêteurs adaptés."
+    },
+    {
+     "nom": "Démontrer",
+     "texte": "Un dossier solide pour la banque, puis des mises en relation."
+    }
+   ]
+  },
+  {
+   "gabarit": "couverture",
+   "centre": true,
+   "surtitre": "Ton projet",
+   "titre": "Parlons de ton projet.",
+   "taille": "l",
+   "sous_titre": "Premier appel de cadrage sans frais<br>sur affairesquebec.ca",
+   "note": "Depuis le Québec, la Martinique, l'Europe ou l'Afrique francophone."
+  }
+ ]
+}
