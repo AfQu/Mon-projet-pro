@@ -43,18 +43,21 @@ L=[("Collègues de l'Espace Sud…",1.0),
    ("votez Upèsse, Une-sa !",0.88),
    ("Upèsse : Union des Personnels de l'Espace Sud.",1.15)]
 vx=[tts(t,ls,f"v{i}.wav") for i,(t,ls) in enumerate(L)]
+old5=tts("Tout moun, sé moun !",0.95,"v4_old.wav")  # gabarit de durée : garde la synchro de la vidéo
+vx[4]=tts("Toutt moun, sé moun !",0.95,"v4.wav")
+LEN=[len(x) for x in vx]; LEN[4]=max(LEN[4],len(old5))
 gains=[1.0,1.0,1.0,1.05,1.1,1.2,1.25,1.3,1.0]
 BEAT=0.6; STEP=BEAT/4; BAR=16*STEP
 # placement
 t=3*BAR/1.0*0+ 2*BAR  # intro tibwa 2 mesures
 starts=[]; cur=2*BAR
-starts.append(cur); cur+=len(vx[0])/SR+0.9
+starts.append(cur); cur+=LEN[0]/SR+0.9
 tan_in=cur-0.3
 for i in [1,2,3,4]:
-    starts.append(cur); cur+=len(vx[i])/SR+(0.7 if i!=2 else 0.9)
+    starts.append(cur); cur+=LEN[i]/SR+(0.7 if i!=2 else 0.9)
 build=cur-0.2
 for i in [5,6,7]:
-    starts.append(cur); cur+=len(vx[i])/SR+0.35
+    starts.append(cur); cur+=LEN[i]/SR+0.35
 fin=cur+0.25
 starts.append(fin+1.6)
 T=starts[-1]+len(vx[8])/SR+2.5

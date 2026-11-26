@@ -1,4 +1,4 @@
-"""Vidéo UPESS-UNSA 9:16 sur la bande-son upess-spoken-word-musique.mp3."""
+"""Vidéo UPES-UNSA 9:16 sur la bande-son upess-spoken-word-musique.mp3."""
 import math, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -59,10 +59,10 @@ def logo(img, cx, cy, wl, p, pulse=0.0):
     s = (0.6 + 0.4 * back(p / 0.7)) * (1 + pulse); lw = int(wl * s); lh = int(LOGO.height * lw / LOGO.width)
     L = LOGO.resize((lw, lh), Image.LANCZOS); L.putalpha(L.getchannel("A").point(lambda v: int(v * cl(p / 0.25))))
     img.alpha_composite(L, (int(cx - lw / 2), int(cy - lh / 2)))
-SOUS = [(4.6, 6.6, "Collègues de l'Espace Sud…"), (6.8, 11.1, "Titulaires ou contractuels, nous avons tous les mêmes essentiels :"),
-        (11.3, 15.9, "nos droits… nos acquis… notre dignité."), (16.0, 20.9, "L'UPESS remonte vos doléances, dialogue avec l'autorité, et reste à vos côtés."),
-        (21.0, 22.9, "Tout moun cé moun !"), (22.95, 24.4, "Du 3 au 10 décembre,"), (24.5, 25.25, "ba nou fos la :"), (25.3, 28.8, "votez UPESS-UNSA !"),
-        (28.95, 33.2, "UPESS. Union des Personnels de l'Espace Sud.")]
+SOUS = [(4.55, 6.6, "Collègues de l'Espace Sud…"), (6.75, 11.0, "Titulaires ou contractuels, nous avons tous les mêmes essentiels :"),
+        (11.2, 15.7, "nos droits… nos acquis… notre dignité."), (15.85, 20.45, "L'UPES remonte vos doléances, dialogue avec l'autorité, et reste à vos côtés."),
+        (20.55, 22.5, "Tout moun cé moun !"), (22.6, 23.85, "Du 3 au 10 décembre,"), (23.9, 25.55, "ba nou fos la :"), (25.6, 28.8, "votez UPES-UNSA !"),
+        (29.05, 33.2, "UPES. Union des Personnels de l'Espace Sud.")]
 def sous_titre(img, t):
     for a, b, s in SOUS:
         if a <= t < b:
@@ -82,44 +82,44 @@ def frame(t):
     if t < 6.6:  # 1. intro tibwa -> logo
         pulse = 0.025 * max(0, 1 - ((t % 0.6) / 0.2)) if t > 1.0 else 0
         logo(img, W / 2, 820, 760, t - 0.3, pulse)
-    elif t < 11.1:  # 2. un mot par frappe
-        for i, (s, t0, col) in enumerate([("TITULAIRES", 6.82, WHITE), ("CONTRACTUELS", 7.82, LIGHT), ("MÊMES ESSENTIELS", 9.74, WHITE)]):
+    elif t < 11.0:  # 2. un mot par frappe
+        for i, (s, t0, col) in enumerate([("TITULAIRES", 6.78, WHITE), ("CONTRACTUELS", 7.78, LIGHT), ("MÊMES ESSENTIELS", 9.64, WHITE)]):
             z = ajuste(s, 980, 150); texte(img, s, z, W / 2, 620 + i * 280, t - t0, col)
-        if t > 9.74: ImageDraw.Draw(img).rectangle([W / 2 - 160, 1310, W / 2 + 160, 1320], fill=RED)
-    elif t < 15.9:  # 3. photo des agents + droits
-        k = (t - 11.1) / 4.8; z = (W + 160) / PHOTO.width * (1 + 0.1 * k); pw = int(PHOTO.width * z * 1.0); ph = int(PHOTO.height * z)
+        if t > 9.64: ImageDraw.Draw(img).rectangle([W / 2 - 160, 1310, W / 2 + 160, 1320], fill=RED)
+    elif t < 15.7:  # 3. photo des agents + droits
+        k = (t - 11.0) / 4.7; z = (W + 160) / PHOTO.width * (1 + 0.1 * k); pw = int(PHOTO.width * z * 1.0); ph = int(PHOTO.height * z)
         P = PHOTO.resize((pw, ph), Image.LANCZOS); x0 = int((W - pw) / 2 - 140 * k)
         img.paste(P, (x0 + 70, 230)); ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); do = ImageDraw.Draw(ov)
         for y in range(230 + ph - 300, 230 + ph): do.line([(0, y), (W, y)], fill=NAVY + (int(255 * (y - (230 + ph - 300)) / 300),))
         img.alpha_composite(ov)
-        for i, (s, t0, col) in enumerate([("Nos droits", 11.3, WHITE), ("Nos acquis", 12.72, LIGHT), ("Notre dignité", 14.14, WHITE)]):
+        for i, (s, t0, col) in enumerate([("Nos droits", 11.22, WHITE), ("Nos acquis", 12.6, LIGHT), ("Notre dignité", 14.02, WHITE)]):
             texte(img, s, 120, W / 2, 1020 + i * 160, t - t0, col)
-    elif t < 20.9:  # 4. break : trois tuiles
-        for i, (s, t0, col) in enumerate([("ÉCOUTER", 16.28, RED), ("DIALOGUER", 17.76, (120, 185, 225)), ("PROPOSER", 19.46, BLUE)]):
+    elif t < 20.45:  # 4. break : trois tuiles
+        for i, (s, t0, col) in enumerate([("ÉCOUTER", 16.14, RED), ("DIALOGUER", 17.7, (120, 185, 225)), ("PROPOSER", 19.04, BLUE)]):
             tuile(img, s, W / 2, 560 + i * 270, t - t0, col)
-    elif t < 22.9:  # 5. climax
-        p = t - 21.0
+    elif t < 22.5:  # 5. climax
+        p = t - 20.58
         if 0 <= p < 0.12: img.alpha_composite(Image.new("RGBA", (W, H), WHITE + (int(255 * (1 - p / 0.12)),)))
         sh = 18 * math.exp(-p * 5) * math.sin(p * 60) if p > 0 else 0
         for i, (s, col) in enumerate([("TOUT", WHITE), ("MOUN", RED), ("CÉ", WHITE), ("MOUN !", RED)]):
             texte(img, s, 230, W / 2 + sh, 470 + i * 250, p - 0.08 * i, col)
-    elif t < 24.4:  # 6. montée : élections
-        texte(img, "ÉLECTIONS", 150, W / 2, 620, t - 22.96, WHITE)
-        texte(img, "PROFESSIONNELLES", ajuste("PROFESSIONNELLES", 980, 120), W / 2, 790, t - 23.05, WHITE)
-        texte(img, "du 3 au 10", 120, W / 2, 1010, t - 23.16, LIGHT)
-        texte(img, "décembre 2026", 120, W / 2, 1150, t - 23.6, LIGHT)
+    elif t < 23.85:  # 6. montée : élections
+        texte(img, "ÉLECTIONS", 150, W / 2, 620, t - 22.64, WHITE)
+        texte(img, "PROFESSIONNELLES", ajuste("PROFESSIONNELLES", 980, 120), W / 2, 790, t - 22.73, WHITE)
+        texte(img, "du 3 au 10", 120, W / 2, 1010, t - 22.9, LIGHT)
+        texte(img, "décembre 2026", 120, W / 2, 1150, t - 23.4, LIGHT)
     else:  # 7. outro
         if t < 28.9:
-            texte(img, "ba nou fos la !", 120, W / 2, 470, t - 24.5, LIGHT)
-            texte(img, "VOTEZ", 190, W / 2, 760, t - 25.3, WHITE)
-            texte(img, "UPESS-UNSA", ajuste("UPESS-UNSA", 1000, 190), W / 2, 960, t - 25.55, RED)
-            if t > 25.9: ImageDraw.Draw(img).rectangle([W / 2 - 300, 1090, W / 2 + 300, 1100], fill=WHITE)
+            texte(img, "ba nou fos la !", 120, W / 2, 470, t - 23.92, LIGHT)
+            texte(img, "VOTEZ", 190, W / 2, 760, t - 25.66, WHITE)
+            texte(img, "UPES-UNSA", ajuste("UPES-UNSA", 1000, 190), W / 2, 960, t - 25.9, RED)
+            if t > 26.2: ImageDraw.Draw(img).rectangle([W / 2 - 300, 1090, W / 2 + 300, 1100], fill=WHITE)
         else:
-            logo(img, W / 2, 800, 720, t - 28.95)
-            texte(img, "Votez UPESS-UNSA", 84, W / 2, 1330, t - 29.5, WHITE, slam=False)
+            logo(img, W / 2, 800, 720, t - 29.0)
+            texte(img, "Votez UPES-UNSA", 84, W / 2, 1330, t - 29.5, WHITE, slam=False)
             texte(img, "du 3 au 10 décembre 2026", 64, W / 2, 1430, t - 29.9, LIGHT, slam=False, w=700)
     # éclair blanc sur chaque changement de scène
-    for c in (6.6, 11.1, 15.9, 22.9, 24.4, 28.9):
+    for c in (6.6, 11.0, 15.7, 22.5, 23.85, 28.9):
         if 0 <= t - c < 0.1: img.alpha_composite(Image.new("RGBA", (W, H), WHITE + (int(200 * (1 - (t - c) / 0.1)),)))
     sous_titre(img, t)
     if t > T - 1.5: img.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * cl((t - (T - 1.5)) / 1.5)))))
