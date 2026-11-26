@@ -79,6 +79,8 @@ add(buf_p,final(),fin,1.0)
 b=fin+1.4
 for k in range(int((T-b)/STEP)):
     if pat_t[k%16]: add(buf_p,tibwa(False),b+k*STEP,0.5*max(0,1-k*STEP/(T-b)))
+w0=__import__('wave').open('voix_seule.wav','wb'); w0.setnchannels(1); w0.setsampwidth(2); w0.setframerate(SR); w0.writeframes((np.clip(buf_v/np.abs(buf_v).max()*0.9,-1,1)*32767).astype(np.int16).tobytes()); w0.close()
+open('duree.txt','w').write(str(T))
 # ducking
 e=np.abs(buf_v); win=int(0.15*SR); e=np.convolve(e,np.ones(win)/win,"same"); duck=1-0.45*np.clip(e/0.05,0,1)
 mix=buf_v*1.0+buf_p*0.55*duck
