@@ -2,7 +2,8 @@ import json, subprocess, numpy as np
 SR=44100; V="/tmp/claude-0/-home-user-Mon-projet-pro/8da80b25-d863-58f1-800d-0061204bdeb6/scratchpad/voix/fr_FR-siwis-medium.onnx"
 rng=np.random.default_rng(7)
 def tts(t,ls,name):
-    subprocess.run(["python3","-m","piper","-m",V,"-f",name,"--length-scale",str(ls),"--sentence-silence","0.45"],input=t.encode(),capture_output=True,check=True)
+    import os
+    if not os.path.exists(name): subprocess.run(["python3","-m","piper","-m",V,"-f",name,"--length-scale",str(ls),"--sentence-silence","0.45"],input=t.encode(),capture_output=True,check=True)
     a=np.frombuffer(subprocess.run(["ffmpeg","-loglevel","error","-i",name,"-ar",str(SR),"-ac","1","-f","f32le","-"],capture_output=True).stdout,np.float32).copy()
     nz=np.where(np.abs(a)>0.01)[0]; return a[max(0,nz[0]-400):nz[-1]+2000]
 def env(n,d): return np.exp(-np.arange(n)/(d*SR))
@@ -45,7 +46,10 @@ L=[("Collègues de l'Espace Sud…",1.0),
 vx=[tts(t,ls,f"v{i}.wav") for i,(t,ls) in enumerate(L)]
 old5=tts("Tout moun, sé moun !",0.95,"v4_old.wav")  # gabarit de durée : garde la synchro de la vidéo
 vx[4]=tts("Toutt moun, sé moun !",0.95,"v4.wav")
-LEN=[len(x) for x in vx]; LEN[4]=max(LEN[4],len(old5))
+old1=len(vx[1])
+vx[1]=tts("Titulaires ou contractuels, nous avons touss les mêmes essentiels :",0.95,"v1.wav")
+LEN=[len(x) for x in vx]; LEN[4]=max(LEN[4],len(old5)); LEN[1]=old1
+LEN[3]=len(tts('',0.93,'v3_prev.wav'))
 gains=[1.0,1.0,1.0,1.05,1.1,1.2,1.25,1.3,1.0]
 BEAT=0.6; STEP=BEAT/4; BAR=16*STEP
 # placement
@@ -90,4 +94,4 @@ mix=buf_v*1.0+buf_p*0.55*duck
 mix=mix/np.abs(mix).max()*0.9
 import wave
 w=wave.open("upess.wav","wb"); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((mix*32767).astype(np.int16).tobytes()); w.close()
-print("durée",round(T,1),"s ; voix aux", [round(s,1) for s in starts])
+print("durée",round(T,1),"s ; voix aux", [round(s,1) for s in starts]); open("starts.json","w").write(__import__("json").dumps(starts))

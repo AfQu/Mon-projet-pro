@@ -3,7 +3,15 @@ import math, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONT = os.path.join(HERE, "..", "..", "..", "visuels", "assets", "fonts", "Figtree[wght].ttf")
-W, H, FPS, T = 1080, 1920, 30, 35.0
+W, H, FPS, T = 1080, 1920, 30, 35.1
+# Recalage : instants de début de phrase de la voix pour laquelle les temps ci-dessous ont été écrits (OLD) et de la voix actuelle (NEW)
+OLD = [4.8, 7.0, 11.3, 15.8, 20.6, 22.7, 24.4, 25.6, 29.2]
+NEW = [4.8, 7.038, 11.409, 15.885, 20.948, 22.967, 24.702, 25.894, 29.584]
+def warp(t):
+    d = 0.0
+    for o, n in zip(OLD, NEW):
+        if t >= n - 0.05: d = n - o
+    return t - d
 NAVY, BLUE, LIGHT, RED, WHITE = (27, 48, 96), (46, 95, 168), (155, 208, 238), (227, 6, 19), (255, 255, 255)
 cl = lambda x: max(0.0, min(1.0, x))
 def eo(x): x = cl(x); return 1 - (1 - x) ** 3
@@ -130,7 +138,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 3:
         for s in sys.argv[3:]: frame(float(s)).save(os.path.join(HERE, f"apercu_{s}.png"))
         sys.exit()
-    for i in range(int(T * FPS)): frame(i / FPS).save(f"{tmp}/{i:04d}.png")
+    for i in range(int(T * FPS)): frame(warp(i / FPS)).save(f"{tmp}/{i:04d}.png")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", f"{tmp}/%04d.png", "-i", audio, "-c:v", "libx264", "-pix_fmt", "yuv420p",
                     "-crf", "20", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], check=True)
     print("OK", out)
