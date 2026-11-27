@@ -1,0 +1,136 @@
+[
+ {
+  "aff": "Élections professionnelles en Martinique, du 3 au 10 décembre 2026.",
+  "dit": "Élections professionnelles en Martinique. Du trois au dix décembre, deux mille vingt-six.",
+  "ls": 1.0,
+  "pause": 1.2
+ },
+ {
+  "aff": "L'Espace Sud en avant ! Collègues, tous ensemble avec l'UPES.",
+  "dit": "L'Espace Sud en avant ! Collègues, touss ensemble, avec l'Upèsse !",
+  "ls": 0.95,
+  "pause": 0.5
+ },
+ {
+  "aff": "Toujours présents pour défendre vos intérêts…",
+  "dit": "Toujours présents, pour défendre vos intérêts…",
+  "ls": 0.95,
+  "pause": 0.15
+ },
+ {
+  "aff": "UPES !",
+  "dit": "Upèsse !",
+  "ls": 0.9,
+  "pause": 0.8,
+  "choeur": true
+ },
+ {
+  "aff": "Titulaires ou contractuels, nous avons tous les mêmes essentiels.",
+  "dit": "Titulaires ou contractuels, nous avons touss les mêmes essentiels.",
+  "ls": 0.95,
+  "pause": 0.6
+ },
+ {
+  "aff": "Nos droits, nos acquis, notre dignité,",
+  "dit": "Nos droits. Nos acquis. Notre dignité.",
+  "ls": 1.05,
+  "pause": 0.4
+ },
+ {
+  "aff": "ensemble, on va les faire respecter !",
+  "dit": "Ensemble, on va les faire respecter !",
+  "ls": 0.92,
+  "pause": 1.2
+ },
+ {
+  "aff": "Remonter vos doléances, dialoguer, échanger avec l'autorité.",
+  "dit": "Remonter vos doléances. Dialoguer. Échanger avec l'autorité.",
+  "ls": 0.95,
+  "pause": 0.5
+ },
+ {
+  "aff": "L'UPES, toujours présente, force de proposition,",
+  "dit": "L'Upèsse, toujours présente, force de proposition,",
+  "ls": 0.95,
+  "pause": 0.3
+ },
+ {
+  "aff": "de tout temps à vos côtés, pour améliorer nos conditions de travail et notre qualité de vie.",
+  "dit": "de tout temps à vos côtés, pour améliorer nos conditions de travail, et notre qualité de vie.",
+  "ls": 0.95,
+  "pause": 0.8
+ },
+ {
+  "aff": "Respect de la valeur humaine.",
+  "dit": "Respect de la valeur humaine.",
+  "ls": 1.0,
+  "pause": 0.4
+ },
+ {
+  "aff": "Tout moun cé moun !",
+  "dit": "Toutt moun, sé moun !",
+  "ls": 0.95,
+  "pause": 0.7
+ },
+ {
+  "aff": "Pour concilier nos vies sans tout sacrifier.",
+  "dit": "Pour concilier nos vies, sans tout sacrifier.",
+  "ls": 0.95,
+  "pause": 0.4
+ },
+ {
+  "aff": "Et nos acquis sociaux, on veut les préserver.",
+  "dit": "Et nos acquis sociaux, on veut les préserver.",
+  "ls": 0.95,
+  "pause": 0.4
+ },
+ {
+  "aff": "Notre avenir ensemble, on veut l'améliorer !",
+  "dit": "Notre avenir ensemble, on veut l'améliorer !",
+  "ls": 0.95,
+  "pause": 0.8
+ },
+ {
+  "aff": "Faites entendre vos voix, ba nou fos la !",
+  "dit": "Faites entendre vos voix ! Ba nou fosse la !",
+  "ls": 0.92,
+  "pause": 0.4
+ },
+ {
+  "aff": "Du 3 au 10 décembre 2026,",
+  "dit": "Du trois au dix décembre, deux mille vingt-six,",
+  "ls": 0.92,
+  "pause": 0.4
+ },
+ {
+  "aff": "UPES… Union des Personnels de l'Espace Sud.",
+  "dit": "Upèsse. Union des Personnels de l'Espace Sud.",
+  "ls": 1.08,
+  "pause": 1.3
+ },
+ {
+  "aff": "Votez UPES-UNSA !",
+  "dit": "Votez Upèsse, Une-sa !",
+  "ls": 0.88,
+  "pause": 0.4,
+  "choeur": true
+ },
+ {
+  "aff": "Territoriaux, on est là !",
+  "dit": "Territoriaux, on est là !",
+  "ls": 1.0,
+  "pause": 0.4
+ },
+ {
+  "aff": "Libres ensemble, unis, solidaires,",
+  "dit": "Libres ensemble ! Unis ! Solidaires !",
+  "ls": 0.95,
+  "pause": 0.3
+ },
+ {
+  "aff": "pour nos droits, pour nos salaires !",
+  "dit": "Pour nos droits, pour nos salaires !",
+  "ls": 0.92,
+  "pause": 2.5
+ }
+]

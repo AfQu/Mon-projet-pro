@@ -6,3 +6,8 @@
 - `upess-video.mp4` (26 nov.) : vidéo 9:16, 35 s, sur `upess-spoken-word-musique.mp3`. Script `video/video.py` (logo et affiche fournis par Rénald dans `video/`). Déroulé : logo (intro), un mot par frappe, photo de l'affiche avec « Nos droits · Nos acquis · Notre dignité », tuiles « Écouter · Dialoguer · Proposer », « TOUT MOUN CÉ MOUN », élections du 3 au 10 décembre 2026, « Votez UPES-UNSA, ba nou fos la ! » et logo. Sous-titres complets en bas.
 - 26 nov. (correction) : « UPES » (et non UPESS) dans tous les textes ; « Toutt moun » dans le script de voix pour faire prononcer le T de « Tout moun cé moun ».
 - 26 nov. (correction 2) : « touss » dans le script de voix pour faire entendre le S de « tous les mêmes essentiels » ; phrases de voix figées (fichiers réutilisés), vidéo recalée par la fonction warp() de video.py.
+
+## Version 2 (27 nov.) : chanson complète
+- `upes-chanson-v2.mp3` (81 s) et `upes-video-v2.mp4` (9:16, 81 s) : nouveau texte (couplets 1 et 2, refrain), voix SIWIS sur la musique fournie, chœur « UPES ! » et « Votez UPES-UNSA » à 3 voix (SIWIS + UPMC, licence CC BY-SA 4.0 pour UPMC).
+- Prononciations : « Upèsse », « touss », « Toutt moun sé moun », « ba nou fosse la », « Une-sa ». Affichage : UPES (pas UPESS).
+- Scripts : `video/voix_v2.py` (voix, phrases en cache, texte dans `video/lignes.json`), `video/video_v2.py` (images, calées sur `video/segments.json`).
