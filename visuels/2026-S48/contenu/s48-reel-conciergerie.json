@@ -1,0 +1,81 @@
+[
+ {
+  "type": "machine",
+  "duree": 5.5,
+  "surtitre": "IMAGINE LA SCÈNE",
+  "texte": "Tu déposes ton linge au pressing sans quitter le bureau.",
+  "reponse": "En France, c'est un vrai métier."
+ },
+ {
+  "type": "picto",
+  "duree": 5,
+  "transition": "glisse",
+  "icone": "immeuble",
+  "surtitre": "LE CONCEPT · FRANCE",
+  "titre": "La conciergerie d'entreprise",
+  "taille": 92,
+  "texte": "Des services du quotidien, directement au travail."
+ },
+ {
+  "type": "picto",
+  "duree": 5,
+  "transition": "coupe",
+  "icone": "cintre",
+  "surtitre": "LE CONCEPT",
+  "titre": "Pressing, cordonnerie, colis",
+  "taille": 88,
+  "texte": "Le concierge fait les courses des employés à leur place."
+ },
+ {
+  "type": "liste",
+  "duree": 8.5,
+  "transition": "volet",
+  "titre": "Pourquoi ça marche",
+  "rythme": 1.4,
+  "items": [
+   "L'entreprise paie un abonnement",
+   "Les employés gagnent du temps",
+   "Un atout pour garder ses équipes",
+   "Des partenaires locaux : pressing, cordonnier"
+  ]
+ },
+ {
+  "type": "machine",
+  "duree": 6,
+  "transition": "fondu",
+  "surtitre": "POUR LE QUÉBEC",
+  "taille": 92,
+  "texte": "Qui seraient tes premiers clients ?",
+  "reponse": "Les grands bureaux, les usines, les parcs industriels. Commence avec des partenaires de quartier."
+ },
+ {
+  "type": "titre",
+  "duree": 4.5,
+  "transition": "coupe",
+  "lignes": [
+   "Et toi,",
+   "tu ferais quoi ?"
+  ],
+  "sous": [
+   "Dis-le-moi en commentaire."
+  ]
+ },
+ {
+  "type": "titre",
+  "duree": 3.5,
+  "transition": "cercle",
+  "lignes": [
+   "Tu veux le lancer ?"
+  ],
+  "sous": [
+   "Affaires Québec t'accompagne.",
+   "affairesquebec.ca"
+  ]
+ },
+ {
+  "type": "logo",
+  "duree": 2,
+  "transition": "fondu",
+  "accroche": "ON T'ACCOMPAGNE"
+ }
+]

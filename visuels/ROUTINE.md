@@ -15,7 +15,8 @@ Chaque semaine, **avant de créer quoi que ce soit** :
    - **Région** : une région pas encore couverte (voir `visuels/reels-journal.md`, `visuels/semaines/*/README.md` ; déjà faites : Mauricie, Lanaudière, Montréal, Capitale-Nationale, Estrie), avec chiffres officiels trouvables par recherche web ;
    - **Valeur ajoutée** : un guide concret tiré des 6 sujets de `PLAN.md` (priorité réseau et accès au marché ; financement au plus 1 fois par semaine), vérifiable sur des sources officielles ;
    - **Cabinet** : Affaires Québec lui-même, uniquement avec des formulations déjà validées (méthode Structurer · Financer · Démontrer, parcours de `2026-S45/contenu/s45-03-parcours.json`, messages de `references/marque.md`) ; jamais d'offre, de forfait ou de cas client non confirmés ;
-   - facultatif : un **Concept à importer** (Reel 40 s, sans voix off) ou l'épisode suivant d'une série en cours.
+   - **OBLIGATOIRE chaque semaine (consigne de Rénald, 27 nov. 2026) : un Reel « Concept à importer »** (idée d'entreprise qui marche ailleurs et qui pourrait marcher au Québec) : 40 s, motion design avec pictos (`reel.py`, type `picto`), sans voix off, 2 ou 3 phrases d'accroche, légende, 5 hashtags et commentaire épinglé ; dossier `concept/`. Varier les pays d'origine (déjà faits : France ×2, Kenya, France conciergerie) ; aucun chiffre non vérifié, aucune marque ni nom d'entreprise dans le visuel ; toujours une scène « ce qu'il faut adapter au Québec » (permis, normes, climat) et la fin « Tu veux le lancer ? Affaires Québec t'accompagne » ;
+   - facultatif : l'épisode suivant d'une série en cours.
    Ne jamais reprendre un sujet déjà publié (`aq/journal.md`, `visuels/publie.md`).
 2. Passer ces thématiques à **« Visuels en cours »**, commit et push.
 3. Créer les visuels selon la catégorie, en suivant le reste de cette procédure (charte, sources, section 3 quater, langage clair, Reels variés, QA) :

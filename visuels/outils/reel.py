@@ -18,7 +18,7 @@ Formes ajoutées pour varier : "compteur" (chiffre qui défile), "liste" (cases 
              {"type": "liste", "titre": "…", "items": ["…", "…"]}
              {"type": "machine", "surtitre": "QUESTION", "texte": "…", "reponse": "…"}
              {"type": "mythe", "mythe": "…", "realite": "…"}
-  "picto" : icône or tracée trait par trait (camion, carte, village, route, immeuble, feuille, document, recyclage, pave, flocon), puis surtitre, titre et texte.
+  "picto" : icône or tracée trait par trait (camion, carte, village, route, immeuble, feuille, document, recyclage, pave, flocon, cintre), puis surtitre, titre et texte.
              {"type": "picto", "icone": "camion", "surtitre": "LE CONCEPT", "titre": "…", "texte": "…"}
 Transitions (clé "transition" de la scène qui arrive) : volet (défaut), fondu, glisse, cercle, coupe. Musique : musique.py (synthétisée, libre de droits).
 Dépendances : Pillow, ffmpeg. Toujours contrôler quelques images clés avant de livrer.
@@ -323,6 +323,12 @@ PICTOS = {
         ([(200.0, 200.0), (61.43593539448983, 119.99999999999999)], False),
         ([(113.21796769724492, 190.31088913245534), (104.73720558371176, 145.0), (148.21796769724492, 129.68911086754466)], False),
         ([(77.74682452694518, 161.7487113059643), (71.8282402399031, 125.99999999999999), (105.74682452694518, 113.25128869403572)], False),
+    ],
+    "cintre": [
+        ([(200, 120), (200, 95)], False),
+        ([(200, 95), (186, 82), (184, 64), (194, 50), (210, 48), (222, 58), (224, 72)], False),
+        ([(200, 120), (40, 250), (360, 250), (200, 120)], False),
+        ([(60, 300), (340, 300)], True),
     ],
 }
 
