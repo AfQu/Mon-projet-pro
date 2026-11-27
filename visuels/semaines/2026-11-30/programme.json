@@ -17,6 +17,21 @@
       ],
       "legendes": "visuels/semaines/2026-11-23/region/legendes.md",
       "statut": "à publier"
+    },
+    {
+      "date": "2026-12-01",
+      "heure": "18:30",
+      "plateformes": [
+        "instagram",
+        "facebook"
+      ],
+      "type": "reel",
+      "titre": "Reel « Concept à importer : la conciergerie d'entreprise »",
+      "fichiers": [
+        "visuels/semaines/2026-11-23/concept/reel.mp4"
+      ],
+      "legendes": "visuels/semaines/2026-11-23/concept/legendes.md",
+      "statut": "à publier"
     }
   ]
 }

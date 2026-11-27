@@ -52,4 +52,4 @@ Affaires Québec accompagne les entrepreneurs issus de l'immigration pour struct
 ## Texte alternatif
 Reel : animation or sur fond noir. Un immeuble et un cintre sont dessinés trait par trait. Le texte présente la conciergerie d'entreprise, ses avantages et ses premiers clients possibles au Québec, puis « Tu veux le lancer ? Affaires Québec t'accompagne ».
 
-Sources du concept (non citées dans le visuel) : Edenred, « Créer un environnement de travail favorable grâce à la conciergerie d'entreprise » ; Le Journal des entreprises, « Conciergeries : pour bichonner ses salariés ».
+Sources du concept, non citées dans le visuel : Edenred ; Le Journal des entreprises.
